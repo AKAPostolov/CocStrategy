@@ -6,7 +6,9 @@ import android.graphics.BitmapFactory;
 import android.graphics.Point;
 
 //pointer class
-public class MenuCPointer {
+public class MenuCPointer
+{
+	private String name;
 	private Bitmap img;
 	private Bitmap imgover;
 	private int imgradius;
@@ -18,7 +20,9 @@ public class MenuCPointer {
 	private Point homepoint = null;
 	private boolean isselected = false;
 	
-	public MenuCPointer(Context context, int img, int imgover, int border) {
+	public MenuCPointer(Context context, int img, int imgover, int border, String name)
+	{
+		this.name = name;
 		BitmapFactory.Options opts = new BitmapFactory.Options();
         opts.inJustDecodeBounds = true;
         this.border = border;
@@ -88,4 +92,7 @@ public class MenuCPointer {
 	public int get_border() {
 		return border;
 	}
+
+	public String getName()
+	{return name;}
 }
