@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mainpage.xml",
         "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\layout\\mainpage.xml"
+    },
+    {
+        "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\framelayout.xml",
+        "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\layout\\framelayout.xml"
     }
 ]

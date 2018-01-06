@@ -10,29 +10,72 @@ package coc.strategy;
 public final class R {
     public static final class attr {
     }
+    public static final class color {
+        public static final int Aqua=0x7f040000;
+        public static final int Black=0x7f040001;
+        public static final int Blue=0x7f040002;
+        public static final int Fuchsia=0x7f040003;
+        public static final int Gray=0x7f040004;
+        public static final int Green=0x7f040005;
+        public static final int Lime=0x7f040006;
+        public static final int Maroon=0x7f040007;
+        public static final int Navy=0x7f040008;
+        public static final int Olive=0x7f040009;
+        public static final int Orange1=0x7f04000a;
+        public static final int Orange2=0x7f04000b;
+        public static final int Orange3=0x7f04000c;
+        public static final int Purple=0x7f04000d;
+        public static final int Red=0x7f04000e;
+        public static final int Silver=0x7f04000f;
+        public static final int Teal=0x7f040010;
+        public static final int White=0x7f040011;
+        public static final int Yellow1=0x7f040012;
+        public static final int Yellow2=0x7f040013;
+    }
+    public static final class dimen {
+        public static final int shadowSizeForButton=0x7f050000;
+    }
     public static final class drawable {
-        public static final int icon=0x7f020000;
-        public static final int img_backmain=0x7f020001;
-        public static final int menu_back=0x7f020002;
-        public static final int menu_item_a=0x7f020003;
-        public static final int menu_item_aover=0x7f020004;
-        public static final int menu_item_b=0x7f020005;
-        public static final int menu_item_bover=0x7f020006;
-        public static final int menu_item_c=0x7f020007;
-        public static final int menu_item_cover=0x7f020008;
-        public static final int menu_item_d=0x7f020009;
-        public static final int menu_item_dover=0x7f02000a;
-        public static final int menu_pointer=0x7f02000b;
-        public static final int menu_pointerover=0x7f02000c;
+        public static final int coc_button_green=0x7f020000;
+        public static final int coc_button_green_square=0x7f020001;
+        public static final int icon=0x7f020002;
+        public static final int img_backmain=0x7f020003;
+        public static final int menu_back=0x7f020004;
+        public static final int menu_item_a=0x7f020005;
+        public static final int menu_item_aover=0x7f020006;
+        public static final int menu_item_b=0x7f020007;
+        public static final int menu_item_bover=0x7f020008;
+        public static final int menu_item_c=0x7f020009;
+        public static final int menu_item_cover=0x7f02000a;
+        public static final int menu_item_d=0x7f02000b;
+        public static final int menu_item_dover=0x7f02000c;
+        public static final int menu_pointer=0x7f02000d;
+        public static final int menu_pointerover=0x7f02000e;
     }
     public static final class id {
-        public static final int ImageSwitcherBackground=0x7f050000;
-        public static final int LinearLayout_main=0x7f050001;
+        public static final int ImageSwitcherBackground=0x7f080008;
+        public static final int LinearLayout_main=0x7f080009;
+        public static final int button1=0x7f080004;
+        public static final int button2=0x7f080005;
+        public static final int button3=0x7f080006;
+        public static final int button4=0x7f080007;
+        public static final int button5=0x7f080003;
+        public static final int frameLayout=0x7f080000;
+        public static final int tv1=0x7f080001;
+        public static final int tv2=0x7f080002;
     }
     public static final class layout {
-        public static final int mainpage=0x7f030000;
+        public static final int framelayout=0x7f030000;
+        public static final int mainpage=0x7f030001;
     }
     public static final class string {
-        public static final int app_name=0x7f040000;
+        public static final int app_name=0x7f060000;
+        public static final int btn_elixir_normal=0x7f060001;
+        public static final int btn_elixir_oscuro=0x7f060002;
+        public static final int btn_hechizos=0x7f060003;
+        public static final int btn_tropas=0x7f060004;
+    }
+    public static final class style {
+        public static final int whiteTextBlackStrokeButtonCOC=0x7f070000;
     }
 }

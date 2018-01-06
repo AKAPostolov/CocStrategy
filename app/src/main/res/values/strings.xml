@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sample_DragDropMenu</string>
+
+    <!--BUTTONS-->
+    <string name="btn_elixir_normal">Normal</string>
+    <string name="btn_elixir_oscuro">Oscuro</string>
+    <string name="btn_tropas">Tropas</string>
+    <string name="btn_hechizos">Hechizos</string>
 </resources>

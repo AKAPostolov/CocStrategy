@@ -4,18 +4,109 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@android:color/white">
+    <Button
+        android:id="@+id/button5"
+        android:visibility="gone"
+        android:tag="1"
+        android:onClick="manageButtons"
+        android:textColor="@color/Orange1"
+        android:shadowColor="@color/Teal"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="1"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:textSize="16sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:height="5dp"
+        android:textStyle="bold"
+        android:background="@drawable/coc_button_green_square"
+        android:text="+"/>
+    <Button
+        android:id="@+id/button1"
+        android:tag="1"
+        android:onClick="manageButtons"
+        android:textColor="@color/Fuchsia"
+        android:shadowColor="@color/Black"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="1"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:textSize="8sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:height="5dp"
+        android:background="@drawable/coc_button_green"
+        android:text="@string/btn_elixir_normal"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:tag="2"
+        android:onClick="manageButtons"
+        android:textColor="@color/Black"
+        android:shadowColor="@color/White"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="1"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:textSize="8sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="35dp"
+        android:height="5dp"
+        android:background="@drawable/coc_button_green"
+        android:text="@string/btn_elixir_oscuro"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:tag="3"
+        android:onClick="manageButtons"
+        android:textColor="@color/White"
+        android:shadowColor="@color/Black"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="1"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:textSize="10sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="55dp"
+        android:height="5dp"
+        android:background="@drawable/coc_button_green"
+        android:text="@string/btn_hechizos"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:tag="4"
+        android:onClick="manageButtons"
+        android:textColor="@color/White"
+        android:shadowColor="@color/Black"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="1"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:textSize="10sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="75dp"
+        android:height="5dp"
+        android:background="@drawable/coc_button_green"
+        android:text="@string/btn_tropas"/>
     <ImageSwitcher
         android:id="@+id/ImageSwitcherBackground"
-        android:layout_width="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/img_backmain">
     </ImageSwitcher>
     <LinearLayout
         android:id="@+id/LinearLayout_main"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentTop="true"
-        android:orientation="horizontal">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
     </LinearLayout>
 </RelativeLayout>
