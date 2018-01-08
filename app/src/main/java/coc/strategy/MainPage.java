@@ -3,14 +3,19 @@ package coc.strategy;
 import android.app.Activity;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+
+import com.transitionseverywhere.TransitionManager;
+
 import coc.strategy.R;
 
 public class MainPage extends Activity {
@@ -70,25 +75,49 @@ public class MainPage extends Activity {
         boton2.setTypeface(plain);
         boton3.setTypeface(plain);
         boton4.setTypeface(plain);
+
+
+
     }
 
     public void manageButtons(View v)
     {
-        System.out.println("View clicked " + v.getTag().toString());
+        //System.out.println("View clicked " + v.getTag().toString());
         switch (Integer.parseInt(v.getTag().toString()))
         {
             case 1:
                 boton1.setVisibility(View.GONE);
+
+                TransitionManager.beginDelayedTransition(mainLayout);
+                int visible = boton1.getVisibility();
+
+                boton1.setVisibility(false ? View.VISIBLE : View.GONE);
+
                 boton2.setVisibility(View.GONE);
                 boton3.setVisibility(View.GONE);
                 boton4.setVisibility(View.GONE);
                 boton5.setVisibility(View.VISIBLE);
             break;
             case 2:
+                boton1.setVisibility(View.GONE);
+                boton2.setVisibility(View.GONE);
+                boton3.setVisibility(View.GONE);
+                boton4.setVisibility(View.GONE);
+                boton5.setVisibility(View.VISIBLE);
             break;
             case 3:
+                boton1.setVisibility(View.GONE);
+                boton2.setVisibility(View.GONE);
+                boton3.setVisibility(View.GONE);
+                boton4.setVisibility(View.GONE);
+                boton5.setVisibility(View.VISIBLE);
             break;
             case 4:
+                boton1.setVisibility(View.GONE);
+                boton2.setVisibility(View.GONE);
+                boton3.setVisibility(View.GONE);
+                boton4.setVisibility(View.GONE);
+                boton5.setVisibility(View.VISIBLE);
             break;
             case 5:
                 boton1.setVisibility(View.VISIBLE);

@@ -9,6 +9,9 @@ android {
         minSdkVersion 8
         targetSdkVersion 8
     }
+    dependencies{
+        compile "com.andkulikov:transitionseverywhere:1.7.4"
+    }
 
     buildTypes {
         release {

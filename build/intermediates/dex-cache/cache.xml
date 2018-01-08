@@ -3,12 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\XTO\.android\build-cache\bc03fcae0687d9fc2da9a17fe16937638470be61\output\jars\libs\internal_impl-22.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="67e776b8808c3c39455faa5d983bedc2e74f6891">
-        <dex dex="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_015e3037a9175335a0a8a5dad5d5f90e0c062bca\classes.dex" />
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.1_d8269a788074ecf902ac1fa7c4b7288069b2802d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Install_Dir\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.1_20a1f5d10d21ccf98d5974be23a2acc6b42c2b58\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -18,6 +27,33 @@
         revision="25.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_45d4f0213a0bc523aad0033eede386fa930fb59f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="de3310979bbfe724cd326944d49572ea4185b8a7">
+        <dex dex="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_015e3037a9175335a0a8a5dad5d5f90e0c062bca\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\XTO\.android\build-cache\bc03fcae0687d9fc2da9a17fe16937638470be61\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_13f1d5ff86f11c5b22f0f0144799694e34feda33\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\XTO\.android\build-cache\535cb02ec080438491cf54d6161a2fbf39c761d9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="19b518aea966c08b31859ade8a30f83cb11d5868">
+        <dex dex="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3550ccc61b0ccad2ba6593ab848ab4b6263bdda6\classes.dex" />
     </item>
 
 </items>

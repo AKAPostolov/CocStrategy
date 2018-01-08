@@ -9,6 +9,197 @@ package coc.strategy;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int disappearedScale=0x7f010008;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int duration=0x7f01000a;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int excludeClass=0x7f010015;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int excludeId=0x7f010013;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int excludeName=0x7f010017;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fade_in</code></td><td>1</td><td></td></tr>
+<tr><td><code>fade_out</code></td><td>2</td><td></td></tr>
+<tr><td><code>fade_in_out</code></td><td>3</td><td></td></tr>
+</table>
+         */
+        public static final int fadingMode=0x7f010006;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int fromScene=0x7f01000f;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int interpolator=0x7f01000c;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int matchOrder=0x7f01000d;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int maximumAngle=0x7f010002;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int minimumHorizontalAngle=0x7f010000;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int minimumVerticalAngle=0x7f010001;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int patternPathData=0x7f010007;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int reparent=0x7f010005;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int reparentWithOverlay=0x7f010004;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int resizeClip=0x7f010003;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>0x03</td><td></td></tr>
+<tr><td><code>top</code></td><td>0x30</td><td></td></tr>
+<tr><td><code>right</code></td><td>0x05</td><td></td></tr>
+<tr><td><code>bottom</code></td><td>0x50</td><td></td></tr>
+</table>
+         */
+        public static final int slideEdge=0x7f010009;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int startDelay=0x7f01000b;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int targetClass=0x7f010014;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int targetId=0x7f010012;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int targetName=0x7f010016;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int toScene=0x7f010010;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int transition=0x7f01000e;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>together</code></td><td>0</td><td></td></tr>
+<tr><td><code>sequential</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int transitionOrdering=0x7f010011;
+        /** <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>mode_in</code></td><td>1</td><td></td></tr>
+<tr><td><code>mode_out</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int transitionVisibilityMode=0x7f010018;
     }
     public static final class color {
         public static final int Aqua=0x7f040000;
@@ -53,29 +244,595 @@ public final class R {
         public static final int menu_pointerover=0x7f02000e;
     }
     public static final class id {
-        public static final int ImageSwitcherBackground=0x7f080008;
-        public static final int LinearLayout_main=0x7f080009;
-        public static final int button1=0x7f080004;
-        public static final int button2=0x7f080005;
-        public static final int button3=0x7f080006;
-        public static final int button4=0x7f080007;
-        public static final int button5=0x7f080003;
-        public static final int frameLayout=0x7f080000;
-        public static final int tv1=0x7f080001;
-        public static final int tv2=0x7f080002;
+        public static final int ImageSwitcherBackground=0x7f06001a;
+        public static final int LinearLayout_main=0x7f06001b;
+        public static final int bottom=0x7f06000e;
+        public static final int button1=0x7f06001c;
+        public static final int button2=0x7f06001d;
+        public static final int button3=0x7f06001e;
+        public static final int button4=0x7f06001f;
+        public static final int button5=0x7f060020;
+        public static final int current_scene=0x7f060000;
+        public static final int fade_in=0x7f06000b;
+        public static final int fade_in_out=0x7f06000c;
+        public static final int fade_out=0x7f06000d;
+        public static final int frameLayout=0x7f060016;
+        public static final int group_layouttransition_backup=0x7f060001;
+        public static final int left=0x7f06000f;
+        public static final int mode_in=0x7f060014;
+        public static final int mode_out=0x7f060015;
+        public static final int overlay_layout_params_backup=0x7f060002;
+        public static final int overlay_view=0x7f060003;
+        public static final int parentMatrix=0x7f060004;
+        public static final int relativeLayout=0x7f060019;
+        public static final int right=0x7f060010;
+        public static final int runningTransitions=0x7f060005;
+        public static final int scene_layoutid_cache=0x7f060006;
+        public static final int sequential=0x7f060012;
+        public static final int together=0x7f060013;
+        public static final int top=0x7f060011;
+        public static final int transitionAlpha=0x7f060007;
+        public static final int transitionName=0x7f060008;
+        public static final int transitionPosition=0x7f060009;
+        public static final int transitionTransform=0x7f06000a;
+        public static final int tv1=0x7f060017;
+        public static final int tv2=0x7f060018;
     }
     public static final class layout {
         public static final int framelayout=0x7f030000;
         public static final int mainpage=0x7f030001;
     }
     public static final class string {
-        public static final int app_name=0x7f060000;
-        public static final int btn_elixir_normal=0x7f060001;
-        public static final int btn_elixir_oscuro=0x7f060002;
-        public static final int btn_hechizos=0x7f060003;
-        public static final int btn_tropas=0x7f060004;
+        public static final int app_name=0x7f070000;
+        public static final int btn_elixir_normal=0x7f070001;
+        public static final int btn_elixir_oscuro=0x7f070002;
+        public static final int btn_hechizos=0x7f070003;
+        public static final int btn_tropas=0x7f070004;
     }
     public static final class style {
-        public static final int whiteTextBlackStrokeButtonCOC=0x7f070000;
+        public static final int whiteTextBlackStrokeButtonCOC=0x7f080000;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a ArcMotion.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ArcMotion_maximumAngle coc.strategy:maximumAngle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ArcMotion_minimumHorizontalAngle coc.strategy:minimumHorizontalAngle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ArcMotion_minimumVerticalAngle coc.strategy:minimumVerticalAngle}</code></td><td></td></tr>
+           </table>
+           @see #ArcMotion_maximumAngle
+           @see #ArcMotion_minimumHorizontalAngle
+           @see #ArcMotion_minimumVerticalAngle
+         */
+        public static final int[] ArcMotion = {
+            0x7f010000, 0x7f010001, 0x7f010002
+        };
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#maximumAngle}
+          attribute's value can be found in the {@link #ArcMotion} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:maximumAngle
+        */
+        public static final int ArcMotion_maximumAngle = 2;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#minimumHorizontalAngle}
+          attribute's value can be found in the {@link #ArcMotion} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:minimumHorizontalAngle
+        */
+        public static final int ArcMotion_minimumHorizontalAngle = 0;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#minimumVerticalAngle}
+          attribute's value can be found in the {@link #ArcMotion} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:minimumVerticalAngle
+        */
+        public static final int ArcMotion_minimumVerticalAngle = 1;
+        /** Attributes that can be used with a ChangeBounds.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ChangeBounds_resizeClip coc.strategy:resizeClip}</code></td><td></td></tr>
+           </table>
+           @see #ChangeBounds_resizeClip
+         */
+        public static final int[] ChangeBounds = {
+            0x7f010003
+        };
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#resizeClip}
+          attribute's value can be found in the {@link #ChangeBounds} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:resizeClip
+        */
+        public static final int ChangeBounds_resizeClip = 0;
+        /** Attributes that can be used with a ChangeTransform.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ChangeTransform_reparent coc.strategy:reparent}</code></td><td></td></tr>
+           <tr><td><code>{@link #ChangeTransform_reparentWithOverlay coc.strategy:reparentWithOverlay}</code></td><td></td></tr>
+           </table>
+           @see #ChangeTransform_reparent
+           @see #ChangeTransform_reparentWithOverlay
+         */
+        public static final int[] ChangeTransform = {
+            0x7f010004, 0x7f010005
+        };
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#reparent}
+          attribute's value can be found in the {@link #ChangeTransform} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:reparent
+        */
+        public static final int ChangeTransform_reparent = 1;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#reparentWithOverlay}
+          attribute's value can be found in the {@link #ChangeTransform} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:reparentWithOverlay
+        */
+        public static final int ChangeTransform_reparentWithOverlay = 0;
+        /** Attributes that can be used with a Fade.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #Fade_fadingMode coc.strategy:fadingMode}</code></td><td></td></tr>
+           </table>
+           @see #Fade_fadingMode
+         */
+        public static final int[] Fade = {
+            0x7f010006
+        };
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#fadingMode}
+          attribute's value can be found in the {@link #Fade} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fade_in</code></td><td>1</td><td></td></tr>
+<tr><td><code>fade_out</code></td><td>2</td><td></td></tr>
+<tr><td><code>fade_in_out</code></td><td>3</td><td></td></tr>
+</table>
+          @attr name coc.strategy:fadingMode
+        */
+        public static final int Fade_fadingMode = 0;
+        /** Attributes that can be used with a PatternPathMotion.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #PatternPathMotion_patternPathData coc.strategy:patternPathData}</code></td><td></td></tr>
+           </table>
+           @see #PatternPathMotion_patternPathData
+         */
+        public static final int[] PatternPathMotion = {
+            0x7f010007
+        };
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#patternPathData}
+          attribute's value can be found in the {@link #PatternPathMotion} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:patternPathData
+        */
+        public static final int PatternPathMotion_patternPathData = 0;
+        /** Attributes that can be used with a Scale.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #Scale_disappearedScale coc.strategy:disappearedScale}</code></td><td></td></tr>
+           </table>
+           @see #Scale_disappearedScale
+         */
+        public static final int[] Scale = {
+            0x7f010008
+        };
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#disappearedScale}
+          attribute's value can be found in the {@link #Scale} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:disappearedScale
+        */
+        public static final int Scale_disappearedScale = 0;
+        /** Attributes that can be used with a Slide.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #Slide_slideEdge coc.strategy:slideEdge}</code></td><td></td></tr>
+           </table>
+           @see #Slide_slideEdge
+         */
+        public static final int[] Slide = {
+            0x7f010009
+        };
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#slideEdge}
+          attribute's value can be found in the {@link #Slide} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>0x03</td><td></td></tr>
+<tr><td><code>top</code></td><td>0x30</td><td></td></tr>
+<tr><td><code>right</code></td><td>0x05</td><td></td></tr>
+<tr><td><code>bottom</code></td><td>0x50</td><td></td></tr>
+</table>
+          @attr name coc.strategy:slideEdge
+        */
+        public static final int Slide_slideEdge = 0;
+        /** Attributes that can be used with a Transition.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #Transition_android_duration android:duration}</code></td><td></td></tr>
+           <tr><td><code>{@link #Transition_android_interpolator android:interpolator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Transition_duration coc.strategy:duration}</code></td><td></td></tr>
+           <tr><td><code>{@link #Transition_interpolator coc.strategy:interpolator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Transition_matchOrder coc.strategy:matchOrder}</code></td><td></td></tr>
+           <tr><td><code>{@link #Transition_startDelay coc.strategy:startDelay}</code></td><td></td></tr>
+           </table>
+           @see #Transition_android_duration
+           @see #Transition_android_interpolator
+           @see #Transition_duration
+           @see #Transition_interpolator
+           @see #Transition_matchOrder
+           @see #Transition_startDelay
+         */
+        public static final int[] Transition = {
+            0x01010141, 0x01010198, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#duration}
+          attribute's value can be found in the {@link #Transition} array.
+          @attr name android:duration
+        */
+        public static final int Transition_android_duration = 1;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#interpolator}
+          attribute's value can be found in the {@link #Transition} array.
+          @attr name android:interpolator
+        */
+        public static final int Transition_android_interpolator = 0;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#duration}
+          attribute's value can be found in the {@link #Transition} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:duration
+        */
+        public static final int Transition_duration = 2;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#interpolator}
+          attribute's value can be found in the {@link #Transition} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name coc.strategy:interpolator
+        */
+        public static final int Transition_interpolator = 4;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#matchOrder}
+          attribute's value can be found in the {@link #Transition} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:matchOrder
+        */
+        public static final int Transition_matchOrder = 5;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#startDelay}
+          attribute's value can be found in the {@link #Transition} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:startDelay
+        */
+        public static final int Transition_startDelay = 3;
+        /** Attributes that can be used with a TransitionManager.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #TransitionManager_fromScene coc.strategy:fromScene}</code></td><td></td></tr>
+           <tr><td><code>{@link #TransitionManager_toScene coc.strategy:toScene}</code></td><td></td></tr>
+           <tr><td><code>{@link #TransitionManager_transition coc.strategy:transition}</code></td><td></td></tr>
+           </table>
+           @see #TransitionManager_fromScene
+           @see #TransitionManager_toScene
+           @see #TransitionManager_transition
+         */
+        public static final int[] TransitionManager = {
+            0x7f01000e, 0x7f01000f, 0x7f010010
+        };
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#fromScene}
+          attribute's value can be found in the {@link #TransitionManager} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name coc.strategy:fromScene
+        */
+        public static final int TransitionManager_fromScene = 1;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#toScene}
+          attribute's value can be found in the {@link #TransitionManager} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name coc.strategy:toScene
+        */
+        public static final int TransitionManager_toScene = 2;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#transition}
+          attribute's value can be found in the {@link #TransitionManager} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name coc.strategy:transition
+        */
+        public static final int TransitionManager_transition = 0;
+        /** Attributes that can be used with a TransitionSet.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #TransitionSet_transitionOrdering coc.strategy:transitionOrdering}</code></td><td></td></tr>
+           </table>
+           @see #TransitionSet_transitionOrdering
+         */
+        public static final int[] TransitionSet = {
+            0x7f010011
+        };
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#transitionOrdering}
+          attribute's value can be found in the {@link #TransitionSet} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>together</code></td><td>0</td><td></td></tr>
+<tr><td><code>sequential</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name coc.strategy:transitionOrdering
+        */
+        public static final int TransitionSet_transitionOrdering = 0;
+        /** Attributes that can be used with a TransitionTarget.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #TransitionTarget_excludeClass coc.strategy:excludeClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #TransitionTarget_excludeId coc.strategy:excludeId}</code></td><td></td></tr>
+           <tr><td><code>{@link #TransitionTarget_excludeName coc.strategy:excludeName}</code></td><td></td></tr>
+           <tr><td><code>{@link #TransitionTarget_targetClass coc.strategy:targetClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #TransitionTarget_targetId coc.strategy:targetId}</code></td><td></td></tr>
+           <tr><td><code>{@link #TransitionTarget_targetName coc.strategy:targetName}</code></td><td></td></tr>
+           </table>
+           @see #TransitionTarget_excludeClass
+           @see #TransitionTarget_excludeId
+           @see #TransitionTarget_excludeName
+           @see #TransitionTarget_targetClass
+           @see #TransitionTarget_targetId
+           @see #TransitionTarget_targetName
+         */
+        public static final int[] TransitionTarget = {
+            0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015,
+            0x7f010016, 0x7f010017
+        };
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#excludeClass}
+          attribute's value can be found in the {@link #TransitionTarget} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:excludeClass
+        */
+        public static final int TransitionTarget_excludeClass = 3;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#excludeId}
+          attribute's value can be found in the {@link #TransitionTarget} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name coc.strategy:excludeId
+        */
+        public static final int TransitionTarget_excludeId = 1;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#excludeName}
+          attribute's value can be found in the {@link #TransitionTarget} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:excludeName
+        */
+        public static final int TransitionTarget_excludeName = 5;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#targetClass}
+          attribute's value can be found in the {@link #TransitionTarget} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:targetClass
+        */
+        public static final int TransitionTarget_targetClass = 2;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#targetId}
+          attribute's value can be found in the {@link #TransitionTarget} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name coc.strategy:targetId
+        */
+        public static final int TransitionTarget_targetId = 0;
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#targetName}
+          attribute's value can be found in the {@link #TransitionTarget} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name coc.strategy:targetName
+        */
+        public static final int TransitionTarget_targetName = 4;
+        /** Attributes that can be used with a VisibilityTransition.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #VisibilityTransition_transitionVisibilityMode coc.strategy:transitionVisibilityMode}</code></td><td></td></tr>
+           </table>
+           @see #VisibilityTransition_transitionVisibilityMode
+         */
+        public static final int[] VisibilityTransition = {
+            0x7f010018
+        };
+        /**
+          <p>This symbol is the offset where the {@link coc.strategy.R.attr#transitionVisibilityMode}
+          attribute's value can be found in the {@link #VisibilityTransition} array.
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>mode_in</code></td><td>1</td><td></td></tr>
+<tr><td><code>mode_out</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name coc.strategy:transitionVisibilityMode
+        */
+        public static final int VisibilityTransition_transitionVisibilityMode = 0;
+    };
 }
