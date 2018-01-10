@@ -6,23 +6,22 @@
     android:clickable="true"
     android:id="@+id/relativeLayout"
     android:background="@android:color/white">
-
-    <LinearLayout
-        android:id="@+id/LinearLayout_main"
+    <ImageView
+        android:id="@+id/ImageSwitcherBackground"
+        android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:background="@drawable/map1">
+    </ImageView>
+    <LinearLayout
+        android:id="@+id/LinearLayout_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:weightSum="1">
 
     </LinearLayout>
-    <ImageView
-        android:id="@+id/ImageSwitcherBackground"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        android:background="@drawable/map1">
-    </ImageView>
     <Button
         android:id="@+id/button1"
         android:layout_width="100dp"

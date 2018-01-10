@@ -17,18 +17,9 @@ import android.support.v4.content.CursorLoader;
 
 public class RealPathUtil
 {
-    public static String getPathFromUri(Context context, Uri uri)
-    {
-        if (Build.VERSION.SDK_INT < 11)
-            return RealPathUtil.getRealPathFromURI_BelowAPI11(context, uri);
-        else if (Build.VERSION.SDK_INT < 19)
-            return RealPathUtil.getRealPathFromURI_API11to18(context, uri);
-        else
-            return RealPathUtil.getRealPathFromURI_API19(context, uri);
-    }
     @SuppressLint("NewApi")
-    public static String getRealPathFromURI_API19(final Context context, final Uri uri)
-    {
+    public static String getRealPathFromURI_API19(final Context context, final Uri uri) {
+
         final boolean isKitKat = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT;
 
         // DocumentProvider

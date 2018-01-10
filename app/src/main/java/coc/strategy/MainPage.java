@@ -23,9 +23,9 @@ import com.transitionseverywhere.Slide;
 import com.transitionseverywhere.TransitionManager;
 
 public class MainPage extends Activity {
-	
-	private int screenWidth = 0;
-	private int screenHeight = 0;
+
+    private int screenWidth = 0;
+    private int screenHeight = 0;
 
     LinearLayout mainLayout;
     LinearLayout layoutButtons;
@@ -43,19 +43,19 @@ public class MainPage extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+
         //set fullscreen
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        
+
         //get screen dimension
         Display display = getWindowManager().getDefaultDisplay();
         screenWidth = display.getWidth();
         screenHeight = display.getHeight();
-        
+
         //display layout
         setContentView(R.layout.mainpage);
-        
+
         //add the menu layout
         mainLayout = (LinearLayout) findViewById(R.id.LinearLayout_main);
 
@@ -111,7 +111,7 @@ public class MainPage extends Activity {
                 boton3.setVisibility(View.GONE);
                 boton4.setVisibility(View.GONE);
                 boton5.setVisibility(View.VISIBLE);
-            break;
+                break;
 
             case 2:
                 boton1.setVisibility(View.GONE);
@@ -119,14 +119,14 @@ public class MainPage extends Activity {
                 boton3.setVisibility(View.GONE);
                 boton4.setVisibility(View.GONE);
                 boton5.setVisibility(View.VISIBLE);
-            break;
+                break;
             case 3:
                 boton1.setVisibility(View.GONE);
                 boton2.setVisibility(View.GONE);
                 boton3.setVisibility(View.GONE);
                 boton4.setVisibility(View.GONE);
                 boton5.setVisibility(View.VISIBLE);
-            break;
+                break;
             case 4:
                 takePictureFromGalleryOrAnyOtherFolder();
                 bringDrawingToFront();
@@ -135,25 +135,25 @@ public class MainPage extends Activity {
                 boton3.setVisibility(View.GONE);
                 boton4.setVisibility(View.GONE);
                 boton5.setVisibility(View.VISIBLE);
-            break;
+                break;
             case 5:
                 boton1.setVisibility(View.VISIBLE);
                 boton2.setVisibility(View.VISIBLE);
                 boton3.setVisibility(View.VISIBLE);
                 boton4.setVisibility(View.VISIBLE);
                 boton5.setVisibility(View.GONE);
-            break;
+                break;
         }
     }
 
     public int get_screenWidth()
     {
-    	return screenWidth;
+        return screenWidth;
     }
-    
+
     public int get_screenHeight()
     {
-    	return screenHeight;
+        return screenHeight;
     }
     public static final int PICK_IMAGE = 1;
     private void takePictureFromGalleryOrAnyOtherFolder()
@@ -199,7 +199,7 @@ public class MainPage extends Activity {
                         {
                             if(realuri==null)
                             {
-                                realuri = RealPathUtil.getPathFromUri(this, selectedImageUri);
+                                realuri = RealPathUtil.getRealPathFromURI_API19(this, selectedImageUri);
                             }
                             //final InputStream imageStream   = getContentResolver().openInputStream(Uri.parse(realuri));
                             //final Bitmap      selectedImage = BitmapFactory.decodeStream(imageStream);
@@ -217,7 +217,6 @@ public class MainPage extends Activity {
                     {
                         Toast.makeText(this, "Failed to get image", Toast.LENGTH_LONG).show();
                     }
-
                 }
                 final Drawable bg = Drawable.createFromPath(realuri);;
                 if (bg != null)
@@ -242,7 +241,6 @@ public class MainPage extends Activity {
                 }
                 else
                 {
-                    Toast.makeText(this,"ImageLoaded failed",Toast.LENGTH_SHORT).show();
                     System.out.println("NOT Found img uri: " + selectedImageUri.toString());
                 }
                 //linearLayout.refreshDrawableState();

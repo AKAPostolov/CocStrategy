@@ -171,7 +171,7 @@ public class DrawableScene extends View
 		canvas.drawText("Troops", 		screenWidth/60, screenHeight/15 * 2, paint);
 		canvas.drawText("Dark troops", 	screenWidth/60, screenHeight/15 * 3, paint);
 		canvas.drawText("Heroes", 		screenWidth/60, screenHeight/15 * 4, paint);
-
+		*/
 		Rect bounds = new Rect();
 		paint.getTextBounds("SPELLS",0,"SPELLS".length(),bounds);
 		arrayTextMenuBounds.add(bounds);
@@ -181,7 +181,6 @@ public class DrawableScene extends View
 		arrayTextMenuBounds.add(bounds);
 		paint.getTextBounds("Heroes",0,"Heroes".length(),bounds);
 		arrayTextMenuBounds.add(bounds);
-		*/
 
 		//draw thigs on pointer selected
     	//if(menupointer.get_isselected())

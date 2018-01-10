@@ -265,8 +265,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int shield1=0x7f020023;
     }
     public static final class id {
-        public static final int ImageSwitcherBackground=0x7f07001b;
-        public static final int LinearLayout_main=0x7f07001a;
+        public static final int ImageSwitcherBackground=0x7f07001a;
+        public static final int LinearLayout_main=0x7f07001b;
         public static final int bottom=0x7f07000e;
         public static final int button1=0x7f07001c;
         public static final int button2=0x7f07001d;
