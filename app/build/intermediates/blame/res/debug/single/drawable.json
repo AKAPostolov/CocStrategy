@@ -1,14 +1,6 @@
 [
     {
-        "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon.png",
-        "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable\\icon.png"
-    },
-    {
-        "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\coc_button_green.png",
-        "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable\\coc_button_green.png"
-    },
-    {
-        "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\coc_button_green_square.png",
-        "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable\\coc_button_green_square.png"
+        "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\map1.png",
+        "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable\\map1.png"
     }
 ]

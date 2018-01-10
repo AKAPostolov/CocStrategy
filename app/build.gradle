@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 8
+    compileSdkVersion 24
     buildToolsVersion "25.0.2"
 
     defaultConfig {
         applicationId "coc.strategy"
         minSdkVersion 8
-        targetSdkVersion 8
+        targetSdkVersion 24
+
     }
     dependencies{
         compile "com.andkulikov:transitionseverywhere:1.7.4"

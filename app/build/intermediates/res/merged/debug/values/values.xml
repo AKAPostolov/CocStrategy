@@ -70,11 +70,17 @@
     <item name="transitionName" type="id"/>
     <item name="transitionPosition" type="id"/>
     <item name="transitionTransform" type="id"/>
-    <string name="app_name">Sample_DragDropMenu</string>
-    <string name="btn_elixir_normal">Normal</string>
-    <string name="btn_elixir_oscuro">Oscuro</string>
-    <string name="btn_hechizos">Hechizos</string>
-    <string name="btn_tropas">Tropas</string>
+    <string name="app_name">Draw COC Strategy</string>
+    <string name="btn_definir_ejercito">DEFINIR ARMY</string>
+    <string name="btn_disolver_ejercito">DISSOLVE ARMY</string>
+    <string name="btn_elegir_enemigo">PICK ENEMY VILAGE</string>
+    <string name="btn_elixir_normal">NORMAL</string>
+    <string name="btn_elixir_oscuro">DARK</string>
+    <string name="btn_hechizos">SPELLS</string>
+    <string name="btn_heroes">HEROES</string>
+    <string name="btn_salir">EXIT</string>
+    <string name="btn_tropas">TROOPS</string>
+    <string name="label_tipo">TYPE</string>
     <style name="whiteTextBlackStrokeButtonCOC">
         <item name="android:gestureStrokeWidth">2</item>
     </style>

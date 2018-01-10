@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Draw COC Strategy</string>
+
+    <!--BUTTONS-->
+    <string name="label_tipo">TIPO</string>
+    <string name="btn_elixir_normal">NORMAL</string>
+    <string name="btn_elixir_oscuro">OSCURO</string>
+    <string name="btn_tropas">TROPAS</string>
+    <string name="btn_hechizos">HECHIZOS</string>
+    <string name="btn_heroes">HEROES</string>
+    <string name="btn_salir">SALIR</string>
+    <string name="btn_elegir_enemigo">ELEGIR ALDEA ENEMIGA</string>
+    <string name="btn_definir_ejercito">DEFINIR EJERCITO</string>
+    <string name="btn_disolver_ejercito">DISOLVER EJERCITO</string>
+</resources>

@@ -1,22 +1,26 @@
 package coc.strategy;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.AssetManager;
+import android.database.Cursor;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.Display;
+import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-
+import android.widget.Toast;
+import com.transitionseverywhere.Slide;
 import com.transitionseverywhere.TransitionManager;
-
-import coc.strategy.R;
 
 public class MainPage extends Activity {
 	
@@ -25,12 +29,15 @@ public class MainPage extends Activity {
 
     LinearLayout mainLayout;
     LinearLayout layoutButtons;
+    ImageView imageSwitcher = null;
 
     Button boton1;
     Button boton2;
     Button boton3;
     Button boton4;
     Button boton5;
+
+    DrawableScene drawableScene;
 
     /** Called when the activity is first created. */
     @Override
@@ -51,11 +58,11 @@ public class MainPage extends Activity {
         
         //add the menu layout
         mainLayout = (LinearLayout) findViewById(R.id.LinearLayout_main);
-        //layoutButtons = (LinearLayout) findViewById(R.id.LinearLayout_buttons);
-        MenuC myView = new MenuC(this);
-        mainLayout.addView(myView);
 
+        drawableScene = new DrawableScene(this);
 
+        mainLayout.addView(drawableScene);
+        imageSwitcher = (ImageView) findViewById(R.id.ImageSwitcherBackground);
         /*FrameLayout frameLayout = (FrameLayout) findViewById(R.id.frameLayout);
         if(frameLayout!=null)
             mainLayout.addView(frameLayout);
@@ -75,29 +82,37 @@ public class MainPage extends Activity {
         boton2.setTypeface(plain);
         boton3.setTypeface(plain);
         boton4.setTypeface(plain);
-
+        /*boton1.setOnClickListener(new VisibleToggleClickListener() {
+            @Override
+            protected void changeVisibility(boolean visible) {
+                TransitionManager.beginDelayedTransition(mainLayout, new Slide(Gravity.RIGHT));
+                button1.setVisibility(visible ? View.VISIBLE : View.GONE);
+            }
+        }); );*/
 
 
     }
-
+    public void bringDrawingToFront()
+    {
+        drawableScene.bringToFront();
+        //drawableScene.invalidate();
+    }
     public void manageButtons(View v)
     {
         //System.out.println("View clicked " + v.getTag().toString());
         switch (Integer.parseInt(v.getTag().toString()))
         {
             case 1:
+                TransitionManager.beginDelayedTransition(mainLayout,new Slide(Gravity.RIGHT));
+
                 boton1.setVisibility(View.GONE);
-
-                TransitionManager.beginDelayedTransition(mainLayout);
-                int visible = boton1.getVisibility();
-
-                boton1.setVisibility(false ? View.VISIBLE : View.GONE);
 
                 boton2.setVisibility(View.GONE);
                 boton3.setVisibility(View.GONE);
                 boton4.setVisibility(View.GONE);
                 boton5.setVisibility(View.VISIBLE);
             break;
+
             case 2:
                 boton1.setVisibility(View.GONE);
                 boton2.setVisibility(View.GONE);
@@ -113,6 +128,8 @@ public class MainPage extends Activity {
                 boton5.setVisibility(View.VISIBLE);
             break;
             case 4:
+                takePictureFromGalleryOrAnyOtherFolder();
+                bringDrawingToFront();
                 boton1.setVisibility(View.GONE);
                 boton2.setVisibility(View.GONE);
                 boton3.setVisibility(View.GONE);
@@ -138,5 +155,99 @@ public class MainPage extends Activity {
     {
     	return screenHeight;
     }
-    
+    public static final int PICK_IMAGE = 1;
+    private void takePictureFromGalleryOrAnyOtherFolder()
+    {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        String realuri = null;
+        if (resultCode == Activity.RESULT_OK)
+        {
+            if (requestCode == PICK_IMAGE )
+            {
+                Uri selectedImageUri = data.getData();
+
+                System.out.println("SDK_int : " + Build.VERSION.SDK_INT);
+                System.out.println("selectedImageUri: " + selectedImageUri);
+                System.out.println("realuri: " + realuri);
+
+                //selectedImageUri = Uri.parse(realuri.toString());
+                if(realuri==null)
+                {
+                    try {
+                        Uri originalUri = data.getData();
+                        String pathsegment[] = originalUri.getLastPathSegment().split(":");
+                        String id = pathsegment[0];
+                        final String[] imageColumns = { MediaStore.Images.Media.DATA };
+                        final String imageOrderBy = null;
+
+                        Uri uri = selectedImageUri;
+                        Cursor imageCursor = getContentResolver().query(originalUri, imageColumns,
+                                MediaStore.Images.Media._ID + "=" + id, null, null);
+
+                        if (imageCursor.moveToFirst()) {
+                            realuri = imageCursor.getString(imageCursor.getColumnIndex(MediaStore.Images.Media.DATA));
+                        }
+
+                        try
+                        {
+                            if(realuri==null)
+                            {
+                                realuri = RealPathUtil.getPathFromUri(this, selectedImageUri);
+                            }
+                            //final InputStream imageStream   = getContentResolver().openInputStream(Uri.parse(realuri));
+                            //final Bitmap      selectedImage = BitmapFactory.decodeStream(imageStream);
+                            //bg = Drawable.createFromStream(imageStream, realuri.toString());
+                            //bg = Drawable.createFromStream(imageStream, selectedImageUri.toString());
+                            //bg = Drawable.createFromPath(selectedImageUri.toString());
+                        }
+                        catch (Exception e)
+                        {
+                            //bg = ContextCompat.getDrawable(this, R.drawable.bg);
+                            System.out.println("FileNotFoundexception: " + e.getMessage());
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Toast.makeText(this, "Failed to get image", Toast.LENGTH_LONG).show();
+                    }
+
+                }
+                final Drawable bg = Drawable.createFromPath(realuri);;
+                if (bg != null)
+                {
+                    Toast.makeText(this, "Found img uri: " + selectedImageUri.toString(), Toast.LENGTH_SHORT).show();
+                    System.out.println("img uri: " + selectedImageUri.toString());
+
+                    if(imageSwitcher!=null)
+                    {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                imageSwitcher.setImageDrawable(bg);
+                            }
+                        });
+
+                    }
+                    else
+                    {
+                        System.out.println("imageSwitcher R.id.ImageSwitcherBackground is null");
+                    }
+                }
+                else
+                {
+                    Toast.makeText(this,"ImageLoaded failed",Toast.LENGTH_SHORT).show();
+                    System.out.println("NOT Found img uri: " + selectedImageUri.toString());
+                }
+                //linearLayout.refreshDrawableState();
+                //linearLayout.invalidateDrawable(d);
+            }
+        }
+    }
 }

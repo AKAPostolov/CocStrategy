@@ -1,7 +1,6 @@
 package coc.strategy;
 
 import android.content.Context;
-import android.content.SyncStatusObserver;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -16,10 +15,8 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-import coc.strategy.R;
-
 //menu class
-public class MenuC extends View
+public class DrawableScene extends View
 {
 	
 	private int center_X = 0;
@@ -41,10 +38,11 @@ public class MenuC extends View
 	private int screenHeight = 0;
 	private int screenWidth = 0;
 		
-	private MenuCPointer menupointer = null;
-	private MenuCPointer menupointer2 = null;
-	private MenuCPointer[] menuPointers = new MenuCPointer[40];
-	ArrayList<MenuCPointer> arrayPointers = new ArrayList<MenuCPointer>();
+	private Element   menupointer  = null;
+	private Element   menupointer2 = null;
+	private Element   menupointer3 = null;
+	private Element[] menuPointers = new Element[40];
+	ArrayList<Element> arrayPointers = new ArrayList<Element>();
 
 	MenuCItem[] menuitems = new MenuCItem[4];
 
@@ -52,7 +50,7 @@ public class MenuC extends View
 	private int over_engagement = 15; //how much distance to set over item true
 	private int click_engagement = 25; //how much distanc to set click item true
 	    
-    public MenuC(Context context) 
+    public DrawableScene(Context context)
     {
         super(context);
         setFocusable(true); //necessary for getting the touch events
@@ -77,7 +75,8 @@ public class MenuC extends View
         menuback_border = 35;
         
         //pointer (center)
-        menupointer = new MenuCPointer(context, R.drawable.menu_pointer, R.drawable.menu_pointerover, 10, "Carta1");
+		/*
+        menupointer = new Element(context, R.drawable.nminidraco, R.drawable.ndragon, 10, "Carta1",false);
         menupointer.set_homeposition(new Point(
         		menuback_X + menuback_width / 2 - menupointer.get_width() / 2,
         		menuback_Y + menuback_height / 2 - menupointer.get_height() / 2));
@@ -85,7 +84,7 @@ public class MenuC extends View
         		menupointer.get_homepoint().x,
         		menupointer.get_homepoint().y);
 
-		menupointer2 = new MenuCPointer(context, R.drawable.menu_pointer, R.drawable.menu_pointerover, 10, "Carta2");
+		menupointer2 = new Element(context, R.drawable.nbarbaro, R.drawable.narquera, 10, "Carta2",false);
 		menupointer2.set_homeposition(new Point(
 				menuback_X + menuback_width / 2 - menupointer.get_width() / 2,
 				menuback_Y + menuback_height / 2 - menupointer.get_height() / 2));
@@ -94,16 +93,34 @@ public class MenuC extends View
 				menupointer.get_homepoint().y+250);
 		arrayPointers.add(menupointer);
 		arrayPointers.add(menupointer2);
-		for (int i=3;i<=13;i++)
+		menupointer3 = new Element(context, R.drawable.nbarbaro, R.drawable.narquera, 10, "Carta2",false);
+		menupointer3.set_homeposition(new Point(
+				menuback_X + menuback_width / 2 - menupointer.get_width() / 2,
+				menuback_Y + menuback_height / 2 - menupointer.get_height() / 2));
+		menupointer3.set_position(
+				menupointer.get_homepoint().x+250,
+				menupointer.get_homepoint().y+350);
+		arrayPointers.add(menupointer3);
+		*/
+		for (int i=1;i<=13;i++)
 		{
 			//pointer (center)
-			MenuCPointer pointer = new MenuCPointer(context, R.drawable.menu_pointer, R.drawable.menu_pointerover, 10, "Carta"+i);
+			Element backgroundElement = new Element(context, R.drawable.shield1, R.drawable.shield1, 10, "Escudo"+i,true);
+			backgroundElement.set_homeposition(new Point(
+					menuback_X + menuback_width / 2 - backgroundElement.get_width() / 2,
+					menuback_Y + menuback_height / 2 - backgroundElement.get_height() / 2));
+			backgroundElement.set_position(
+					0 + arrayPointers.size()* backgroundElement.get_imgradius()+15,
+					screenHeight-backgroundElement.get_height());
+
+			Element pointer = new Element(context, R.drawable.nmago, R.drawable.npekka, 10, "Carta"+i,false);
 			pointer.set_homeposition(new Point(
 					menuback_X + menuback_width / 2 - pointer.get_width() / 2,
 					menuback_Y + menuback_height / 2 - pointer.get_height() / 2));
 			pointer.set_position(
-					0 + arrayPointers.size()* pointer.get_imgradius()*2+5,
+					0 + arrayPointers.size()* pointer.get_imgradius()+15,
 					screenHeight-pointer.get_height());
+			arrayPointers.add(backgroundElement);
 			arrayPointers.add(pointer);
 		}
 
@@ -154,7 +171,7 @@ public class MenuC extends View
 		canvas.drawText("Troops", 		screenWidth/60, screenHeight/15 * 2, paint);
 		canvas.drawText("Dark troops", 	screenWidth/60, screenHeight/15 * 3, paint);
 		canvas.drawText("Heroes", 		screenWidth/60, screenHeight/15 * 4, paint);
-		*/
+
 		Rect bounds = new Rect();
 		paint.getTextBounds("SPELLS",0,"SPELLS".length(),bounds);
 		arrayTextMenuBounds.add(bounds);
@@ -164,10 +181,11 @@ public class MenuC extends View
 		arrayTextMenuBounds.add(bounds);
 		paint.getTextBounds("Heroes",0,"Heroes".length(),bounds);
 		arrayTextMenuBounds.add(bounds);
+		*/
 
 		//draw thigs on pointer selected
-    	if(menupointer.get_isselected())
-    	{
+    	//if(menupointer.get_isselected())
+    	//{
     		//draw back menu
     		//canvas.drawBitmap(menuback, menuback_X, menuback_Y, null);
 
@@ -192,9 +210,9 @@ public class MenuC extends View
     			}
         	}
         	*/
-    	}
+    	//}
     	//draw pointer
-		for (MenuCPointer pointer: arrayPointers)
+		for (Element pointer: arrayPointers)
 		{
 			canvas.drawBitmap(pointer.get_img(), pointer.get_x(), pointer.get_y(), null);
 		}
@@ -224,22 +242,25 @@ public class MenuC extends View
 		{
 			case MotionEvent.ACTION_DOWN:
 				int i = 0;
-				for (MenuCPointer pointer: arrayPointers)
+				for (Element pointer: arrayPointers)
 				{
-					i++;
-					// check if the finger is on the pointer
-					int menupointer_x = pointer.get_x() + pointer.get_imgradius();
-					int menupointer_y = pointer.get_y() + pointer.get_imgradius();
-					//new Alex:
-
-					// distance from the touch pointe to the center of the pointer
-					double pointer_radius  = Math.sqrt( (double) ( Math.pow(menupointer_x-current_x, 2) + Math.pow(menupointer_y-current_y, 2)) );
-					//check if the pointer is selected (add some distance)
-					if (pointer_radius < pointer.get_imgradius() - 3)
+					if(!pointer.isStatic)
 					{
-						pointer.set_isselected(true);
-						//System.out.println("Pointer n:" + i);
-						break;
+						i++;
+						// check if the finger is on the pointer
+						int menupointer_x = pointer.get_x() + pointer.get_imgradius();
+						int menupointer_y = pointer.get_y() + pointer.get_imgradius();
+						//new Alex:
+
+						// distance from the touch pointe to the center of the pointer
+						double pointer_radius = Math.sqrt((double) (Math.pow(menupointer_x - current_x, 2) + Math.pow(menupointer_y - current_y, 2)));
+						//check if the pointer is selected (add some distance)
+						if (pointer_radius < pointer.get_imgradius() - 3)
+						{
+							pointer.set_isselected(true);
+							//System.out.println("Pointer n:" + i);
+							break;
+						}
 					}
 				}
 				for(Rect rect: arrayTextMenuBounds)
@@ -253,7 +274,7 @@ public class MenuC extends View
 
 			case MotionEvent.ACTION_MOVE:
 				int x = 0;
-				for (MenuCPointer pointer: arrayPointers)
+				for (Element pointer: arrayPointers)
 				{
 					x++;
 					// move the pointer
@@ -313,7 +334,7 @@ public class MenuC extends View
 			break;
 
 			case MotionEvent.ACTION_UP:
-				for (MenuCPointer pointer: arrayPointers)
+				for (Element pointer: arrayPointers)
 				{
 					// reset the pointer to home
 					pointer.set_isselected(false);
@@ -324,62 +345,66 @@ public class MenuC extends View
 			break;
 		}
 	}
-	private void borderPointerPositionFix(MenuCPointer pointer)
+	private void borderPointerPositionFix(Element pointer)
 	{
-		//Alex fix border touch
-		boolean isCloseToBorder = false;
-		if(current_x<pointer.get_imgradius()/2&&current_y<pointer.get_imgradius()/2)
+
+		if(!pointer.isStatic)
 		{
-			isCloseToBorder = true;
-			////System.out.println("Case1 Touching Top-Left-Landscape" + pointer.getName());
-			pointer.set_x(0);
-			pointer.set_y(0);
-		}
-		else if(current_x<menupointer.get_imgradius()/2)
-		{
-			isCloseToBorder = true;
-			//System.out.println("Case2 Touching LEFT - Landscape" + pointer.getName());
-			pointer.set_x(0);
-			pointer.set_y(current_y-pointer.get_imgradius());
-		}
-		else if(current_y<menupointer.get_imgradius()/2)
-		{
-			////System.out.println("Case3 Touching TOP - Landscape" + pointer.getName());
-			isCloseToBorder = true;
-			pointer.set_x(current_x - pointer.get_imgradius());
-			pointer.set_y(0);
-		}
-		else
-		{
+			//Alex fix border touch
+			boolean isCloseToBorder = false;
+			if (current_x < pointer.get_imgradius() / 2 && current_y < pointer.get_imgradius() / 2)
+			{
+				isCloseToBorder = true;
+				////System.out.println("Case1 Touching Top-Left-Landscape" + pointer.getName());
+				pointer.set_x(0);
+				pointer.set_y(0);
+			}
+			else if (current_x < pointer.get_imgradius() / 2)
+			{
+				isCloseToBorder = true;
+				//System.out.println("Case2 Touching LEFT - Landscape" + pointer.getName());
+				pointer.set_x(0);
+				pointer.set_y(current_y - pointer.get_imgradius());
+			}
+			else if (current_y < pointer.get_imgradius() / 2)
+			{
+				////System.out.println("Case3 Touching TOP - Landscape" + pointer.getName());
+				isCloseToBorder = true;
+				pointer.set_x(current_x - pointer.get_imgradius());
+				pointer.set_y(0);
+			}
+			else
+			{
+				isCloseToBorder = false;
+			}
+			if (current_y > screenHeight - pointer.get_imgradius() && current_x > screenWidth - pointer.get_imgradius())
+			{
+				////System.out.println("Case4 Touching Bottom-Right-Landscape" + pointer.getName());
+				isCloseToBorder = true;
+				pointer.set_x(screenWidth - pointer.get_imgradius() * 2);
+				pointer.set_y(screenHeight - pointer.get_imgradius() * 2);
+			}
+			else if (current_y > screenHeight - pointer.get_imgradius())
+			{
+				//System.out.println("Case5 Touching Bottom - Landscape" + pointer.getName());
+				isCloseToBorder = true;
+				pointer.set_x(current_x);
+				pointer.set_y(screenHeight - pointer.get_imgradius() * 2);
+			}
+			else if (current_x > screenWidth - pointer.get_imgradius())
+			{
+				//System.out.println("Case6 Touching Right - Landscape" + pointer.getName());
+				isCloseToBorder = true;
+				pointer.set_x(screenWidth - pointer.get_imgradius() * 2);
+				pointer.set_y(current_y);
+			}
+			if (!isCloseToBorder) // Mayor parte del tiempo:
+			{
+				//System.out.println("Case7  (NORMAL move)" + pointer.getName());
+				pointer.set_x(current_x - pointer.get_imgradius());
+				pointer.set_y(current_y - pointer.get_imgradius());
+			}
 			isCloseToBorder = false;
 		}
-		if(current_y>screenHeight-pointer.get_imgradius()&&current_x>screenWidth-pointer.get_imgradius())
-		{
-			////System.out.println("Case4 Touching Bottom-Right-Landscape" + pointer.getName());
-			isCloseToBorder = true;
-			pointer.set_x(screenWidth  - pointer.get_imgradius()*2);
-			pointer.set_y(screenHeight - pointer.get_imgradius()*2);
-		}
-		else if(current_y>screenHeight-pointer.get_imgradius())
-		{
-			//System.out.println("Case5 Touching Bottom - Landscape" + pointer.getName());
-			isCloseToBorder = true;
-			pointer.set_x(current_x);
-			pointer.set_y(screenHeight - pointer.get_imgradius()*2);
-		}
-		else if(current_x>screenWidth-pointer.get_imgradius())
-		{
-			//System.out.println("Case6 Touching Right - Landscape" + pointer.getName());
-			isCloseToBorder = true;
-			pointer.set_x(screenWidth  - pointer.get_imgradius()*2);
-			pointer.set_y(current_y);
-		}
-		if(!isCloseToBorder) // Mayor parte del tiempo:
-		{
-			//System.out.println("Case7  (NORMAL move)" + pointer.getName());
-			pointer.set_x(current_x - pointer.get_imgradius());
-			pointer.set_y(current_y - pointer.get_imgradius());
-		}
-		isCloseToBorder = false;
 	}
 }

@@ -6,7 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Point;
 
 //pointer class
-public class MenuCPointer
+public class Element
 {
 	private String name;
 	private Bitmap img;
@@ -19,9 +19,11 @@ public class MenuCPointer
 	private int border = 0;
 	private Point homepoint = null;
 	private boolean isselected = false;
+	boolean isStatic = false;
 	
-	public MenuCPointer(Context context, int img, int imgover, int border, String name)
+	public Element(Context context, int img, int imgover, int border, String name, boolean isStatic)
 	{
+		this.isStatic = isStatic;
 		this.name = name;
 		BitmapFactory.Options opts = new BitmapFactory.Options();
         opts.inJustDecodeBounds = true;
