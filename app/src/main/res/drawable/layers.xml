@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap android:src="@drawable/coc_button_green_square"
+                android:gravity="center"></bitmap>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/ogolem"
+                android:gravity="center"></bitmap>
+    </item>
+</layer-list>

@@ -1,4 +1,4 @@
-#Wed Jan 10 15:26:11 CET 2018
+#Mon Jan 15 11:57:40 CET 2018
 base.0=C\:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_015e3037a9175335a0a8a5dad5d5f90e0c062bca
 renamed.1=classes.dex
 renamed.0=classes2.dex

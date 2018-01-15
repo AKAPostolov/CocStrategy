@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -35,7 +36,27 @@ public class MainPage extends Activity {
     Button boton2;
     Button boton3;
     Button boton4;
-    Button boton5;
+    Button botonAdd;
+
+    Button boton1nt;
+    Button boton2nt;
+    Button boton3nt;
+    Button boton4nt;
+    Button boton5nt;
+    Button boton6nt;
+    Button boton7nt;
+    Button boton8nt;
+    Button botonOKnt;
+
+    ImageButton boton1dt;
+    ImageButton boton2dt;
+    ImageButton boton3dt;
+    ImageButton boton4dt;
+    ImageButton boton5dt;
+    ImageButton boton6dt;
+    ImageButton boton7dt;
+    ImageButton btnIMB;
+    Button botondtOK;
 
     DrawableScene drawableScene;
 
@@ -72,7 +93,26 @@ public class MainPage extends Activity {
         boton2 = (Button) findViewById(R.id.button2);
         boton3 = (Button) findViewById(R.id.button3);
         boton4 = (Button) findViewById(R.id.button4);
-        boton5 = (Button) findViewById(R.id.button5);
+        botonAdd = (Button) findViewById(R.id.button5);
+
+        boton1dt = (ImageButton) findViewById(R.id.btnDarkTroops1);
+        boton2dt = (ImageButton) findViewById(R.id.btnDarkTroops2);
+        boton3dt = (ImageButton) findViewById(R.id.btnDarkTroops3);
+        boton4dt = (ImageButton) findViewById(R.id.btnDarkTroops4);
+        boton5dt = (ImageButton) findViewById(R.id.btnDarkTroops5);
+        boton6dt = (ImageButton) findViewById(R.id.btnDarkTroops6);
+        boton7dt = (ImageButton) findViewById(R.id.btnDarkTroops7);
+        botondtOK = (Button) findViewById(R.id.btnDarkTroopsOK);
+
+        boton1nt = (Button) findViewById(R.id.btnNormalTroops1);
+        boton2nt = (Button) findViewById(R.id.btnNormalTroops2);
+        boton3nt = (Button) findViewById(R.id.btnNormalTroops3);
+        boton4nt = (Button) findViewById(R.id.btnNormalTroops4);
+        boton5nt = (Button) findViewById(R.id.btnNormalTroops5);
+        boton6nt = (Button) findViewById(R.id.btnNormalTroops6);
+        boton7nt = (Button) findViewById(R.id.btnNormalTroops7);
+        boton8nt = (Button) findViewById(R.id.btnNormalTroops8);
+        botonOKnt = (Button) findViewById(R.id.btnOK);
 
         AssetManager am = this.getAssets();
         Typeface plain  = Typeface.createFromAsset(am, "fonts/Supercell.ttf");
@@ -82,13 +122,6 @@ public class MainPage extends Activity {
         boton2.setTypeface(plain);
         boton3.setTypeface(plain);
         boton4.setTypeface(plain);
-        /*boton1.setOnClickListener(new VisibleToggleClickListener() {
-            @Override
-            protected void changeVisibility(boolean visible) {
-                TransitionManager.beginDelayedTransition(mainLayout, new Slide(Gravity.RIGHT));
-                button1.setVisibility(visible ? View.VISIBLE : View.GONE);
-            }
-        }); );*/
 
 
     }
@@ -96,6 +129,48 @@ public class MainPage extends Activity {
     {
         drawableScene.bringToFront();
         //drawableScene.invalidate();
+    }
+    public void darkTroopsClick(View v)
+    {
+        switch (Integer.valueOf(v.getTag().toString()))
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            default:
+                boton1dt.setVisibility(View.GONE);
+                boton2dt.setVisibility(View.GONE);
+                boton3dt.setVisibility(View.GONE);
+                boton4dt.setVisibility(View.GONE);
+                boton5dt.setVisibility(View.GONE);
+                boton6dt.setVisibility(View.GONE);
+                boton7dt.setVisibility(View.GONE);
+                btnIMB.setVisibility(View.GONE);
+                botondtOK.setVisibility(View.GONE);
+                botonAdd.setVisibility(View.VISIBLE);
+                break;
+        }
+    }
+    public void normalTroopsClick(View v)
+    {
+        switch (Integer.valueOf(v.getTag().toString()))
+        {
+            case 1:
+            break;
+            default:
+                boton1nt.setVisibility(View.GONE);
+                boton2nt.setVisibility(View.GONE);
+                boton3nt.setVisibility(View.GONE);
+                boton4nt.setVisibility(View.GONE);
+                boton5nt.setVisibility(View.GONE);
+                boton6nt.setVisibility(View.GONE);
+                boton7nt.setVisibility(View.GONE);
+                boton8nt.setVisibility(View.GONE);
+                botonOKnt.setVisibility(View.GONE);
+                botonAdd.setVisibility(View.VISIBLE);
+            break;
+        }
     }
     public void manageButtons(View v)
     {
@@ -110,7 +185,19 @@ public class MainPage extends Activity {
                 boton2.setVisibility(View.GONE);
                 boton3.setVisibility(View.GONE);
                 boton4.setVisibility(View.GONE);
-                boton5.setVisibility(View.VISIBLE);
+
+                botonAdd.setVisibility(View.GONE);
+
+                boton1nt.setVisibility(View.VISIBLE);
+                boton2nt.setVisibility(View.VISIBLE);
+                boton3nt.setVisibility(View.VISIBLE);
+                boton4nt.setVisibility(View.VISIBLE);
+                boton5nt.setVisibility(View.VISIBLE);
+                boton6nt.setVisibility(View.VISIBLE);
+                boton7nt.setVisibility(View.VISIBLE);
+                boton8nt.setVisibility(View.VISIBLE);
+                botonOKnt.setVisibility(View.VISIBLE);
+                //boton1nt.setBackgroundDrawable(getResources().getDrawable(R.drawable.layers));
                 break;
 
             case 2:
@@ -118,14 +205,23 @@ public class MainPage extends Activity {
                 boton2.setVisibility(View.GONE);
                 boton3.setVisibility(View.GONE);
                 boton4.setVisibility(View.GONE);
-                boton5.setVisibility(View.VISIBLE);
+
+                boton1dt.setVisibility(View.VISIBLE);
+                boton2dt.setVisibility(View.VISIBLE);
+                boton3dt.setVisibility(View.VISIBLE);
+                boton4dt.setVisibility(View.VISIBLE);
+                boton5dt.setVisibility(View.VISIBLE);
+                //boton6dt.setVisibility(View.VISIBLE);
+                //boton7dt.setVisibility(View.VISIBLE);
+                botondtOK.setVisibility(View.VISIBLE);
+                //botonAdd.setVisibility(View.VISIBLE);
                 break;
             case 3:
                 boton1.setVisibility(View.GONE);
                 boton2.setVisibility(View.GONE);
                 boton3.setVisibility(View.GONE);
                 boton4.setVisibility(View.GONE);
-                boton5.setVisibility(View.VISIBLE);
+                botonAdd.setVisibility(View.VISIBLE);
                 break;
             case 4:
                 takePictureFromGalleryOrAnyOtherFolder();
@@ -134,14 +230,14 @@ public class MainPage extends Activity {
                 boton2.setVisibility(View.GONE);
                 boton3.setVisibility(View.GONE);
                 boton4.setVisibility(View.GONE);
-                boton5.setVisibility(View.VISIBLE);
+                botonAdd.setVisibility(View.VISIBLE);
                 break;
             case 5:
                 boton1.setVisibility(View.VISIBLE);
                 boton2.setVisibility(View.VISIBLE);
                 boton3.setVisibility(View.VISIBLE);
                 boton4.setVisibility(View.VISIBLE);
-                boton5.setVisibility(View.GONE);
+                botonAdd.setVisibility(View.GONE);
                 break;
         }
     }
@@ -199,7 +295,7 @@ public class MainPage extends Activity {
                         {
                             if(realuri==null)
                             {
-                                realuri = RealPathUtil.getRealPathFromURI_API19(this, selectedImageUri);
+                                realuri = RealPathUtil.getPathFromUri(this, selectedImageUri);
                             }
                             //final InputStream imageStream   = getContentResolver().openInputStream(Uri.parse(realuri));
                             //final Bitmap      selectedImage = BitmapFactory.decodeStream(imageStream);
@@ -218,7 +314,7 @@ public class MainPage extends Activity {
                         Toast.makeText(this, "Failed to get image", Toast.LENGTH_LONG).show();
                     }
                 }
-                final Drawable bg = Drawable.createFromPath(realuri);;
+                final Drawable bg = Drawable.createFromPath(realuri);
                 if (bg != null)
                 {
                     Toast.makeText(this, "Found img uri: " + selectedImageUri.toString(), Toast.LENGTH_SHORT).show();

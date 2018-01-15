@@ -17,6 +17,15 @@ import android.support.v4.content.CursorLoader;
 
 public class RealPathUtil
 {
+    public static String getPathFromUri(Context context, Uri uri)
+    {
+        if (Build.VERSION.SDK_INT < 11)
+            return RealPathUtil.getRealPathFromURI_BelowAPI11(context, uri);
+        else if (Build.VERSION.SDK_INT < 19)
+            return RealPathUtil.getRealPathFromURI_API11to18(context, uri);
+        else
+            return RealPathUtil.getRealPathFromURI_API19(context, uri);
+    }
     @SuppressLint("NewApi")
     public static String getRealPathFromURI_API19(final Context context, final Uri uri) {
 
@@ -29,12 +38,10 @@ public class RealPathUtil
                 final String docId = DocumentsContract.getDocumentId(uri);
                 final String[] split = docId.split(":");
                 final String type = split[0];
-
-                if ("primary".equalsIgnoreCase(type)) {
+                //if ("primary".equalsIgnoreCase(type)) {
                     return Environment.getExternalStorageDirectory() + "/" + split[1];
-                }
-
-                // TODO handle non-primary volumes
+                //}
+                // TODO handle non primary == Hacer que lea memoria externa (SdCard)
             }
             // DownloadsProvider
             else if (isDownloadsDocument(uri)) {

@@ -4,8 +4,8 @@
 
     <!--BUTTONS-->
     <string name="label_tipo">TIPO</string>
-    <string name="btn_elixir_normal">NORMAL</string>
-    <string name="btn_elixir_oscuro">OSCURO</string>
+    <string name="btn_elixir_normal">TROPAS \n NORMALES</string>
+    <string name="btn_elixir_oscuro">TROPAS \n OSCURAS</string>
     <string name="btn_tropas">TROPAS</string>
     <string name="btn_hechizos">HECHIZOS</string>
     <string name="btn_heroes">HEROES</string>

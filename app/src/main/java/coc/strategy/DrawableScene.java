@@ -18,7 +18,7 @@ import java.util.ArrayList;
 //menu class
 public class DrawableScene extends View
 {
-	
+	Context context;
 	private int center_X = 0;
 	private int center_Y = 0;
 	private int eventaction = 0;
@@ -43,16 +43,31 @@ public class DrawableScene extends View
 	private Element   menupointer3 = null;
 	private Element[] menuPointers = new Element[40];
 	ArrayList<Element> arrayPointers = new ArrayList<Element>();
+	ArrayList<Element> arrayQuantity = new ArrayList<Element>();
 
 	MenuCItem[] menuitems = new MenuCItem[4];
 
 	ArrayList<Rect> arrayTextMenuBounds = new ArrayList<Rect>();
 	private int over_engagement = 15; //how much distance to set over item true
 	private int click_engagement = 25; //how much distanc to set click item true
-	    
+	private int troopsIDs[] = {R.drawable.narquera,R.drawable.nbarbaro,R.drawable.ngiga,R.drawable.nmago,R.drawable.nrompemuros,R.drawable.ndragon,R.drawable.npekka,R.drawable.nminidraco};
+	private int darkTroopsIDs[] = {R.drawable.obruja,R.drawable.oesbirro,R.drawable.ogolem,R.drawable.omontapuercos,R.drawable.operrolava,R.drawable.ovalquiria};
+	private int spellsIDs[] = {R.drawable.obruja,R.drawable.oesbirro,R.drawable.ogolem,R.drawable.omontapuercos,R.drawable.operrolava,R.drawable.ovalquiria};
+	private int heroesIDs[] = {R.drawable.hrey,R.drawable.hreina,R.drawable.hcentinela};
+	public void printElementsFromArrayIDs(int[] var)
+	{
+		for (int i=0;i<var.length;i++)
+		{
+			Element element = new Element(context, R.drawable.nmago, R.drawable.nmago, 10, "Tropa "+i,false);
+			element.set_homeposition(new Point(
+					menuback_X + menuback_width / 2 - element.get_width() / 2,
+					menuback_Y + menuback_height / 2 - element.get_height() / 2));
+		}
+	}
     public DrawableScene(Context context)
     {
         super(context);
+		this.context = context;
         setFocusable(true); //necessary for getting the touch events
                 
         BitmapFactory.Options opts = new BitmapFactory.Options();
@@ -102,9 +117,10 @@ public class DrawableScene extends View
 				menupointer.get_homepoint().y+350);
 		arrayPointers.add(menupointer3);
 		*/
-		for (int i=1;i<=13;i++)
+		for (int i=1;i<=4;i++)
 		{
 			//pointer (center)
+			/*
 			Element backgroundElement = new Element(context, R.drawable.shield1, R.drawable.shield1, 10, "Escudo"+i,true);
 			backgroundElement.set_homeposition(new Point(
 					menuback_X + menuback_width / 2 - backgroundElement.get_width() / 2,
@@ -112,16 +128,22 @@ public class DrawableScene extends View
 			backgroundElement.set_position(
 					0 + arrayPointers.size()* backgroundElement.get_imgradius()+15,
 					screenHeight-backgroundElement.get_height());
-
-			Element pointer = new Element(context, R.drawable.nmago, R.drawable.npekka, 10, "Carta"+i,false);
+			*/
+			Element pointer = new Element(context, R.drawable.nmago, R.drawable.nmago, 10, "Tropa "+i,false);
 			pointer.set_homeposition(new Point(
 					menuback_X + menuback_width / 2 - pointer.get_width() / 2,
 					menuback_Y + menuback_height / 2 - pointer.get_height() / 2));
 			pointer.set_position(
-					0 + arrayPointers.size()* pointer.get_imgradius()+15,
+					arrayPointers.size()* pointer.get_imgradius()+ pointer.get_imgradius()*arrayPointers.size(),
 					screenHeight-pointer.get_height());
-			arrayPointers.add(backgroundElement);
+			//arrayPointers.add(backgroundElement);
 			arrayPointers.add(pointer);
+			Element quantity = new Element(context, R.drawable.menu_pointer, R.drawable.menu_pointerover, 10, "Quantity "+i,false);
+			int quantityX = arrayQuantity.size()* pointer.get_imgradius()+ pointer.get_imgradius()*arrayQuantity.size()+pointer.get_imgradius();
+			int quantityY = screenHeight-pointer.get_height()+ pointer.get_imgradius();
+			quantity.set_homeposition(new Point(quantityX,quantityY));
+			quantity.set_position(quantityX,quantityY);
+			arrayQuantity.add(quantity);
 		}
 
 
@@ -157,13 +179,13 @@ public class DrawableScene extends View
     {
 		//Alex. Nada, codigo aislado.
 		Paint paint = new Paint();
-		paint.setColor(Color.WHITE);
+		paint.setColor(Color.MAGENTA);
 		AssetManager am = this.getContext().getAssets();
 		Typeface plain = Typeface.createFromAsset(am, "fonts/Supercell.ttf");
 		Typeface bold  = Typeface.create(plain, Typeface.BOLD);
-		paint.setTypeface(bold);
+		paint.setTypeface(plain);
 		paint.setShadowLayer(15, 0, 0, Color.BLACK);
-		paint.setTextSize(40);
+		paint.setTextSize(24);
 		//System.out.println("screenWidth  "+screenWidth); //2392
 		//System.out.println("screenHeight "+screenHeight);//1440
 		/*
@@ -211,9 +233,13 @@ public class DrawableScene extends View
         	*/
     	//}
     	//draw pointer
+		int i=0;
 		for (Element pointer: arrayPointers)
 		{
 			canvas.drawBitmap(pointer.get_img(), pointer.get_x(), pointer.get_y(), null);
+			canvas.drawBitmap(arrayQuantity.get(i).get_img(), arrayQuantity.get(i).get_x(), arrayQuantity.get(i).get_y(), null);
+			canvas.drawText(String.valueOf(arrayQuantity.indexOf(arrayQuantity.get(i))),arrayQuantity.get(i).get_x()+arrayQuantity.get(i).get_imgradius(),arrayQuantity.get(i).get_y()+(arrayQuantity.get(i).get_imgradius()*3/2), paint);
+			i++;
 		}
 		//older draw on canvas
 		/*
@@ -257,6 +283,8 @@ public class DrawableScene extends View
 						if (pointer_radius < pointer.get_imgradius() - 3)
 						{
 							pointer.set_isselected(true);
+							//Per each selected Item we carry the quantity as selected.
+							arrayQuantity.get(arrayPointers.indexOf(pointer)).set_isselected(true);
 							//System.out.println("Pointer n:" + i);
 							break;
 						}
@@ -304,6 +332,16 @@ public class DrawableScene extends View
 						}
 						*/
 						borderPointerPositionFix(pointer);
+
+						Element pointerQuantity = arrayQuantity.get(arrayPointers.indexOf(pointer));
+
+						borderPointerPositionFix(pointerQuantity);
+						//pointerQuantity.set_x(pointerQuantity.get_x()+pointer.get_imgradius());
+						//pointerQuantity.set_y(pointerQuantity.get_y()+pointer.get_imgradius());
+
+
+						//canvas.drawText(String.valueOf(arrayQuantity.indexOf(arrayQuantity.get(i))),arrayQuantity.get(i).get_x()+arrayQuantity.get(i).get_imgradius(),arrayQuantity.get(i).get_y()+(arrayQuantity.get(i).get_imgradius()*3/2), paint);
+
 						//check items over //
 						for (MenuCItem m : menuitems)
 						{
@@ -337,7 +375,7 @@ public class DrawableScene extends View
 				{
 					// reset the pointer to home
 					pointer.set_isselected(false);
-
+					arrayQuantity.get(arrayPointers.indexOf(pointer)).set_isselected(false);
 					//Alex. Volver al centro:
 					//menupointer.set_position(menupointer.get_homepoint().x, menupointer.get_homepoint().y);
 				}
@@ -346,7 +384,6 @@ public class DrawableScene extends View
 	}
 	private void borderPointerPositionFix(Element pointer)
 	{
-
 		if(!pointer.isStatic)
 		{
 			//Alex fix border touch

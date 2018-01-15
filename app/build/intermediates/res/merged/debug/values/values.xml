@@ -74,8 +74,8 @@
     <string name="btn_definir_ejercito">DEFINIR ARMY</string>
     <string name="btn_disolver_ejercito">DISSOLVE ARMY</string>
     <string name="btn_elegir_enemigo">PICK ENEMY VILAGE</string>
-    <string name="btn_elixir_normal">NORMAL</string>
-    <string name="btn_elixir_oscuro">DARK</string>
+    <string name="btn_elixir_normal">NORMAL \n TROOPS</string>
+    <string name="btn_elixir_oscuro">DARK \n TROOPS</string>
     <string name="btn_hechizos">SPELLS</string>
     <string name="btn_heroes">HEROES</string>
     <string name="btn_salir">EXIT</string>

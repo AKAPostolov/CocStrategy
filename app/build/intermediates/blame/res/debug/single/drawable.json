@@ -1,6 +1,14 @@
 [
     {
+        "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\layers.xml",
+        "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable\\layers.xml"
+    },
+    {
         "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\map1.png",
         "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable\\map1.png"
+    },
+    {
+        "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\framelayout.xml",
+        "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable\\framelayout.xml"
     }
 ]
