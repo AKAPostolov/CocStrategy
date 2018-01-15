@@ -38,14 +38,14 @@ public class MainPage extends Activity {
     Button boton4;
     Button botonAdd;
 
-    Button boton1nt;
-    Button boton2nt;
-    Button boton3nt;
-    Button boton4nt;
-    Button boton5nt;
-    Button boton6nt;
-    Button boton7nt;
-    Button boton8nt;
+    ImageButton boton1nt;
+    ImageButton boton2nt;
+    ImageButton boton3nt;
+    ImageButton boton4nt;
+    ImageButton boton5nt;
+    ImageButton boton6nt;
+    ImageButton boton7nt;
+    ImageButton boton8nt;
     Button botonOKnt;
 
     ImageButton boton1dt;
@@ -55,7 +55,6 @@ public class MainPage extends Activity {
     ImageButton boton5dt;
     ImageButton boton6dt;
     ImageButton boton7dt;
-    ImageButton btnIMB;
     Button botondtOK;
 
     DrawableScene drawableScene;
@@ -104,14 +103,14 @@ public class MainPage extends Activity {
         boton7dt = (ImageButton) findViewById(R.id.btnDarkTroops7);
         botondtOK = (Button) findViewById(R.id.btnDarkTroopsOK);
 
-        boton1nt = (Button) findViewById(R.id.btnNormalTroops1);
-        boton2nt = (Button) findViewById(R.id.btnNormalTroops2);
-        boton3nt = (Button) findViewById(R.id.btnNormalTroops3);
-        boton4nt = (Button) findViewById(R.id.btnNormalTroops4);
-        boton5nt = (Button) findViewById(R.id.btnNormalTroops5);
-        boton6nt = (Button) findViewById(R.id.btnNormalTroops6);
-        boton7nt = (Button) findViewById(R.id.btnNormalTroops7);
-        boton8nt = (Button) findViewById(R.id.btnNormalTroops8);
+        boton1nt = (ImageButton) findViewById(R.id.btnNormalTroops1);
+        boton2nt = (ImageButton) findViewById(R.id.btnNormalTroops2);
+        boton3nt = (ImageButton) findViewById(R.id.btnNormalTroops3);
+        boton4nt = (ImageButton) findViewById(R.id.btnNormalTroops4);
+        boton5nt = (ImageButton) findViewById(R.id.btnNormalTroops5);
+        boton6nt = (ImageButton) findViewById(R.id.btnNormalTroops6);
+        boton7nt = (ImageButton) findViewById(R.id.btnNormalTroops7);
+        boton8nt = (ImageButton) findViewById(R.id.btnNormalTroops8);
         botonOKnt = (Button) findViewById(R.id.btnOK);
 
         AssetManager am = this.getAssets();
@@ -146,7 +145,6 @@ public class MainPage extends Activity {
                 boton5dt.setVisibility(View.GONE);
                 boton6dt.setVisibility(View.GONE);
                 boton7dt.setVisibility(View.GONE);
-                btnIMB.setVisibility(View.GONE);
                 botondtOK.setVisibility(View.GONE);
                 botonAdd.setVisibility(View.VISIBLE);
                 break;
@@ -211,8 +209,8 @@ public class MainPage extends Activity {
                 boton3dt.setVisibility(View.VISIBLE);
                 boton4dt.setVisibility(View.VISIBLE);
                 boton5dt.setVisibility(View.VISIBLE);
-                //boton6dt.setVisibility(View.VISIBLE);
-                //boton7dt.setVisibility(View.VISIBLE);
+                boton6dt.setVisibility(View.VISIBLE);
+                boton7dt.setVisibility(View.VISIBLE);
                 botondtOK.setVisibility(View.VISIBLE);
                 //botonAdd.setVisibility(View.VISIBLE);
                 break;

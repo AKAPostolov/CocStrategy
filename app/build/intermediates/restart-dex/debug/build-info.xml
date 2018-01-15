@@ -6,7 +6,7 @@
     density="560dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1516013859966"
+    timestamp="1516015745923"
     token="8440714757029796015"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -70,7 +70,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1516013754577"
+        timestamp="1516015685240"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
@@ -78,7 +78,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1516013859966"
+        timestamp="1516015745923"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\outputs\apk\app-debug.apk"
