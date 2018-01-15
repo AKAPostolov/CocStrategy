@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -155,6 +156,20 @@ public class MainPage extends Activity {
         switch (Integer.valueOf(v.getTag().toString()))
         {
             case 1:
+                //Tester alex
+                try
+                {
+                    Bitmap screenshotBitmap = Tools.takeScreenShot(this);
+                    String bitmapPath = MediaStore.Images.Media.insertImage(getContentResolver(), screenshotBitmap,"title", null);
+                    Uri bitmapUri = Uri.parse(bitmapPath);
+
+                    inflateShareIntent(bitmapUri);
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+
             break;
             default:
                 boton1nt.setVisibility(View.GONE);
@@ -239,7 +254,15 @@ public class MainPage extends Activity {
                 break;
         }
     }
+    public void inflateShareIntent(Uri bitmapUri)
+    {
 
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("image/png");
+        //intent.putExtra(Intent.EXTRA_STREAM, bitmap);
+        intent.putExtra(Intent.EXTRA_STREAM, bitmapUri );
+        startActivity(Intent.createChooser(intent , "Share"));
+    }
     public int get_screenWidth()
     {
         return screenWidth;

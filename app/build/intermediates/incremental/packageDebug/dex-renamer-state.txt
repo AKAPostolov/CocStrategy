@@ -1,7 +1,4 @@
-#Mon Jan 15 12:48:28 CET 2018
-base.0=C\:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_015e3037a9175335a0a8a5dad5d5f90e0c062bca
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_45d4f0213a0bc523aad0033eede386fa930fb59f\\classes.dex
-base.1=C\:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_45d4f0213a0bc523aad0033eede386fa930fb59f
-file.0=C\:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_015e3037a9175335a0a8a5dad5d5f90e0c062bca\\classes.dex
+#Mon Jan 15 15:52:30 CET 2018
+base.0=C\:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
