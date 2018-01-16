@@ -100,6 +100,10 @@
         "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable-nodpi\\menu_back.png"
     },
     {
+        "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\red_spell.png",
+        "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable-nodpi\\red_spell.png"
+    },
+    {
         "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\ngiga.png",
         "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable-nodpi\\ngiga.png"
     },

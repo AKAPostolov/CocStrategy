@@ -61,7 +61,10 @@ public class Element
 	public void set_homeposition(Point point) {
         this.homepoint = point;
 	}
-	
+	public void set_position(Point point) {
+		x = point.x;
+		y = point.y;
+	}
 	public void set_position(int goX, int goY) {
 		x = goX;
 		y = goY;
