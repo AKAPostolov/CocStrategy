@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Display;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,6 +21,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -28,8 +30,8 @@ import coc.strategy.FloatingMenu.CocElementDM;
 import coc.strategy.FloatingMenu.CocElementsRow;
 import coc.strategy.FloatingMenu.CustomAdapter;
 
-public class MainPage extends Activity {
-
+public class MainPage extends Activity implements View.OnTouchListener
+{
     private int screenWidth = 0;
     private int screenHeight = 0;
 
@@ -110,7 +112,8 @@ public class MainPage extends Activity {
                 */
     /** Called when the activity is first created. */
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
         //set fullscreen
@@ -139,6 +142,10 @@ public class MainPage extends Activity {
 
         obtainViewButtons();
         setUpPaletteArrayAdapter();
+
+        LinearLayout child = (LinearLayout) mainLayout.getChildAt(0);
+
+        child.setOnTouchListener(this);
     }
     public void obtainViewButtons()
     {
@@ -635,4 +642,77 @@ public class MainPage extends Activity {
             }
         }
     }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event)
+    {
+        int _xDelta =0;
+        int _yDelta =0;
+        String tag = "";
+        if(v.getTag()!=null)
+        {
+            tag = v.getTag().toString();
+            System.out.println("tag: " + tag);
+        }
+        if(tag.contains("mainPaletteLayout"))
+        {
+            final int X = (int) event.getRawX();
+            final int Y = (int) event.getRawY();
+            switch (event.getAction() & MotionEvent.ACTION_MASK) {
+                case MotionEvent.ACTION_DOWN:
+                    LinearLayout.LayoutParams lParams = (LinearLayout.LayoutParams) v.getLayoutParams();
+                    _xDelta = X - lParams.leftMargin;
+                    _yDelta = Y - lParams.topMargin;
+                    break;
+                case MotionEvent.ACTION_UP:
+                    break;
+                case MotionEvent.ACTION_POINTER_DOWN:
+                    break;
+                case MotionEvent.ACTION_POINTER_UP:
+                    break;
+                case MotionEvent.ACTION_MOVE:
+                    LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) v.getLayoutParams();
+                    /*
+                    layoutParams.leftMargin = X - _xDelta;
+                    layoutParams.topMargin = Y - _yDelta;
+                    layoutParams.rightMargin = -250;
+                    layoutParams.bottomMargin = -250;
+                    */
+                    layoutParams.setMargins(X - _xDelta, Y - _yDelta, (int)getResources().getDimension(R.dimen.rightMargin),(int)getResources().getDimension(R.dimen.bottomMargin));
+                    v.setLayoutParams(layoutParams);
+                    break;
+            }
+            v.invalidate();
+            return true;
+        }
+        return false;
+    }
+    /**
+     * Codigo RESIDUAL *******************************************************************
+     *
+     *
+     *
+     * Buscar Layout children by tag
+     * */
+        /*for (int i=0;i<mainLayout.getChildCount();i++)
+        {
+            boolean LinearLayout = false;
+            try
+            {
+                child = (LinearLayout) mainLayout.getChildAt(i);
+                if(child.getTag()!=null)
+                {
+                    System.out.println("Child tag: " + child.getTag().toString() + " i:" + i);
+                }
+            }
+            catch(Exception e)
+            {
+                System.out.println("Exception e: " + e.getMessage());
+            }
+            finally
+            {
+
+            }
+        }
+        */
 }

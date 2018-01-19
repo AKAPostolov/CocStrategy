@@ -58,6 +58,8 @@
             
             <flag name="mode_out" value="2"/>
         </attr></declare-styleable>
+    <dimen name="bottomMargin">25dp</dimen>
+    <dimen name="rightMargin">25dp</dimen>
     <dimen name="shadowSizeForButton">1dp</dimen>
     <item name="current_scene" type="id"/>
     <item name="group_layouttransition_backup" type="id"/>

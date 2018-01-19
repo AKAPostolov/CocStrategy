@@ -3,7 +3,54 @@
               android:orientation="vertical"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:gravity="bottom">
+              android:gravity="bottom"
+              android:tag="mainPaletteLayout1"
+              android:id="@+id/mainPaletteLayout"
+    android:layout_marginTop="10dp">
+    <LinearLayout
+        android:background="@color/Teal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:tag="mainPaletteLayout2.1"
+        android:layout_gravity="center">
+        <TextView
+            android:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:tag="mainPaletteLayout2.2"
+        android:background="@color/Red"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:weightSum="3.3"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <LinearLayout
+            android:background="@color/Orange1"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp">
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/Orange2"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp">
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/Orange3"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp">
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:gravity="bottom"
         android:orientation="vertical"
