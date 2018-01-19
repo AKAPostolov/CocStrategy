@@ -6,7 +6,7 @@
     density="xhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1516103155583"
+    timestamp="1516362860273"
     token="8440714757029796015"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -23,10 +23,17 @@
         name="verifier"
         duration="0" />
 
+    <artifact
+        location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\outputs\apk\app-debug.apk"
+        type="SPLIT_MAIN" />
+
     <build
         build-mode="FULL"
-        timestamp="1516102978302"
+        timestamp="1516362764980"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
         <artifact
             location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
@@ -60,13 +67,14 @@
         <artifact
             location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1516103155583"
-        verifier="COLD_SWAP_REQUESTED" />
+        timestamp="1516362860273"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
 
 </instant-run>

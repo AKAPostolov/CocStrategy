@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="bottom">
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/coc_button_green"
+        android:layout_width="100dp"
+        android:padding="5dp"
+        android:layout_margin="3dp"
+        android:layout_height="300dp">
+            <ListView
+                android:background="@color/Orange1"
+                android:id="@+id/listViewFloating"
+                android:smoothScrollbar="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+    </LinearLayout>
+
+</LinearLayout>

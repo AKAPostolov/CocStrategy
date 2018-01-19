@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.database.Cursor;
-import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -12,27 +11,33 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Display;
-import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
-import com.transitionseverywhere.Slide;
-import com.transitionseverywhere.TransitionManager;
+
+import java.util.ArrayList;
+
+import coc.strategy.FloatingMenu.CocElementDM;
+import coc.strategy.FloatingMenu.CocElementsRow;
+import coc.strategy.FloatingMenu.CustomAdapter;
 
 public class MainPage extends Activity {
 
     private int screenWidth = 0;
     private int screenHeight = 0;
 
-    private int troopsIDs[] = {R.drawable.narquera,R.drawable.nbarbaro,R.drawable.ngiga,R.drawable.nmago,R.drawable.nrompemuros,R.drawable.ndragon,R.drawable.npekka,R.drawable.nminidraco};
-    private int darkTroopsIDs[] = {R.drawable.obruja,R.drawable.oesbirro,R.drawable.ogolem,R.drawable.omontapuercos,R.drawable.operrolava,R.drawable.ovalquiria,R.drawable.ovalquiria};
-    private int spellsIDs[] = {R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell};
-    private int heroesIDs[] = {R.drawable.hrey,R.drawable.hreina,R.drawable.hcentinela};
+    private int smallTroops[] = {R.drawable.arc,R.drawable.arq,R.drawable.bab,R.drawable.bak,R.drawable.bal,R.drawable.bar,R.drawable.bow,R.drawable.dra,R.drawable.gia,R.drawable.gob,R.drawable.gol,R.drawable.gra,R.drawable.hea,R.drawable.hog,R.drawable.lav,R.drawable.min,R.drawable.mnr,R.drawable.pek,R.drawable.val,R.drawable.wal,R.drawable.wit,R.drawable.wiz};
+    private int normalTroopsIDs[] = {R.drawable.narquera, R.drawable.nbarbaro, R.drawable.ngiga, R.drawable.nmago, R.drawable.nrompemuros, R.drawable.ndragon, R.drawable.npekka, R.drawable.nminidraco};
+    private int darkTroopsIDs[]   = {R.drawable.obruja,R.drawable.oesbirro,R.drawable.ogolem,R.drawable.omontapuercos,R.drawable.operrolava,R.drawable.ovalquiria,R.drawable.ovalquiria};
+    private int spellsIDs[]       = {R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell};
+    private int heroesIDs[]       = {R.drawable.hrey,R.drawable.hreina,R.drawable.hcentinela};
 
     LinearLayout mainLayout;
     LinearLayout layoutButtons;
@@ -79,6 +84,7 @@ public class MainPage extends Activity {
     ImageButton boton6dt;
     ImageButton boton7dt;
     Button botondtOK;
+    ListView listView;
 
     DrawableScene drawableScene;
     //TODO
@@ -132,6 +138,7 @@ public class MainPage extends Activity {
         */
 
         obtainViewButtons();
+        setUpPaletteArrayAdapter();
     }
     public void obtainViewButtons()
     {
@@ -183,6 +190,92 @@ public class MainPage extends Activity {
         boton2.setTypeface(plain);
         boton3.setTypeface(plain);
         boton4.setTypeface(plain);
+    }
+    public void setUpPaletteArrayAdapter()
+    {
+        listView = (ListView) findViewById(R.id.listViewFloating);
+
+        final ArrayList<CocElementDM> elements = new ArrayList<>();
+        loadItemsInArrayList(elements);
+        final ArrayList<CocElementsRow> rows = getRowsFromElements(elements);
+        CustomAdapter                 adapter  = new CustomAdapter(rows,getApplicationContext());
+
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                CocElementDM element = elements.get(position);
+
+                /*Snackbar.make(view, elements.getName()+"\n"+elements.getType()+" API: "+elements.getVersion_number(), Snackbar.LENGTH_LONG)
+                        .setAction("No action", null).show();
+                        */
+            }
+        });
+    }
+    public ArrayList<CocElementsRow> getRowsFromElements(ArrayList<CocElementDM> elements)
+    {
+        ArrayList<CocElementsRow> arrayCocElementsRows = new ArrayList<>();
+        int i = 0;
+        for (CocElementDM element: elements)
+        {
+            i++;
+            if(i==1)
+            {
+                arrayCocElementsRows.add(new CocElementsRow());
+                arrayCocElementsRows.get(arrayCocElementsRows.size()-1).element1 = element;
+            }
+            if(i==2)
+            {
+                arrayCocElementsRows.get(arrayCocElementsRows.size()-1).element2 = element;
+            }
+            if(i==3)
+            {
+                arrayCocElementsRows.get(arrayCocElementsRows.size()-1).element3 = element;
+                i=0;
+            }
+        }
+        return arrayCocElementsRows;
+    }
+    public void loadItemsInArrayList(ArrayList<CocElementDM> elements)
+    {
+        /*
+        //My drawables
+        loadNormal(elements);
+        loadDark(elements);
+        loadHeroes(elements);
+        loadSpells(elements);
+        */
+        //The other drawables:
+        loadOtherDrawables(elements);
+    }
+    public void loadOtherDrawables(ArrayList<CocElementDM> elements)
+    {
+        addToCocElementsArray(smallTroops,elements);
+    }
+    public void loadHeroes(ArrayList<CocElementDM> elements)
+    {
+        addToCocElementsArray(heroesIDs, elements);
+    }
+    public void loadNormal(ArrayList<CocElementDM> elements)
+    {
+        addToCocElementsArray(normalTroopsIDs, elements);
+    }
+    public void loadDark(ArrayList<CocElementDM> elements)
+    {
+        addToCocElementsArray(darkTroopsIDs, elements);
+    }
+    public void loadSpells(ArrayList<CocElementDM> elements)
+    {
+        addToCocElementsArray(spellsIDs, elements);
+    }
+    public void addToCocElementsArray(int[] input,ArrayList<CocElementDM> elements)
+    {
+        for (int i=0;i<input.length;i++)
+        {
+            elements.add(new CocElementDM(input[i]));
+        }
     }
     public void manageMainButtons(View v)
     {
@@ -329,7 +422,7 @@ public class MainPage extends Activity {
     }
     public void drawNormalTroopClicked(int clicked)
     {
-        addDrawableSceneElement(troopsIDs,clicked);
+        addDrawableSceneElement(normalTroopsIDs,clicked);
         invalidateDrawableScene();
     }
     public void addDrawableSceneElement(int[] drawableResourceID, int clicked)
@@ -493,7 +586,7 @@ public class MainPage extends Activity {
                         {
                             if(realuri==null)
                             {
-                                realuri = RealPathUtil.getPathFromUri(this, selectedImageUri);
+                                realuri = Tools.getPathFromUri(this, selectedImageUri);
                             }
                             //final InputStream imageStream   = getContentResolver().openInputStream(Uri.parse(realuri));
                             //final Bitmap      selectedImage = BitmapFactory.decodeStream(imageStream);
