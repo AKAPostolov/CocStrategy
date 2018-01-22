@@ -2,10 +2,11 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:tag="relativeLayoutMain"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:clickable="true"
-    android:id="@+id/relativeLayout"
+
     android:background="@android:color/white">
 
     <ImageView
@@ -22,7 +23,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:weightSum="1"
-        android:focusable="false"
         android:tag="LinearLayout_main">
         <include layout="@layout/floating_palette_layout"/>
     </LinearLayout>
@@ -34,7 +34,6 @@
         android:layout_marginTop="15dp"
         android:height="5dp"
         android:background="@drawable/coc_button_green"
-        android:clickable="true"
         android:onClick="manageMainButtons"
         android:shadowColor="@color/Black"
         android:shadowDx="5"
@@ -108,7 +107,7 @@
         android:id="@+id/button5"
         android:visibility="gone"
         android:tag="5"
-        android:clickable="true"
+
         android:onClick="manageMainButtons"
         android:textColor="@color/Orange1"
         android:shadowColor="@color/Black"
@@ -130,7 +129,6 @@
         android:layout_width="45dp"
         android:src="@drawable/narquera"
         android:background="@drawable/coc_button_green_square"
-        android:clickable="true"
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -147,7 +145,6 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/nbarbaro"
         android:background="@drawable/coc_button_green_square"
-        android:clickable="true"
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -162,7 +159,6 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/ngiga"
-        android:clickable="true"
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -177,7 +173,6 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/ndragon"
-        android:clickable="true"
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -192,7 +187,6 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/ncurandera"
-        android:clickable="true"
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -207,7 +201,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/npekka"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -222,7 +216,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/nrompemuros"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -237,7 +231,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/nmago"
-        android:clickable="true"
+
         android:onClick="normalTroopsClick"
         android:shadowDx="5"
         android:shadowDy="5"
@@ -252,7 +246,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/nminidraco"
-        android:clickable="true"
+
         android:onClick="normalTroopsClick"
         android:shadowDx="5"
         android:shadowDy="5"
@@ -267,7 +261,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/nminidraco"
-        android:clickable="true"
+
         android:onClick="normalTroopsClick"
         android:shadowDx="5"
         android:shadowDy="5"
@@ -282,7 +276,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/nminidraco"
-        android:clickable="true"
+
         android:onClick="normalTroopsClick"
         android:shadowDx="5"
         android:shadowDy="5"
@@ -297,7 +291,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/nminidraco"
-        android:clickable="true"
+
         android:onClick="normalTroopsClick"
         android:shadowDx="5"
         android:shadowDy="5"
@@ -314,7 +308,7 @@
         android:background="@drawable/coc_button_green_square"
         android:text="OK"
         android:textColor="@color/White"
-        android:clickable="true"
+
         android:onClick="normalTroopsClick"
         android:shadowDx="5"
         android:shadowDy="5"
@@ -322,13 +316,13 @@
         android:tag="99"
         android:visibility="gone"
         android:layout_toRightOf="@+id/btnNormalTroops8"/>
-        <ImageButton
+    <ImageButton
         android:id="@+id/btnDarkTroops1"
         android:layout_height="55dp"
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/oesbirro"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -338,30 +332,30 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"/>
-        <ImageButton
-            android:id="@+id/btnDarkTroops2"
-            android:layout_height="55dp"
-            android:layout_width="45dp"
-            android:background="@drawable/coc_button_green_square"
-            android:src="@drawable/ogolem"
-            android:clickable="true"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="1"
-            android:tag="2"
-            android:onClick="darkTroopsClick"
-            android:visibility="gone"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_toRightOf="@id/btnDarkTroops1"/>
+    <ImageButton
+        android:id="@+id/btnDarkTroops2"
+        android:layout_height="55dp"
+        android:layout_width="45dp"
+        android:background="@drawable/coc_button_green_square"
+        android:src="@drawable/ogolem"
+
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="1"
+        android:tag="2"
+        android:onClick="darkTroopsClick"
+        android:visibility="gone"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/btnDarkTroops1"/>
     <ImageButton
         android:id="@+id/btnDarkTroops3"
         android:layout_height="55dp"
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/ovalquiria"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -378,7 +372,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/obruja"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -395,7 +389,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/operrolava"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -412,7 +406,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/ovalquiria"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -431,7 +425,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/ovalquiria"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -443,32 +437,32 @@
         android:layout_marginStart="20dp"
         android:layout_toRightOf="@id/btnDarkTroops6"/>
 
-        <Button
-            android:id="@+id/btnDarkTroopsOK"
-            android:layout_width="45dp"
-            android:layout_height="55dp"
-            android:height="5dp"
-            android:background="@drawable/coc_button_green_square"
-            android:clickable="true"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="1"
-            android:tag="99"
-            android:text="OK"
-            android:textColor="@color/White"
-            android:onClick="darkTroopsClick"
-            android:visibility="gone"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_toRightOf="@id/btnDarkTroops7"/>
+    <Button
+        android:id="@+id/btnDarkTroopsOK"
+        android:layout_width="45dp"
+        android:layout_height="55dp"
+        android:height="5dp"
+        android:background="@drawable/coc_button_green_square"
+
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="1"
+        android:tag="99"
+        android:text="OK"
+        android:textColor="@color/White"
+        android:onClick="darkTroopsClick"
+        android:visibility="gone"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/btnDarkTroops7"/>
     <ImageButton
         android:id="@+id/btnHeroes1"
         android:layout_height="55dp"
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/hrey"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -484,7 +478,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/hreina"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -501,7 +495,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/hcentinela"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -518,7 +512,7 @@
         android:layout_height="55dp"
         android:height="5dp"
         android:background="@drawable/coc_button_green_square"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -537,7 +531,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/red_spell"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -553,7 +547,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/red_spell"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -570,7 +564,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/red_spell"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -587,7 +581,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/red_spell"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -604,7 +598,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/red_spell"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -621,7 +615,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/red_spell"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -638,7 +632,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/red_spell"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -655,7 +649,7 @@
         android:layout_width="45dp"
         android:background="@drawable/coc_button_green_square"
         android:src="@drawable/red_spell"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"
@@ -672,7 +666,7 @@
         android:layout_height="55dp"
         android:height="5dp"
         android:background="@drawable/coc_button_green_square"
-        android:clickable="true"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="1"

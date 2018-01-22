@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="rightMargin" >25dp</dimen>
-    <dimen name="bottomMargin" >25dp</dimen>
+    <dimen name="topMargin" >5dp</dimen>
+    <dimen name="leftMargin" >5dp</dimen>
+    <dimen name="rightMargin" >5dp</dimen>
+    <dimen name="bottomMargin" >5dp</dimen>
 </resources>

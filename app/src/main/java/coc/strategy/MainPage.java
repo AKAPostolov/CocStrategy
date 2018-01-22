@@ -13,6 +13,7 @@ import android.provider.MediaStore;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -32,6 +33,8 @@ import coc.strategy.FloatingMenu.CustomAdapter;
 
 public class MainPage extends Activity implements View.OnTouchListener
 {
+    LinearLayout child;
+
     private int screenWidth = 0;
     private int screenHeight = 0;
 
@@ -143,9 +146,9 @@ public class MainPage extends Activity implements View.OnTouchListener
         obtainViewButtons();
         setUpPaletteArrayAdapter();
 
-        LinearLayout child = (LinearLayout) mainLayout.getChildAt(0);
+        child = (LinearLayout) mainLayout.getChildAt(0);
+        //((RelativeLayout)mainLayout.getParent()).setOnTouchListener(null);
 
-        child.setOnTouchListener(this);
     }
     public void obtainViewButtons()
     {
@@ -208,13 +211,12 @@ public class MainPage extends Activity implements View.OnTouchListener
         CustomAdapter                 adapter  = new CustomAdapter(rows,getApplicationContext());
 
         listView.setAdapter(adapter);
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 CocElementDM element = elements.get(position);
-
+                System.out.println("Clicked: " + position );
                 /*Snackbar.make(view, elements.getName()+"\n"+elements.getType()+" API: "+elements.getVersion_number(), Snackbar.LENGTH_LONG)
                         .setAction("No action", null).show();
                         */
@@ -317,6 +319,10 @@ public class MainPage extends Activity implements View.OnTouchListener
                 switchAddButtonVisible();
                 break;
         }
+    }
+    public void dragMenu(View v)
+    {
+        child.setOnTouchListener(this);
     }
     public void heroesTroopsClick(View v)
     {
@@ -649,12 +655,13 @@ public class MainPage extends Activity implements View.OnTouchListener
         int _xDelta =0;
         int _yDelta =0;
         String tag = "";
+        //v = (View)v.getParent();
         if(v.getTag()!=null)
         {
             tag = v.getTag().toString();
             System.out.println("tag: " + tag);
         }
-        if(tag.contains("mainPaletteLayout"))
+        if(true)//(tag.contains("LinearLayout_main"))
         {
             final int X = (int) event.getRawX();
             final int Y = (int) event.getRawY();
@@ -665,12 +672,16 @@ public class MainPage extends Activity implements View.OnTouchListener
                     _yDelta = Y - lParams.topMargin;
                     break;
                 case MotionEvent.ACTION_UP:
+                    child.setOnTouchListener(null);
                     break;
                 case MotionEvent.ACTION_POINTER_DOWN:
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
                     break;
                 case MotionEvent.ACTION_MOVE:
+                    int ancho = v.getWidth();
+                    int alto  = v.getHeight();
+                    System.out.println("X: " + X + " Y: " + Y);
                     LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) v.getLayoutParams();
                     /*
                     layoutParams.leftMargin = X - _xDelta;
@@ -678,11 +689,26 @@ public class MainPage extends Activity implements View.OnTouchListener
                     layoutParams.rightMargin = -250;
                     layoutParams.bottomMargin = -250;
                     */
-                    layoutParams.setMargins(X - _xDelta, Y - _yDelta, (int)getResources().getDimension(R.dimen.rightMargin),(int)getResources().getDimension(R.dimen.bottomMargin));
+
+                    int limiteEjeX = ancho + (int)getResources().getDimension(R.dimen.rightMargin);
+                    if(X>=screenWidth-limiteEjeX)
+                    {
+                        layoutParams.setMargins(screenWidth-limiteEjeX, 0, (int)getResources().getDimension(R.dimen.rightMargin),(int)getResources().getDimension(R.dimen.bottomMargin));
+                    }
+                    else
+                    {
+                        layoutParams.setMargins(X, 0, (int)getResources().getDimension(R.dimen.rightMargin),(int)getResources().getDimension(R.dimen.bottomMargin));
+                    }
+
                     v.setLayoutParams(layoutParams);
                     break;
             }
-            v.invalidate();
+            ((RelativeLayout)((LinearLayout)v.getParent()).getParent()).invalidate();
+            ((RelativeLayout)((LinearLayout)v.getParent()).getParent()).requestLayout();
+            ((RelativeLayout)((LinearLayout)v.getParent()).getParent()).refreshDrawableState();
+            //ViewGroup vg = findViewById(R.id.mainPaletteLayout);
+            //getWindow().getDecorView().findViewById(android.R.id.content).invalidate();
+
             return true;
         }
         return false;

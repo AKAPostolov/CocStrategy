@@ -4,7 +4,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:gravity="bottom"
-              android:tag="mainPaletteLayout1"
+              android:tag="PaletteLayout1"
               android:id="@+id/mainPaletteLayout"
     android:layout_marginTop="10dp">
     <LinearLayout
@@ -13,15 +13,20 @@
         android:layout_width="match_parent"
         android:layout_height="15dp"
         android:gravity="center"
-        android:tag="mainPaletteLayout2.1"
+        android:tag="PaletteLayout2.1"
         android:layout_gravity="center">
+        <ImageButton
+            android:onClick="dragMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bar"/>
         <TextView
             android:text="@string/app_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
     <LinearLayout
-        android:tag="mainPaletteLayout2.2"
+        android:tag="PaletteLayout2.2"
         android:background="@color/Red"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -62,6 +67,7 @@
         android:layout_margin="3dp"
         android:layout_height="300dp">
             <ListView
+                android:scrollbarAlwaysDrawVerticalTrack="true"
                 android:background="@color/Orange1"
                 android:id="@+id/listViewFloating"
                 android:smoothScrollbar="true"
