@@ -6,29 +6,26 @@
     density="xhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1516614593022"
+    timestamp="1516629887241"
     token="8440714757029796015"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="209" />
+        duration="155" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="7" />
+        duration="8" />
     <task
         name="verifier"
-        duration="3" />
+        duration="1" />
 
     <artifact
-        location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
         type="SPLIT" />
-    <artifact
-        location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\outputs\apk\app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
@@ -73,22 +70,27 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1516613564319"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1516614593022"
+        timestamp="1516616340062"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1516629286867"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1516629887241"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>

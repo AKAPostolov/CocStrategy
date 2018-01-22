@@ -6,7 +6,7 @@
     android:tag="relativeLayoutMain"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-
+    android:clickable="true"
     android:background="@android:color/white">
 
     <ImageView

@@ -49,6 +49,7 @@ public class CustomAdapter extends ArrayAdapter<CocElementsRow> implements View.
         Object object = getItem(position);
         CocElementDM element =(CocElementDM)object;
         System.out.println(String.valueOf(position));
+
         switch (v.getId())
         {
             default:

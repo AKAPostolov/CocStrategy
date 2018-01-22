@@ -13,7 +13,6 @@ import android.provider.MediaStore;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -31,7 +30,7 @@ import coc.strategy.FloatingMenu.CocElementDM;
 import coc.strategy.FloatingMenu.CocElementsRow;
 import coc.strategy.FloatingMenu.CustomAdapter;
 
-public class MainPage extends Activity implements View.OnTouchListener
+public class MainPage extends Activity// implements View.OnTouchListener
 {
     LinearLayout child;
 
@@ -136,19 +135,26 @@ public class MainPage extends Activity implements View.OnTouchListener
 
         drawableScene = new DrawableScene(this);
 
-        mainLayout.addView(drawableScene);
         imageSwitcher = (ImageView) findViewById(R.id.ImageSwitcherBackground);
         /*FrameLayout frameLayout = (FrameLayout) findViewById(R.id.frameLayout);
         if(frameLayout!=null)
             mainLayout.addView(frameLayout);
         */
-
+        mainLayout.addView(drawableScene);
         obtainViewButtons();
         setUpPaletteArrayAdapter();
 
         child = (LinearLayout) mainLayout.getChildAt(0);
         //((RelativeLayout)mainLayout.getParent()).setOnTouchListener(null);
 
+
+        //drawableScene.setFocusable(true);
+        //drawableScene.setFocusableInTouchMode(true);
+        //mainLayout.setOnTouchListener(this);
+        //drawableScene.setOnTouchListener(this);
+        //drawableScene.requestFocusFromTouch();
+        //drawableScene.requestFocus();
+        //drawableScene.invalidate();
     }
     public void obtainViewButtons()
     {
@@ -216,7 +222,15 @@ public class MainPage extends Activity implements View.OnTouchListener
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 CocElementDM element = elements.get(position);
+                drawableScene.addElement(element.getDrawableResource(),element.getDrawableResource());
+                drawableScene.invalidate();
+                //drawableScene.bringToFront();
+                //drawableScene.requestFocus();
+                //invalidateDrawableScene();
+                //drawableScene.drawLastElementOnCanvas();
+
                 System.out.println("Clicked: " + position );
+
                 /*Snackbar.make(view, elements.getName()+"\n"+elements.getType()+" API: "+elements.getVersion_number(), Snackbar.LENGTH_LONG)
                         .setAction("No action", null).show();
                         */
@@ -322,7 +336,7 @@ public class MainPage extends Activity implements View.OnTouchListener
     }
     public void dragMenu(View v)
     {
-        child.setOnTouchListener(this);
+        //child.setOnTouchListener(this);
     }
     public void heroesTroopsClick(View v)
     {
@@ -648,70 +662,81 @@ public class MainPage extends Activity implements View.OnTouchListener
             }
         }
     }
-
-    @Override
-    public boolean onTouch(View v, MotionEvent event)
-    {
-        int _xDelta =0;
-        int _yDelta =0;
-        String tag = "";
-        //v = (View)v.getParent();
-        if(v.getTag()!=null)
+    /*
+        @Override
+        public boolean onTouch(View v, MotionEvent event)
         {
-            tag = v.getTag().toString();
-            System.out.println("tag: " + tag);
-        }
-        if(true)//(tag.contains("LinearLayout_main"))
-        {
-            final int X = (int) event.getRawX();
-            final int Y = (int) event.getRawY();
-            switch (event.getAction() & MotionEvent.ACTION_MASK) {
-                case MotionEvent.ACTION_DOWN:
-                    LinearLayout.LayoutParams lParams = (LinearLayout.LayoutParams) v.getLayoutParams();
-                    _xDelta = X - lParams.leftMargin;
-                    _yDelta = Y - lParams.topMargin;
-                    break;
-                case MotionEvent.ACTION_UP:
-                    child.setOnTouchListener(null);
-                    break;
-                case MotionEvent.ACTION_POINTER_DOWN:
-                    break;
-                case MotionEvent.ACTION_POINTER_UP:
-                    break;
-                case MotionEvent.ACTION_MOVE:
-                    int ancho = v.getWidth();
-                    int alto  = v.getHeight();
-                    System.out.println("X: " + X + " Y: " + Y);
-                    LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) v.getLayoutParams();
-                    /*
-                    layoutParams.leftMargin = X - _xDelta;
-                    layoutParams.topMargin = Y - _yDelta;
-                    layoutParams.rightMargin = -250;
-                    layoutParams.bottomMargin = -250;
-                    */
+            System.out.println("onTouch mainpage activity");
+            //drawableScene.dispatchTouchEvent(event);
+            int _xDelta =0;
+            int _yDelta =0;
+            String tag = "";
+            if(v.getTag()!=null)
+            {
+                tag = v.getTag().toString();
+                System.out.println("tag: " + tag);
+                final int X = (int) event.getRawX();
+                final int Y = (int) event.getRawY();
 
-                    int limiteEjeX = ancho + (int)getResources().getDimension(R.dimen.rightMargin);
-                    if(X>=screenWidth-limiteEjeX)
-                    {
-                        layoutParams.setMargins(screenWidth-limiteEjeX, 0, (int)getResources().getDimension(R.dimen.rightMargin),(int)getResources().getDimension(R.dimen.bottomMargin));
-                    }
-                    else
-                    {
-                        layoutParams.setMargins(X, 0, (int)getResources().getDimension(R.dimen.rightMargin),(int)getResources().getDimension(R.dimen.bottomMargin));
-                    }
 
-                    v.setLayoutParams(layoutParams);
-                    break;
             }
-            ((RelativeLayout)((LinearLayout)v.getParent()).getParent()).invalidate();
-            ((RelativeLayout)((LinearLayout)v.getParent()).getParent()).requestLayout();
-            ((RelativeLayout)((LinearLayout)v.getParent()).getParent()).refreshDrawableState();
-            //ViewGroup vg = findViewById(R.id.mainPaletteLayout);
-            //getWindow().getDecorView().findViewById(android.R.id.content).invalidate();
+            if(tag.contains("Palette1"))
+            {
+                final int X = (int) event.getRawX();
+                final int Y = (int) event.getRawY();
+                switch (event.getAction() & MotionEvent.ACTION_MASK) {
+                    case MotionEvent.ACTION_DOWN:
+                        LinearLayout.LayoutParams lParams = (LinearLayout.LayoutParams) v.getLayoutParams();
+                        _xDelta = X - lParams.leftMargin;
+                        _yDelta = Y - lParams.topMargin;
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        //child.setOnTouchListener(null);
+                        break;
+                    case MotionEvent.ACTION_POINTER_DOWN:
+                        break;
+                    case MotionEvent.ACTION_POINTER_UP:
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        int ancho = v.getWidth();
+                        int alto  = v.getHeight();
+                        System.out.println("X: " + X + " Y: " + Y);
+                        LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) v.getLayoutParams();
 
-            return true;
+                        //layoutParams.leftMargin = X - _xDelta;
+                        //layoutParams.topMargin = Y - _yDelta;
+                        //layoutParams.rightMargin = -250;
+                        //layoutParams.bottomMargin = -250;
+
+
+                        int limiteEjeX = ancho + (int)getResources().getDimension(R.dimen.rightMargin);
+                        if(X>=screenWidth-limiteEjeX)
+                        {
+                            layoutParams.setMargins(screenWidth-limiteEjeX, 0, (int)getResources().getDimension(R.dimen.rightMargin),(int)getResources().getDimension(R.dimen.bottomMargin));
+                        }
+                        else
+                        {
+                            layoutParams.setMargins(X, 0, (int)getResources().getDimension(R.dimen.rightMargin),(int)getResources().getDimension(R.dimen.bottomMargin));
+                        }
+
+                        v.setLayoutParams(layoutParams);
+                        break;
+                }
+                ((RelativeLayout)((LinearLayout)v.getParent()).getParent()).invalidate();
+                ((RelativeLayout)((LinearLayout)v.getParent()).getParent()).requestLayout();
+                ((RelativeLayout)((LinearLayout)v.getParent()).getParent()).refreshDrawableState();
+                //ViewGroup vg = findViewById(R.id.mainPaletteLayout);
+                //getWindow().getDecorView().findViewById(android.R.id.content).invalidate();
+
+                drawableScene.dispatchTouchEvent(event);
+                return true;
+            }
+            return false;
         }
-        return false;
+    */
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        return super.dispatchTouchEvent(ev);
     }
     /**
      * Codigo RESIDUAL *******************************************************************

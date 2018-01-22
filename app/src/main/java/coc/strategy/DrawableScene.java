@@ -10,6 +10,7 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -73,9 +74,22 @@ public class DrawableScene extends View
 		//drawElementOnCanvas(element);
 
 	}
+	public void drawLastElementOnCanvas()
+	{
+		if(arrayElements.size()>0)
+		{
+			Element element = arrayElements.get(arrayElements.size() - 1);
+			this.canvas.drawBitmap(element.get_img(), element.get_x(), element.get_y(), null);
+
+		}
+	}
 	public void drawElementOnCanvas(Element element)
 	{
+		System.out.println("Dibujamos onDraw");
 		this.canvas.drawBitmap(element.get_img(), element.get_x(), element.get_y(), null);
+
+		this.canvas.drawBitmap(BitmapFactory.decodeResource(context.getResources(),R.drawable.bak), 500, 700, null);
+
 	}
     public DrawableScene(Context context)
     {
@@ -130,7 +144,7 @@ public class DrawableScene extends View
 				menupointer.get_homepoint().y+350);
 		arrayElements.add(menupointer3);
 		*/
-		for (int i=1;i<=4;i++)
+		for (int i=1;i<=0;i++) //Alex inicializamos 3 elementos,. esta deshabilitado 22 01 para crear los click and draw
 		{
 			//pointer (center)
 			/*
@@ -191,7 +205,9 @@ public class DrawableScene extends View
     protected void onDraw(Canvas canvas) 
     {
 		this.canvas = canvas;
+		super.onDraw(this.canvas);
 
+		System.out.println("onDraw");
 		//Alex. Nada, codigo aislado.
 		Paint paint = new Paint();
 		paint.setColor(Color.MAGENTA);
@@ -273,19 +289,22 @@ public class DrawableScene extends View
     	canvas.drawBitmap(menupointer.get_img(), menupointer.get_x(), menupointer.get_y(), null);
 		canvas.drawBitmap(menupointer2.get_img(), menupointer2.get_x(), menupointer2.get_y(), null);
 		*/
+		//super.draw(this.canvas);
     }
-
+	@Override
     public boolean onTouchEvent(MotionEvent event)
 	{
+		System.out.println("onTouchEvent drawableScene");
 		eventActionHandler(event);
 
 		// redraw the canvas
-		invalidate();
+
 		return true;
     }
 	public void eventActionHandler(MotionEvent event)
 	{
 		//get current touch position
+		System.out.println("Touching drawableScene");
 		eventaction = event.getAction();
 		current_x = (int)event.getX();
 		current_y = (int)event.getY();
@@ -294,28 +313,33 @@ public class DrawableScene extends View
 		{
 			case MotionEvent.ACTION_DOWN:
 				int i = 0;
-				for (Element pointer: arrayElements)
+				for (Element actionDownElement: arrayElements)
 				{
-					if(!pointer.isStatic)
+					if(!actionDownElement.isStatic)
 					{
 						i++;
-						// check if the finger is on the pointer
-						int menupointer_x = pointer.get_x() + pointer.get_imgradius();
-						int menupointer_y = pointer.get_y() + pointer.get_imgradius();
+						// check if the finger is on the actionDownElement
+						int menupointer_x = actionDownElement.get_x() + actionDownElement.get_imgradius();
+						int menupointer_y = actionDownElement.get_y() + actionDownElement.get_imgradius();
 						//new Alex:
 
-						// distance from the touch pointe to the center of the pointer
+						// distance from the touch pointe to the center of the actionDownElement
 						double pointer_radius = Math.sqrt((double) (Math.pow(menupointer_x - current_x, 2) + Math.pow(menupointer_y - current_y, 2)));
-						//check if the pointer is selected (add some distance)
-						if (pointer_radius < pointer.get_imgradius() - 3)
+						//check if the actionDownElement is selected (add some distance)
+						if (true)//(pointer_radius < actionDownElement.get_imgradius() - 3)
 						{
-							pointer.set_isselected(true);
+							actionDownElement.set_isselected(true);
 							//Per each selected Item we carry the quantity as selected.
-							arrayQuantity.get(arrayElements.indexOf(pointer)).set_isselected(true);
+							arrayQuantity.get(arrayElements.indexOf(actionDownElement)).set_isselected(true);
 							//System.out.println("Pointer n:" + i);
+
+							//Nueva funcionalidad:
+							//drawLastElementOnCanvas();
+
 							break;
 						}
 					}
+
 				}
 				for(Rect rect: arrayTextMenuBounds)
 				{
@@ -328,20 +352,20 @@ public class DrawableScene extends View
 
 			case MotionEvent.ACTION_MOVE:
 				int x = 0;
-				for (Element pointer: arrayElements)
+				for (Element movedElement: arrayElements)
 				{
 					x++;
-					// move the pointer
-					if (pointer.get_isselected())
+					// move the movedElement
+					if (movedElement.get_isselected())
 					{
-						//System.out.println("Draggind pointer n"+x);
+						//System.out.println("Draggind movedElement n"+x);
 						//x/y projection to the menu back radius circle
 						int circleset_x = (int) (menuback_center_X + (menuback_radius - menuback_border) * (current_x - menuback_center_X) / Math.sqrt(Math.pow(current_x - menuback_center_X, 2) + Math.pow(current_y - menuback_center_Y, 2)));
 						int circleset_y = (int) (menuback_center_Y + (menuback_radius - menuback_border) * (current_y - menuback_center_Y) / Math.sqrt(Math.pow(current_x - menuback_center_X, 2) + Math.pow(current_y - menuback_center_Y, 2)));
 
 						//Alex quitamos radio de seguridad:
 						/*
-						//check max dimensions and project pointer on the circle
+						//check max dimensions and project movedElement on the circle
 						if(	current_x <= circleset_x && current_y <= circleset_y && current_x <= menuback_center_X && current_y <= menuback_center_Y ||
 							current_x <= circleset_x && current_y >= circleset_y && current_x <= menuback_center_X && current_y >= menuback_center_Y ||
 							current_x >= circleset_x && current_y <= circleset_y && current_x >= menuback_center_X && current_y <= menuback_center_Y ||
@@ -358,13 +382,13 @@ public class DrawableScene extends View
 							menupointer.set_y(current_y - menupointer.get_imgradius());
 						}
 						*/
-						borderPointerPositionFix(pointer);
+						borderPointerPositionFix(movedElement);
 
-						Element pointerQuantity = arrayQuantity.get(arrayElements.indexOf(pointer));
+						Element pointerQuantity = arrayQuantity.get(arrayElements.indexOf(movedElement));
 
 						borderPointerPositionFix(pointerQuantity);
-						//pointerQuantity.set_x(pointerQuantity.get_x()+pointer.get_imgradius());
-						//pointerQuantity.set_y(pointerQuantity.get_y()+pointer.get_imgradius());
+						//pointerQuantity.set_x(pointerQuantity.get_x()+movedElement.get_imgradius());
+						//pointerQuantity.set_y(pointerQuantity.get_y()+movedElement.get_imgradius());
 
 
 						//canvas.drawText(String.valueOf(arrayQuantity.indexOf(arrayQuantity.get(i))),arrayQuantity.get(i).get_x()+arrayQuantity.get(i).get_imgradius(),arrayQuantity.get(i).get_y()+(arrayQuantity.get(i).get_imgradius()*3/2), paint);
@@ -373,10 +397,10 @@ public class DrawableScene extends View
 						for (MenuCItem m : menuitems)
 						{
 							if (
-									pointer.get_x() + pointer.get_border() + over_engagement < m.get_x() + m.get_width() - m.get_border() &&
-											pointer.get_x() - pointer.get_border() + pointer.get_width() - over_engagement > m.get_x() + m.get_border() &&
-											pointer.get_y() + pointer.get_border() + over_engagement < m.get_y() + m.get_height() - m.get_border() &&
-											pointer.get_y() - pointer.get_border() + pointer.get_height() - over_engagement > m.get_y() + m.get_border())
+									movedElement.get_x() + movedElement.get_border() + over_engagement < m.get_x() + m.get_width() - m.get_border() &&
+											movedElement.get_x() - movedElement.get_border() + movedElement.get_width() - over_engagement > m.get_x() + m.get_border() &&
+											movedElement.get_y() + movedElement.get_border() + over_engagement < m.get_y() + m.get_height() - m.get_border() &&
+											movedElement.get_y() - movedElement.get_border() + movedElement.get_height() - over_engagement > m.get_y() + m.get_border())
 								m.set_isover(true);
 							else
 								m.set_isover(false);
@@ -385,10 +409,10 @@ public class DrawableScene extends View
 						for (MenuCItem m : menuitems)
 						{
 							if (
-									pointer.get_x() + pointer.get_border() + click_engagement < m.get_x() + m.get_width() - m.get_border() &&
-											pointer.get_x() - pointer.get_border() + pointer.get_width() - click_engagement > m.get_x() + m.get_border() &&
-											pointer.get_y() + pointer.get_border() + click_engagement < m.get_y() + m.get_height() - m.get_border() &&
-											pointer.get_y() - pointer.get_border() + pointer.get_height() - click_engagement > m.get_y() + m.get_border())
+									movedElement.get_x() + movedElement.get_border() + click_engagement < m.get_x() + m.get_width() - m.get_border() &&
+											movedElement.get_x() - movedElement.get_border() + movedElement.get_width() - click_engagement > m.get_x() + m.get_border() &&
+											movedElement.get_y() + movedElement.get_border() + click_engagement < m.get_y() + m.get_height() - m.get_border() &&
+											movedElement.get_y() - movedElement.get_border() + movedElement.get_height() - click_engagement > m.get_y() + m.get_border())
 								m.set_isclick(true);
 							else
 								m.set_isclick(false);
@@ -398,16 +422,17 @@ public class DrawableScene extends View
 			break;
 
 			case MotionEvent.ACTION_UP:
-				for (Element pointer: arrayElements)
+				for (Element elementUP: arrayElements)
 				{
-					// reset the pointer to home
-					pointer.set_isselected(false);
-					arrayQuantity.get(arrayElements.indexOf(pointer)).set_isselected(false);
+					// reset the elementUP to home
+					elementUP.set_isselected(false);
+					arrayQuantity.get(arrayElements.indexOf(elementUP)).set_isselected(false);
 					//Alex. Volver al centro:
 					//menupointer.set_position(menupointer.get_homepoint().x, menupointer.get_homepoint().y);
 				}
 			break;
 		}
+		invalidate();
 	}
 	private void borderPointerPositionFix(Element pointer)
 	{
