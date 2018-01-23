@@ -70,8 +70,6 @@ public class DrawableScene extends View
 		element.set_position(element.get_homepoint());
 		arrayElements.add(element);
 		arrayQuantity.add(element);
-
-		//drawElementOnCanvas(element);
 	}
 	public void drawElementOnCanvas(Element element)
 	{
@@ -249,19 +247,11 @@ public class DrawableScene extends View
         	}
         	*/
     	//}
-    	//draw pointer
-		int i=0;
-
-		//dIBUJAR CLICADO: //Dibujar magos
-
+		//Draw clicked
 		for (Element element: arrayElements)
 		{
 			drawElementOnCanvas(element);
-			//quantity.set_homeposition(new Point(quantityX,quantityY));
-			//quantity.set_position(quantityX,quantityY);
 			canvas.drawText(String.valueOf(arrayElements.indexOf(element)),element.get_x()+element.get_imgradius(),element.get_y()+(element.get_imgradius()*3/2), paint);
-
-			//canvas.drawBitmap(pointer.get_img(), pointer.get_x(), pointer.get_y(), null);
 		}
 		/*
 		for (Element element: arrayElements)
@@ -303,14 +293,17 @@ public class DrawableScene extends View
 		{
 			case MotionEvent.ACTION_DOWN:
 				int i = 0;
+				System.out.println("Elements_:" + arrayElements.size());
 				for (Element element: arrayElements)
 				{
+
 					if(!element.isDrawn())
 					{
 						element.set_homeposition(new Point(center_X,current_y));
 						element.set_x(current_x);
 						element.set_y(current_y);
 						element.isDrawn(true);
+
 					}
 				}
 				for (Element pointer: arrayElements)

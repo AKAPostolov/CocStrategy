@@ -60,12 +60,12 @@
         "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable-nodpi\\img_backmain.png"
     },
     {
-        "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\oesbirro.png",
-        "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable-nodpi\\oesbirro.png"
-    },
-    {
         "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\omontapuercos.png",
         "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable-nodpi\\omontapuercos.png"
+    },
+    {
+        "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\oesbirro.png",
+        "source": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\drawable-nodpi\\oesbirro.png"
     },
     {
         "merged": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\nminidraco.png",

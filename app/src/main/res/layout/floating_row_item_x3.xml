@@ -6,9 +6,18 @@
               android:weightSum="3"
               android:layout_gravity="center"
               android:gravity="center"
+              android:tag="row_main_layout"
+              android:clickable="false"
+              android:descendantFocusability="blocksDescendants"
+              android:focusable="false"
+              android:focusableInTouchMode="false"
               android:background="@color/Lime">
     <LinearLayout
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:background="@color/Teal"
+        android:tag="row_item1"
         android:id="@+id/item1"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
@@ -16,33 +25,50 @@
         android:layout_weight="1"
         android:padding="0.1dp">
         <ImageButton
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:id="@+id/imb1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </LinearLayout>
     <LinearLayout
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:background="@color/Teal"
         android:id="@+id/item2"
+        android:tag="row_item2"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:padding="0.1dp">
         <ImageButton
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:id="@+id/imb2"
             android:src="@drawable/empty"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </LinearLayout>
     <LinearLayout
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:background="@color/Teal"
         android:id="@+id/item3"
+        android:tag="row_item3"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:padding="0.1dp">
         <ImageButton
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:id="@+id/imb3"
             android:src="@drawable/empty"
             android:layout_width="match_parent"

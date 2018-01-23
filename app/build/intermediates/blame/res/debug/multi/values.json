@@ -11,7 +11,14 @@
                     "endOffset": 89
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 602,
+                        "endColumn": 38,
+                        "endOffset": 636
+                    }
                 }
             },
             {
@@ -23,7 +30,14 @@
                     "endOffset": 129
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 843,
+                        "endColumn": 39,
+                        "endOffset": 878
+                    }
                 }
             },
             {
@@ -35,7 +49,14 @@
                     "endOffset": 168
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 763,
+                        "endColumn": 38,
+                        "endOffset": 797
+                    }
                 }
             },
             {
@@ -47,7 +68,14 @@
                     "endOffset": 210
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 352,
+                        "endColumn": 41,
+                        "endOffset": 389
+                    }
                 }
             },
             {
@@ -59,7 +87,14 @@
                     "endOffset": 249
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 437,
+                        "endColumn": 38,
+                        "endOffset": 471
+                    }
                 }
             },
             {
@@ -71,7 +106,14 @@
                     "endOffset": 289
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 722,
+                        "endColumn": 39,
+                        "endOffset": 757
+                    }
                 }
             },
             {
@@ -83,7 +125,14 @@
                     "endOffset": 328
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 642,
+                        "endColumn": 38,
+                        "endOffset": 676
+                    }
                 }
             },
             {
@@ -95,7 +144,14 @@
                     "endOffset": 369
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 560,
+                        "endColumn": 40,
+                        "endOffset": 596
+                    }
                 }
             },
             {
@@ -107,7 +163,14 @@
                     "endOffset": 408
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 803,
+                        "endColumn": 38,
+                        "endOffset": 837
+                    }
                 }
             },
             {
@@ -119,7 +182,14 @@
                     "endOffset": 448
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 477,
+                        "endColumn": 39,
+                        "endOffset": 512
+                    }
                 }
             },
             {
@@ -131,7 +201,14 @@
                     "endOffset": 490
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 184,
+                        "endColumn": 41,
+                        "endOffset": 221
+                    }
                 }
             },
             {
@@ -143,7 +220,14 @@
                     "endOffset": 532
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 227,
+                        "endColumn": 41,
+                        "endOffset": 264
+                    }
                 }
             },
             {
@@ -155,7 +239,14 @@
                     "endOffset": 574
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 270,
+                        "endColumn": 41,
+                        "endOffset": 307
+                    }
                 }
             },
             {
@@ -167,7 +258,14 @@
                     "endOffset": 615
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 518,
+                        "endColumn": 40,
+                        "endOffset": 554
+                    }
                 }
             },
             {
@@ -179,7 +277,14 @@
                     "endOffset": 653
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 313,
+                        "endColumn": 37,
+                        "endOffset": 346
+                    }
                 }
             },
             {
@@ -191,7 +296,14 @@
                     "endOffset": 694
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 395,
+                        "endColumn": 40,
+                        "endOffset": 431
+                    }
                 }
             },
             {
@@ -203,7 +315,14 @@
                     "endOffset": 733
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 682,
+                        "endColumn": 38,
+                        "endOffset": 716
+                    }
                 }
             },
             {
@@ -215,7 +334,14 @@
                     "endOffset": 773
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 39,
+                        "endOffset": 92
+                    }
                 }
             },
             {
@@ -227,7 +353,14 @@
                     "endOffset": 815
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 98,
+                        "endColumn": 41,
+                        "endOffset": 135
+                    }
                 }
             },
             {
@@ -239,7 +372,14 @@
                     "endOffset": 857
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 141,
+                        "endColumn": 41,
+                        "endOffset": 178
+                    }
                 }
             },
             {
@@ -327,7 +467,14 @@
                     "endOffset": 3649
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 2638,
+                        "endColumn": 42,
+                        "endOffset": 2676
+                    }
                 }
             },
             {
@@ -339,7 +486,14 @@
                     "endOffset": 3708
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 4,
+                        "startOffset": 2681,
+                        "endColumn": 58,
+                        "endOffset": 2735
+                    }
                 }
             },
             {
@@ -351,7 +505,14 @@
                     "endOffset": 3766
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 2740,
+                        "endColumn": 57,
+                        "endOffset": 2793
+                    }
                 }
             },
             {
@@ -363,7 +524,14 @@
                     "endOffset": 3808
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 4,
+                        "startOffset": 2798,
+                        "endColumn": 41,
+                        "endOffset": 2835
+                    }
                 }
             },
             {
@@ -375,7 +543,14 @@
                     "endOffset": 3850
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 4,
+                        "startOffset": 2840,
+                        "endColumn": 41,
+                        "endOffset": 2877
+                    }
                 }
             },
             {
@@ -387,7 +562,14 @@
                     "endOffset": 3898
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 4,
+                        "startOffset": 2882,
+                        "endColumn": 47,
+                        "endOffset": 2925
+                    }
                 }
             },
             {
@@ -399,7 +581,14 @@
                     "endOffset": 3948
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 4,
+                        "startOffset": 2930,
+                        "endColumn": 49,
+                        "endOffset": 2975
+                    }
                 }
             },
             {
@@ -411,7 +600,14 @@
                     "endOffset": 3993
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 47,
+                        "startColumn": 4,
+                        "startOffset": 2980,
+                        "endColumn": 44,
+                        "endOffset": 3020
+                    }
                 }
             },
             {
@@ -423,7 +619,14 @@
                     "endOffset": 4037
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 48,
+                        "startColumn": 4,
+                        "startOffset": 3025,
+                        "endColumn": 43,
+                        "endOffset": 3064
+                    }
                 }
             },
             {
@@ -435,7 +638,14 @@
                     "endOffset": 4085
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 4,
+                        "startOffset": 3069,
+                        "endColumn": 47,
+                        "endOffset": 3112
+                    }
                 }
             },
             {
@@ -447,7 +657,14 @@
                     "endOffset": 4134
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\XTO\\.android\\build-cache\\535cb02ec080438491cf54d6161a2fbf39c761d9\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 4,
+                        "startOffset": 3117,
+                        "endColumn": 48,
+                        "endOffset": 3161
+                    }
                 }
             },
             {
@@ -459,7 +676,14 @@
                     "endOffset": 4189
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 54,
+                        "endOffset": 105
+                    }
                 }
             },
             {
@@ -471,7 +695,14 @@
                     "endOffset": 4251
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 546,
+                        "endColumn": 61,
+                        "endOffset": 603
+                    }
                 }
             },
             {
@@ -483,7 +714,14 @@
                     "endOffset": 4315
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 608,
+                        "endColumn": 63,
+                        "endOffset": 667
+                    }
                 }
             },
             {
@@ -495,7 +733,14 @@
                     "endOffset": 4380
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 481,
+                        "endColumn": 64,
+                        "endOffset": 541
+                    }
                 }
             },
             {
@@ -507,7 +752,14 @@
                     "endOffset": 4443
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 174,
+                        "endColumn": 62,
+                        "endOffset": 232
+                    }
                 }
             },
             {
@@ -519,7 +771,14 @@
                     "endOffset": 4504
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 237,
+                        "endColumn": 60,
+                        "endOffset": 293
+                    }
                 }
             },
             {
@@ -531,7 +790,14 @@
                     "endOffset": 4552
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 344,
+                        "endColumn": 47,
+                        "endOffset": 387
+                    }
                 }
             },
             {
@@ -543,7 +809,14 @@
                     "endOffset": 4598
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 392,
+                        "endColumn": 45,
+                        "endOffset": 433
+                    }
                 }
             },
             {
@@ -555,7 +828,14 @@
                     "endOffset": 4641
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 438,
+                        "endColumn": 42,
+                        "endOffset": 476
+                    }
                 }
             },
             {
@@ -567,7 +847,14 @@
                     "endOffset": 4687
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 298,
+                        "endColumn": 45,
+                        "endOffset": 339
+                    }
                 }
             },
             {
@@ -579,7 +866,14 @@
                     "endOffset": 4731
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 130,
+                        "endColumn": 43,
+                        "endOffset": 169
+                    }
                 }
             },
             {
@@ -592,7 +886,15 @@
                     "endOffset": 4850
                 },
                 "from": {
-                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\style.xml"
+                    "file": "C:\\Users\\XTO\\AndroidStudioProjects\\COCStrategyDrawer\\app\\src\\main\\res\\values\\style.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endLine": 4,
+                        "endColumn": 12,
+                        "endOffset": 173
+                    }
                 }
             }
         ]
