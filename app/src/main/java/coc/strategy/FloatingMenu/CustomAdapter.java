@@ -9,7 +9,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -41,25 +40,22 @@ public class CustomAdapter extends ArrayAdapter<CocElementsRow> implements View.
         public TextView    tv2;
         public TextView    tv3;
     }
-
     @Override
     public void onClick(View v)
     {
         int position=(Integer) v.getTag();
         Object object = getItem(position);
         CocElementDM element =(CocElementDM)object;
-        System.out.println(String.valueOf(position));
+
         switch (v.getId())
         {
             default:
-                System.out.println(v.getTag().toString());
                 /*Snackbar.make(v, "Release date " +element.getFeature(), Snackbar.LENGTH_LONG)
                         .setAction("No action", null).show();
                         */
             break;
         }
     }
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {

@@ -3,59 +3,7 @@
               android:orientation="vertical"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:gravity="bottom"
-              android:tag="PaletteLayout1"
-              android:id="@+id/mainPaletteLayout"
-    android:layout_marginTop="10dp">
-    <LinearLayout
-        android:background="@color/Teal"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="15dp"
-        android:gravity="center"
-        android:tag="PaletteLayout2.1"
-        android:layout_gravity="center">
-        <ImageButton
-            android:onClick="dragMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/bar"/>
-        <TextView
-            android:text="@string/app_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-    <LinearLayout
-        android:tag="PaletteLayout2.2"
-        android:background="@color/Red"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:weightSum="3.3"
-        android:layout_gravity="center"
-        android:gravity="center">
-        <LinearLayout
-            android:background="@color/Orange1"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="10dp">
-        </LinearLayout>
-        <LinearLayout
-            android:background="@color/Orange2"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="10dp">
-        </LinearLayout>
-        <LinearLayout
-            android:background="@color/Orange3"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="10dp">
-        </LinearLayout>
-    </LinearLayout>
+              android:gravity="bottom">
     <LinearLayout
         android:gravity="bottom"
         android:orientation="vertical"
@@ -67,7 +15,6 @@
         android:layout_margin="3dp"
         android:layout_height="300dp">
             <ListView
-                android:scrollbarAlwaysDrawVerticalTrack="true"
                 android:background="@color/Orange1"
                 android:id="@+id/listViewFloating"
                 android:smoothScrollbar="true"

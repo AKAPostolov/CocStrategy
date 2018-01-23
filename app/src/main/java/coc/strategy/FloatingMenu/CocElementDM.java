@@ -11,7 +11,6 @@ public class CocElementDM
     boolean isDark = false;
     boolean isSpell = false;
     boolean isHeroe = false;
-    public String kind = "";
     int space = 0;
 
     public int getDrawableResource()
@@ -26,7 +25,6 @@ public class CocElementDM
 
     public void setNormal(boolean normal)
     {
-        kind = "normal";
         isNormal = normal;
         unsetRest();
     }
@@ -35,21 +33,18 @@ public class CocElementDM
     {
         isDark = dark;
         unsetRest();
-        kind = "dark";
     }
 
     public void setHeroe(boolean heroe)
     {
         isHeroe = heroe;
         unsetRest();
-        kind = "heroe";
     }
 
     public void setSpell(boolean spell)
     {
         isSpell = spell;
         unsetRest();
-        kind = "spell";
     }
     private void unsetRest()
     {
