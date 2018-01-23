@@ -217,7 +217,13 @@ public class MainPage extends Activity implements View.OnTouchListener
             {
                 CocElementDM element = elements.get(position);
                 System.out.println("Clicked: " + position );
-                drawableScene.addElement(element.getDrawableResource(),element.getDrawableResource());
+
+                if(drawableScene.lastClickedDrawn)//Avoid multiClick multiDraw
+                {
+                    drawableScene.addElement(element.getDrawableResource(),element.getDrawableResource());
+                    drawableScene.lastClickedDrawn = false;
+                }
+
             }
         });
     }

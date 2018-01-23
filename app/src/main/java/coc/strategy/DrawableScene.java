@@ -18,6 +18,8 @@ import java.util.ArrayList;
 //menu class
 public class DrawableScene extends View
 {
+	public boolean lastClickedDrawn = true;
+
 	Context context;
 	Canvas canvas;
 
@@ -192,126 +194,58 @@ public class DrawableScene extends View
     {
 		this.canvas = canvas;
 
-		//Alex. Nada, codigo aislado.
 		Paint paint = new Paint();
 		paint.setColor(Color.MAGENTA);
 		AssetManager am = this.getContext().getAssets();
 		Typeface plain = Typeface.createFromAsset(am, "fonts/Supercell.ttf");
 		Typeface bold  = Typeface.create(plain, Typeface.BOLD);
 		paint.setTypeface(plain);
-		paint.setShadowLayer(15, 0, 0, Color.BLACK);
-		paint.setTextSize(24);
-		//System.out.println("screenWidth  "+screenWidth); //2392
-		//System.out.println("screenHeight "+screenHeight);//1440
-		/*
-		canvas.drawText("SPELLS", 		screenWidth/60, screenHeight/15 * 1, paint);
-		canvas.drawText("Troops", 		screenWidth/60, screenHeight/15 * 2, paint);
-		canvas.drawText("Dark troops", 	screenWidth/60, screenHeight/15 * 3, paint);
-		canvas.drawText("Heroes", 		screenWidth/60, screenHeight/15 * 4, paint);
-		*/
-		Rect bounds = new Rect();
-		paint.getTextBounds("SPELLS",0,"SPELLS".length(),bounds);
-		arrayTextMenuBounds.add(bounds);
-		paint.getTextBounds("Troops",0,"Troops".length(),bounds);
-		arrayTextMenuBounds.add(bounds);
-		paint.getTextBounds("Dark troops",0,"Dark troops".length(),bounds);
-		arrayTextMenuBounds.add(bounds);
-		paint.getTextBounds("Heroes",0,"Heroes".length(),bounds);
-		arrayTextMenuBounds.add(bounds);
+		paint.setShadowLayer(5, 5, 5, Color.RED);
+		paint.setTextSize(30);
 
-		//draw thigs on pointer selected
-    	//if(menupointer.get_isselected())
-    	//{
-    		//draw back menu
-    		//canvas.drawBitmap(menuback, menuback_X, menuback_Y, null);
-
-    		//draw items
-
-			//Draw items and items are selected
-			//alex
-			/*
-    		for(MenuCItem m : menuitems)
-        	{
-    			canvas.drawBitmap(m.get_img(), m.get_x(), m.get_y(), null);
-        	}
-    		//get the item clicked
-    		for(MenuCItem m : menuitems)
-        	{
-    			if(m.get_isclick())
-    			{
-    	    		Paint paint = new Paint();
-    	    		paint.setColor(Color.BLACK); 
-    	    		paint.setTextSize(20); 
-    				canvas.drawText(new Integer(m.get_id()).toString() + " is clicked", 30, 30, paint);
-    			}
-        	}
-        	*/
-    	//}
-		//Draw clicked
+		//Draw quantity
 		for (Element element: arrayElements)
 		{
 			drawElementOnCanvas(element);
-			canvas.drawText(String.valueOf(arrayElements.indexOf(element)),element.get_x()+element.get_imgradius(),element.get_y()+(element.get_imgradius()*3/2), paint);
+			paint.setStyle(Paint.Style.FILL_AND_STROKE);
+			paint.setStrokeWidth(1);
+			paint.setColor(Color.WHITE);
+			canvas.drawText(String.valueOf(arrayElements.indexOf(element)),element.get_x()+element.get_imgradius()*2,element.get_y()+(element.get_imgradius()*5/2), paint);
 		}
-		/*
-		for (Element element: arrayElements)
-		{
-			canvas.drawBitmap(element.get_img(), element.get_x(), element.get_y(), null);
-			canvas.drawBitmap(arrayQuantity.get(i).get_img(), arrayQuantity.get(i).get_x(), arrayQuantity.get(i).get_y(), null);
-			canvas.drawText(String.valueOf(arrayQuantity.indexOf(arrayQuantity.get(i))),arrayQuantity.get(i).get_x()+arrayQuantity.get(i).get_imgradius(),arrayQuantity.get(i).get_y()+(arrayQuantity.get(i).get_imgradius()*3/2), paint);
-			i++;
-		}*/
-
-
-		//older draw on canvas
-		/*
-    	canvas.drawBitmap(menupointer.get_img(), menupointer.get_x(), menupointer.get_y(), null);
-		canvas.drawBitmap(menupointer2.get_img(), menupointer2.get_x(), menupointer2.get_y(), null);
-		*/
     }
-
     public boolean onTouchEvent(MotionEvent event)
 	{
-		eventActionHandler(event);
-
-		// redraw the canvas
-		invalidate();
+		eventActionHandler(event);// our custom handler
+		invalidate();// this redraw the canvas
 		return true;
     }
-    public void invalidateExternalAccess()
-	{
-		invalidate();
-	}
 	public void eventActionHandler(MotionEvent event)
 	{
-		//get current touch position
-		eventaction = event.getAction();
+		eventaction = event.getAction(); //get current touch position
 		current_x = (int)event.getX();
 		current_y = (int)event.getY();
 		System.out.println("Drawable scene evenActionHandler");
 		switch (eventaction)
 		{
 			case MotionEvent.ACTION_DOWN:
-				int i = 0;
+				lastClickedDrawn = true;
 				System.out.println("Elements_:" + arrayElements.size());
 				for (Element element: arrayElements)
 				{
-
 					if(!element.isDrawn())
 					{
 						element.set_homeposition(new Point(center_X,current_y));
 						element.set_x(current_x);
 						element.set_y(current_y);
 						element.isDrawn(true);
-
 					}
 				}
-				for (Element pointer: arrayElements)
+				int i=0;
+				for (Element pointer: arrayElements) //Item is selected (Check and mark)
 				{
 					if(!pointer.isStatic)
 					{
-						i++;
-						// check if the finger is on the pointer
+						i++; // check if the finger is on the pointer
 						int menupointer_x = pointer.get_x() + pointer.get_imgradius();
 						int menupointer_y = pointer.get_y() + pointer.get_imgradius();
 						//new Alex:
@@ -324,16 +258,8 @@ public class DrawableScene extends View
 							pointer.set_isselected(true);
 							//Per each selected Item we carry the quantity as selected.
 							arrayQuantity.get(arrayElements.indexOf(pointer)).set_isselected(true);
-							//System.out.println("Pointer n:" + i);
 							break;
 						}
-					}
-				}
-				for(Rect rect: arrayTextMenuBounds)
-				{
-					if(rect.contains(current_x,current_y))
-					{
-						System.out.println("Was clicked: " + arrayTextMenuBounds.indexOf(rect)+1);
 					}
 				}
 			break;
@@ -342,81 +268,23 @@ public class DrawableScene extends View
 				int x = 0;
 				for (Element pointer: arrayElements)
 				{
-					x++;
-					// move the pointer
+					x++;// move the pointer
 					if (pointer.get_isselected())
 					{
-						//System.out.println("Draggind pointer n"+x);
-						//x/y projection to the menu back radius circle
-						int circleset_x = (int) (menuback_center_X + (menuback_radius - menuback_border) * (current_x - menuback_center_X) / Math.sqrt(Math.pow(current_x - menuback_center_X, 2) + Math.pow(current_y - menuback_center_Y, 2)));
-						int circleset_y = (int) (menuback_center_Y + (menuback_radius - menuback_border) * (current_y - menuback_center_Y) / Math.sqrt(Math.pow(current_x - menuback_center_X, 2) + Math.pow(current_y - menuback_center_Y, 2)));
-
-						//Alex quitamos radio de seguridad:
-						/*
-						//check max dimensions and project pointer on the circle
-						if(	current_x <= circleset_x && current_y <= circleset_y && current_x <= menuback_center_X && current_y <= menuback_center_Y ||
-							current_x <= circleset_x && current_y >= circleset_y && current_x <= menuback_center_X && current_y >= menuback_center_Y ||
-							current_x >= circleset_x && current_y <= circleset_y && current_x >= menuback_center_X && current_y <= menuback_center_Y ||
-							current_x >= circleset_x && current_y >= circleset_y && current_x >= menuback_center_X && current_y >= menuback_center_Y
-
-								)
-						{
-							menupointer.set_x(circleset_x - menupointer.get_imgradius());
-							menupointer.set_y(circleset_y - menupointer.get_imgradius());
-						}
-						else
-						{
-							menupointer.set_x(current_x - menupointer.get_imgradius());
-							menupointer.set_y(current_y - menupointer.get_imgradius());
-						}
-						*/
 						borderPointerPositionFix(pointer);
 
 						Element pointerQuantity = arrayQuantity.get(arrayElements.indexOf(pointer));
 
 						borderPointerPositionFix(pointerQuantity);
-						//pointerQuantity.set_x(pointerQuantity.get_x()+pointer.get_imgradius());
-						//pointerQuantity.set_y(pointerQuantity.get_y()+pointer.get_imgradius());
-
-
-						//canvas.drawText(String.valueOf(arrayQuantity.indexOf(arrayQuantity.get(i))),arrayQuantity.get(i).get_x()+arrayQuantity.get(i).get_imgradius(),arrayQuantity.get(i).get_y()+(arrayQuantity.get(i).get_imgradius()*3/2), paint);
-
-						//check items over //
-						for (MenuCItem m : menuitems)
-						{
-							if (
-									pointer.get_x() + pointer.get_border() + over_engagement < m.get_x() + m.get_width() - m.get_border() &&
-											pointer.get_x() - pointer.get_border() + pointer.get_width() - over_engagement > m.get_x() + m.get_border() &&
-											pointer.get_y() + pointer.get_border() + over_engagement < m.get_y() + m.get_height() - m.get_border() &&
-											pointer.get_y() - pointer.get_border() + pointer.get_height() - over_engagement > m.get_y() + m.get_border())
-								m.set_isover(true);
-							else
-								m.set_isover(false);
-						}
-						//check items click
-						for (MenuCItem m : menuitems)
-						{
-							if (
-									pointer.get_x() + pointer.get_border() + click_engagement < m.get_x() + m.get_width() - m.get_border() &&
-											pointer.get_x() - pointer.get_border() + pointer.get_width() - click_engagement > m.get_x() + m.get_border() &&
-											pointer.get_y() + pointer.get_border() + click_engagement < m.get_y() + m.get_height() - m.get_border() &&
-											pointer.get_y() - pointer.get_border() + pointer.get_height() - click_engagement > m.get_y() + m.get_border())
-								m.set_isclick(true);
-							else
-								m.set_isclick(false);
-						}
 					}
 				}
 			break;
 
 			case MotionEvent.ACTION_UP:
 				for (Element pointer: arrayElements)
-				{
-					// reset the pointer to home
+				{// reset the pointer to home if needed
 					pointer.set_isselected(false);
 					arrayQuantity.get(arrayElements.indexOf(pointer)).set_isselected(false);
-					//Alex. Volver al centro:
-					//menupointer.set_position(menupointer.get_homepoint().x, menupointer.get_homepoint().y);
 				}
 			break;
 		}
@@ -427,21 +295,21 @@ public class DrawableScene extends View
 		{
 			//Alex fix border touch
 			boolean isCloseToBorder = false;
-			if (current_x < pointer.get_imgradius() / 2 && current_y < pointer.get_imgradius() / 2)
+			if (current_x <= pointer.get_imgradius() / 2 && current_y <= pointer.get_imgradius() / 2)
 			{
-				isCloseToBorder = true;
 				////System.out.println("Case1 Touching Top-Left-Landscape" + pointer.getName());
+				isCloseToBorder = true;
 				pointer.set_x(0);
 				pointer.set_y(0);
 			}
-			else if (current_x < pointer.get_imgradius() / 2)
+			else if (current_x <= pointer.get_imgradius() / 2)
 			{
-				isCloseToBorder = true;
 				//System.out.println("Case2 Touching LEFT - Landscape" + pointer.getName());
+				isCloseToBorder = true;
 				pointer.set_x(0);
 				pointer.set_y(current_y - pointer.get_imgradius());
 			}
-			else if (current_y < pointer.get_imgradius() / 2)
+			else if (current_y <= pointer.get_imgradius() / 2)
 			{
 				////System.out.println("Case3 Touching TOP - Landscape" + pointer.getName());
 				isCloseToBorder = true;
@@ -452,21 +320,21 @@ public class DrawableScene extends View
 			{
 				isCloseToBorder = false;
 			}
-			if (current_y > screenHeight - pointer.get_imgradius() && current_x > screenWidth - pointer.get_imgradius())
+			if (current_y >= screenHeight - pointer.get_imgradius() && current_x >=screenWidth - pointer.get_imgradius())
 			{
 				////System.out.println("Case4 Touching Bottom-Right-Landscape" + pointer.getName());
 				isCloseToBorder = true;
 				pointer.set_x(screenWidth - pointer.get_imgradius() * 2);
 				pointer.set_y(screenHeight - pointer.get_imgradius() * 2);
 			}
-			else if (current_y > screenHeight - pointer.get_imgradius())
+			else if (current_y >=screenHeight - pointer.get_imgradius())
 			{
 				//System.out.println("Case5 Touching Bottom - Landscape" + pointer.getName());
 				isCloseToBorder = true;
 				pointer.set_x(current_x);
 				pointer.set_y(screenHeight - pointer.get_imgradius() * 2);
 			}
-			else if (current_x > screenWidth - pointer.get_imgradius())
+			else if (current_x >=screenWidth - pointer.get_imgradius())
 			{
 				//System.out.println("Case6 Touching Right - Landscape" + pointer.getName());
 				isCloseToBorder = true;
