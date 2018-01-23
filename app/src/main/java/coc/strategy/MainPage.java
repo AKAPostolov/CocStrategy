@@ -217,6 +217,8 @@ public class MainPage extends Activity implements View.OnTouchListener
 
                 CocElementDM element = elements.get(position);
                 System.out.println("Clicked: " + position );
+                drawableScene.addElement(element.getDrawableResource(),element.getDrawableResource());
+                //drawableScene.invalidate();
                 /*Snackbar.make(view, elements.getName()+"\n"+elements.getType()+" API: "+elements.getVersion_number(), Snackbar.LENGTH_LONG)
                         .setAction("No action", null).show();
                         */

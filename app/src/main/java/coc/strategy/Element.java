@@ -19,6 +19,7 @@ public class Element
 	private int border = 0;
 	private Point homepoint = null;
 	private boolean isselected = false;
+	private boolean isDrawn = false;
 	boolean isStatic = false;
 	
 	public Element(Context context, int img, int imgover, int border, String name, boolean isStatic)
@@ -98,6 +99,14 @@ public class Element
 		return border;
 	}
 
+	public boolean isDrawn()
+	{
+		return isDrawn;
+	}
+	public void isDrawn(boolean value)
+	{
+		isDrawn = value;
+	}
 	public String getName()
 	{return name;}
 }

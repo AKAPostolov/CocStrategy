@@ -70,8 +70,8 @@ public class DrawableScene extends View
 		element.set_position(element.get_homepoint());
 		arrayElements.add(element);
 		arrayQuantity.add(element);
-		//drawElementOnCanvas(element);
 
+		//drawElementOnCanvas(element);
 	}
 	public void drawElementOnCanvas(Element element)
 	{
@@ -130,7 +130,9 @@ public class DrawableScene extends View
 				menupointer.get_homepoint().y+350);
 		arrayElements.add(menupointer3);
 		*/
-		for (int i=1;i<=4;i++)
+		//Anulamos rellenado de magos
+		int templimit = 0; //poner a 4 para recuperar los magos
+		for (int i=1;i<=templimit;i++)
 		{
 			//pointer (center)
 			/*
@@ -250,23 +252,26 @@ public class DrawableScene extends View
     	//draw pointer
 		int i=0;
 
-		//dIBUJAR CLICADO:
+		//dIBUJAR CLICADO: //Dibujar magos
+
 		for (Element element: arrayElements)
 		{
 			drawElementOnCanvas(element);
+			//quantity.set_homeposition(new Point(quantityX,quantityY));
+			//quantity.set_position(quantityX,quantityY);
+			canvas.drawText(String.valueOf(arrayElements.indexOf(element)),element.get_x()+element.get_imgradius(),element.get_y()+(element.get_imgradius()*3/2), paint);
+
 			//canvas.drawBitmap(pointer.get_img(), pointer.get_x(), pointer.get_y(), null);
 		}
-		//Dibujar magos
 		/*
-
-		for (Element pointer: arrayElements)
+		for (Element element: arrayElements)
 		{
-			canvas.drawBitmap(pointer.get_img(), pointer.get_x(), pointer.get_y(), null);
+			canvas.drawBitmap(element.get_img(), element.get_x(), element.get_y(), null);
 			canvas.drawBitmap(arrayQuantity.get(i).get_img(), arrayQuantity.get(i).get_x(), arrayQuantity.get(i).get_y(), null);
 			canvas.drawText(String.valueOf(arrayQuantity.indexOf(arrayQuantity.get(i))),arrayQuantity.get(i).get_x()+arrayQuantity.get(i).get_imgradius(),arrayQuantity.get(i).get_y()+(arrayQuantity.get(i).get_imgradius()*3/2), paint);
 			i++;
-		}
-		*/
+		}*/
+
 
 		//older draw on canvas
 		/*
@@ -283,17 +288,31 @@ public class DrawableScene extends View
 		invalidate();
 		return true;
     }
+    public void invalidateExternalAccess()
+	{
+		invalidate();
+	}
 	public void eventActionHandler(MotionEvent event)
 	{
 		//get current touch position
 		eventaction = event.getAction();
 		current_x = (int)event.getX();
 		current_y = (int)event.getY();
-
+		System.out.println("Drawable scene evenActionHandler");
 		switch (eventaction)
 		{
 			case MotionEvent.ACTION_DOWN:
 				int i = 0;
+				for (Element element: arrayElements)
+				{
+					if(!element.isDrawn())
+					{
+						element.set_homeposition(new Point(center_X,current_y));
+						element.set_x(current_x);
+						element.set_y(current_y);
+						element.isDrawn(true);
+					}
+				}
 				for (Element pointer: arrayElements)
 				{
 					if(!pointer.isStatic)

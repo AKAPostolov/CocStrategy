@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="shadowSizeForButton">1dp</dimen>
+    <dimen name="bottomMargin">5dp</dimen>
+    <dimen name="topMargin">5dp</dimen>
+    <dimen name="leftMargin">5dp</dimen>
+    <dimen name="rightMargin">5dp</dimen>
 </resources>
