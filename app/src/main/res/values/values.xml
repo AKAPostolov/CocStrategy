@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="stringDrawableSmallTroops">
+        <item>arc</item>
+        <item>gob</item>
+        <item>bar</item>
+        <item>wiz</item>
+        <item>gia</item>
+        <item>bal</item>
+        <item>wal</item>
+        <item>pek</item>
+        <item>hea</item>
+        <item>dra</item>
+        <item>bab</item>
+        <item>mnr</item>
+        <item>min</item>
+        <item>gol</item>
+        <item>bow</item>
+        <item>val</item>
+        <item>wit</item>
+        <item>hog</item>
+        <item>empty</item>
+        <item>lav</item>
+        <item>empty</item>
+        <item>bak</item>
+        <item>arq</item>
+        <item>gra</item>
+    </string-array>
+</resources>

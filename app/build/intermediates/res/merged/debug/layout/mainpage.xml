@@ -6,7 +6,6 @@
     android:tag="relativeLayoutMain"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-
     android:background="@android:color/white">
 
     <ImageView
@@ -20,11 +19,13 @@
     <LinearLayout
         android:id="@+id/LinearLayout_main"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:weightSum="1"
+        android:gravity="top"
+        android:foregroundGravity="top"
         android:tag="LinearLayout_main">
         <include layout="@layout/floating_palette_layout"/>
+
     </LinearLayout>
     <Button
         android:id="@+id/button1"

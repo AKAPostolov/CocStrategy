@@ -1,9 +1,12 @@
 package coc.strategy;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -11,6 +14,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Display;
+import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,11 +43,15 @@ public class MainPage extends Activity implements View.OnTouchListener
     private int screenWidth = 0;
     private int screenHeight = 0;
 
-    private int smallTroops[] = {R.drawable.arc,R.drawable.arq,R.drawable.bab,R.drawable.bak,R.drawable.bal,R.drawable.bar,R.drawable.bow,R.drawable.dra,R.drawable.gia,R.drawable.gob,R.drawable.gol,R.drawable.gra,R.drawable.hea,R.drawable.hog,R.drawable.lav,R.drawable.min,R.drawable.mnr,R.drawable.pek,R.drawable.val,R.drawable.wal,R.drawable.wit,R.drawable.wiz};
+    private int[] smallTroops = new int[24];
+    private String smallTroopsNames[];
+
     private int normalTroopsIDs[] = {R.drawable.narquera, R.drawable.nbarbaro, R.drawable.ngiga, R.drawable.nmago, R.drawable.nrompemuros, R.drawable.ndragon, R.drawable.npekka, R.drawable.nminidraco};
     private int darkTroopsIDs[]   = {R.drawable.obruja,R.drawable.oesbirro,R.drawable.ogolem,R.drawable.omontapuercos,R.drawable.operrolava,R.drawable.ovalquiria,R.drawable.ovalquiria};
     private int spellsIDs[]       = {R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell,R.drawable.red_spell};
     private int heroesIDs[]       = {R.drawable.hrey,R.drawable.hreina,R.drawable.hcentinela};
+
+    private ArrayList<CocElementDM> elements;
 
     LinearLayout mainLayout;
     LinearLayout layoutButtons;
@@ -118,7 +127,16 @@ public class MainPage extends Activity implements View.OnTouchListener
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        System.out.println("Activity state: onCreate");
+        //array get from XML and set
+        String strDrawableValues[] = getResources().getStringArray(R.array.stringDrawableSmallTroops);
+        for (int i=0; i<strDrawableValues.length;i++)
+        {
+            smallTroops[i] = this.getResources().getIdentifier(strDrawableValues[i], "drawable", this.getPackageName());
+        }
+        elements = new ArrayList<>();
 
+        smallTroopsNames = getResources().getStringArray(R.array.array_troops_names);
         //set fullscreen
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -150,6 +168,22 @@ public class MainPage extends Activity implements View.OnTouchListener
         //((RelativeLayout)mainLayout.getParent()).setOnTouchListener(null);
 
     }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        System.out.println("Activity state: onResume");
+        //drawableScene.invalidate();
+    }
+
+    @Override
+    protected void onRestart()
+    {
+        super.onRestart();
+        System.out.println("Activity state: onRestart");
+    }
+
     public void obtainViewButtons()
     {
         boton1   = (Button) findViewById(R.id.button1);
@@ -205,27 +239,38 @@ public class MainPage extends Activity implements View.OnTouchListener
     {
         listView = (ListView) findViewById(R.id.listViewFloating);
 
-        final ArrayList<CocElementDM> elements = new ArrayList<>();
+
         loadItemsInArrayList(elements);
         final ArrayList<CocElementsRow> rows = getRowsFromElements(elements);
-        CustomAdapter                 adapter  = new CustomAdapter(rows,getApplicationContext());
+        CustomAdapter                 adapter  = new CustomAdapter(this,rows,getApplicationContext());
 
         listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                CocElementDM element = elements.get(position);
-                System.out.println("Clicked: " + position );
 
-                if(drawableScene.lastClickedDrawn)//Avoid multiClick multiDraw
-                {
-                    drawableScene.addElement(element.getDrawableResource(),element.getDrawableResource());
-                    drawableScene.lastClickedDrawn = false;
-                }
 
             }
         });
+    }
+    public void drawElementByDrawableResourceID(int drawableResourceID)
+    {
+        //We void multiClick multiDraw with lastClickedDrawn. MultiClick musn't draw many images.
+        //Allowing switch selected element to draw the last clicked:
+        if(drawableScene.lastClickedDrawn)
+        {
+            drawableScene.addElement(drawableResourceID,drawableResourceID);
+            drawableScene.lastClickedDrawn = false;
+        }
+        else
+        {
+            System.out.println("Switching last clicked element");
+            drawableScene.removeLastElement();
+            drawableScene.addElement(drawableResourceID,drawableResourceID);
+            drawableScene.lastClickedDrawn = false;
+        }
     }
     public ArrayList<CocElementsRow> getRowsFromElements(ArrayList<CocElementDM> elements)
     {
@@ -716,6 +761,84 @@ public class MainPage extends Activity implements View.OnTouchListener
             return true;
         }
         return false;
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)  //For older versions than ECLAIR
+    {
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.ECLAIR
+                && keyCode == KeyEvent.KEYCODE_BACK
+                && event.getRepeatCount() == 0)
+        {
+            // Take care of calling this method on earlier versions of
+            // the platform where it doesn't exist.
+            onBackPressed();
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public void onBackPressed() //For modern versions
+    {
+        // This will be called either automatically for you on 2.0
+        // or later, or by the code above on earlier versions of the
+        // platform.
+        buildExitDialog();
+        return;
+    }
+
+    //MANEJAMOS ESTE EVENTO POR SI ALGUIEN PULSA LA TECLA DE MENU.
+    // No quiero que haga nada en realidad, no hay un menu preparado o pensado para esta app
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                //finish();
+                //me corrijo: QUITO ESTO DE LLAMAR AL MÉTODO PARA QUE NO HAGA NADA.
+                //onBackPressed();
+                break;
+        }
+        return true;
+    }
+
+    public void buildExitDialog()
+    {
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        // set title
+
+        alertDialogBuilder.setTitle(R.string.alert_dialog_title);
+        alertDialogBuilder.setIcon(R.drawable.bar);
+
+        // set dialog message
+        alertDialogBuilder
+                .setMessage(R.string.alert_dialog_question)
+                .setCancelable(false)
+                .setPositiveButton(R.string.alert_dialog_yes,new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        // if this button is clicked, close
+                        // current activity
+                        MainPage.this.finish();
+                    }
+                })
+                .setNegativeButton(R.string.alert_dialog_no,new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        // if this button is clicked, just close
+                        // the dialog box and do nothing
+                        dialog.cancel();
+                    }
+                });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+
+
+        // show it
+        alertDialog.show();
+
+
     }
     /**
      * Codigo RESIDUAL *******************************************************************

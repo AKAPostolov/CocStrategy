@@ -1,5 +1,6 @@
 package coc.strategy.FloatingMenu;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,26 +13,29 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import coc.strategy.MainPage;
 import coc.strategy.R;
 
 /**
  * Created by XTO on 18/01/2018.
  */
 
-public class CustomAdapter extends ArrayAdapter<CocElementsRow> implements View.OnClickListener
+public class CustomAdapter extends ArrayAdapter<CocElementsRow>
 {
     private ArrayList<CocElementsRow> elementsRows;
+    private Activity activity;
     Context context;
     HashMap map;
 
-    public CustomAdapter(ArrayList<CocElementsRow> elements, Context context) {
+    public CustomAdapter(Activity activity, ArrayList<CocElementsRow> elements, Context context) {
         super(context, R.layout.floating_row_item_x3, elements);
         this.elementsRows = elements;
         this.context = context;
         map = new HashMap();
+        this.activity = activity;
     }
     // View lookup cache
-    private static class ViewHolder
+    public static class ViewHolder
     {
         public ImageButton imb1;
         public ImageButton imb2;
@@ -39,7 +43,9 @@ public class CustomAdapter extends ArrayAdapter<CocElementsRow> implements View.
         public TextView    tv1;
         public TextView    tv2;
         public TextView    tv3;
+        int lastPosition = 0;
     }
+    /*
     @Override
     public void onClick(View v)
     {
@@ -50,12 +56,11 @@ public class CustomAdapter extends ArrayAdapter<CocElementsRow> implements View.
         switch (v.getId())
         {
             default:
-                /*Snackbar.make(v, "Release date " +element.getFeature(), Snackbar.LENGTH_LONG)
-                        .setAction("No action", null).show();
-                        */
+
             break;
         }
     }
+    */
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
@@ -76,13 +81,19 @@ public class CustomAdapter extends ArrayAdapter<CocElementsRow> implements View.
             viewHolder.imb1 = (ImageButton) convertView.findViewById(R.id.imb1);
             viewHolder.imb2 = (ImageButton) convertView.findViewById(R.id.imb2);
             viewHolder.imb3 = (ImageButton) convertView.findViewById(R.id.imb3);
-
+            setViewProperties(viewHolder.imb1, element1);
+            setViewProperties(viewHolder.imb2, element2);
+            setViewProperties(viewHolder.imb3, element3);
+            /*
+            viewHolder.imb1.setOnClickListener(onElementClickListener1);
+            viewHolder.imb2.setOnClickListener(onElementClickListener2);
+            viewHolder.imb3.setOnClickListener(onElementClickListener3);
+            */
             if(element1 != null)
             {
-                viewHolder.imb1.setImageDrawable(context.getResources().getDrawable(element1.getDrawableResource()));
-                viewHolder.imb1.setMaxHeight(5);
-                viewHolder.imb1.setMaxWidth(5);
+
             }
+            /*
             else
             {
                 System.out.println("Situacion a corregir, elemento 1 vacio en arrayRow de elementos");
@@ -107,6 +118,7 @@ public class CustomAdapter extends ArrayAdapter<CocElementsRow> implements View.
             }
             viewHolder.imb3.setMaxHeight(5);
             viewHolder.imb3.setMaxWidth(5);
+            */
 
 
             //viewHolder.tv1.setText(String.valueOf(position));
@@ -130,13 +142,35 @@ public class CustomAdapter extends ArrayAdapter<CocElementsRow> implements View.
         */
         return convertView;
     }
-
+    public void setViewProperties(View view, CocElementDM element)
+    {
+        ((ImageButton)view).setImageDrawable(context.getResources().getDrawable(element.getDrawableResource()));
+        ((ImageButton)view).setMaxHeight(5);
+        ((ImageButton)view).setMaxWidth(5);
+        ((ImageButton)view).setTag(String.valueOf(element.getDrawableResource()));
+        ((ImageButton)view).setOnClickListener(onElementClickListener);
+    }
     /**
      * These handle the case where you want different types of view for different rows.
      * For instance, in a contacts application you may want even rows to have pictures
      * on the left side and odd rows to have pictures on the right. In that case,
      * you would use:
      * */
+    private View.OnClickListener onElementClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v)
+        {
+            String viewTag = v.getTag().toString();
+            int clickedViewDrawableID = Integer.valueOf(viewTag);
+            if(clickedViewDrawableID!=R.drawable.empty)
+            {
+                ((MainPage)activity).drawElementByDrawableResourceID(clickedViewDrawableID);
+            }
+            System.out.println("Clicked : " + viewTag);
+        }
+    };
+
+    //Para evitar replicados al hacer scroll
     @Override
     public int getViewTypeCount() {
         return 2;

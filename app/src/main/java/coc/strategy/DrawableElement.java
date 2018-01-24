@@ -4,9 +4,10 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
+import android.graphics.drawable.BitmapDrawable;
 
 //pointer class
-public class Element
+public class DrawableElement
 {
 	private String name;
 	private Bitmap img;
@@ -22,7 +23,7 @@ public class Element
 	private boolean isDrawn = false;
 	boolean isStatic = false;
 	
-	public Element(Context context, int img, int imgover, int border, String name, boolean isStatic)
+	public DrawableElement(Context context, int img, int imgover, int border, String name, boolean isStatic)
 	{
 		this.isStatic = isStatic;
 		this.name = name;
@@ -31,6 +32,19 @@ public class Element
         this.border = border;
         this.img = BitmapFactory.decodeResource(context.getResources(), img);
         this.imgover = BitmapFactory.decodeResource(context.getResources(), imgover);
+        this.imgradius = this.img.getWidth()/2;
+        this.height = this.img.getHeight();
+        this.width = this.img.getWidth();
+	}
+	public DrawableElement(Context context, Bitmap img, Bitmap imgover, int border, String name, boolean isStatic)
+	{
+		this.isStatic = isStatic;
+		this.name = name;
+		BitmapFactory.Options opts = new BitmapFactory.Options();
+        opts.inJustDecodeBounds = true;
+        this.border = border;
+        this.img = img;
+        this.imgover = imgover;
         this.imgradius = this.img.getWidth()/2;
         this.height = this.img.getHeight();
         this.width = this.img.getWidth();
@@ -108,5 +122,7 @@ public class Element
 		isDrawn = value;
 	}
 	public String getName()
-	{return name;}
+	{
+		return name;
+	}
 }

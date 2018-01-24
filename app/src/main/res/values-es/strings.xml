@@ -13,4 +13,30 @@
     <string name="btn_elegir_enemigo">ELEGIR ALDEA ENEMIGA</string>
     <string name="btn_definir_ejercito">DEFINIR EJERCITO</string>
     <string name="btn_disolver_ejercito">DISOLVER EJERCITO</string>
+
+    <string-array name="array_troops_names">
+        <item>Arquera</item>
+        <item>Duende</item>
+        <item>Mago</item>
+        <item>Barbaro</item>
+        <item>Gigante</item>
+        <item>Globo</item>
+        <item>Rompemuros</item>
+        <item>Pekka</item>
+        <item>Curandera</item>
+        <item>Dragón</item>
+        <item>Bebé Dragón</item>
+        <item>Minero</item>
+        <item>Esbirro</item>
+        <item>Golem</item>
+        <item>Bolero</item>
+        <item>Valquiria</item>
+        <item>Bruja</item>
+        <item></item>
+        <item>Perro de lava</item>
+        <item></item>
+        <item>Rey</item>
+        <item>Reina</item>
+        <item>Gran Centinela</item>
+    </string-array>
 </resources>

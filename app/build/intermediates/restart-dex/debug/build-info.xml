@@ -1,36 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86_64,x86"
+    abi="x86"
     api-level="24"
     build-mode="COLD"
-    density="xhdpi"
+    density="560dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1516701348832"
+    timestamp="1516809130086"
     token="8440714757029796015"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="204" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="17" />
     <task
         name="verifier"
-        duration="0" />
+        duration="3" />
 
     <artifact
-        location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\outputs\apk\app-debug.apk"
-        type="SPLIT_MAIN" />
+        location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1516700792610"
+        timestamp="1516783682609"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
@@ -58,31 +67,38 @@
         <artifact
             location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1516802790607"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1516808049691"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1516808970490"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1516809130086"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\outputs\apk\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1516700969617"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1516701348832"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\outputs\apk\app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

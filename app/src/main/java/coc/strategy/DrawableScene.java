@@ -42,12 +42,12 @@ public class DrawableScene extends View
 	private int screenHeight = 0;
 	private int screenWidth = 0;
 		
-	private Element   menupointer  = null;
-	private Element   menupointer2 = null;
-	private Element   menupointer3 = null;
-	private Element[] menuPointers = new Element[40];
-	ArrayList<Element> arrayElements = new ArrayList<Element>();
-	ArrayList<Element> arrayQuantity = new ArrayList<Element>();
+	private DrawableElement   menupointer  = null;
+	private DrawableElement   menupointer2 = null;
+	private DrawableElement   menupointer3 = null;
+	private DrawableElement[] menuPointers = new DrawableElement[40];
+	ArrayList<DrawableElement> arrayDrawableElements = new ArrayList<DrawableElement>();
+	ArrayList<DrawableElement> arrayQuantity         = new ArrayList<DrawableElement>();
 
 	MenuCItem[] menuitems = new MenuCItem[4];
 
@@ -59,29 +59,44 @@ public class DrawableScene extends View
 	{
 		for (int i=0;i<var.length;i++)
 		{
-			Element element = new Element(context, R.drawable.nmago, R.drawable.nmago, 10, "Tropa "+i,false);
-			element.set_homeposition(new Point(
-					menuback_X + menuback_width / 2 - element.get_width() / 2,
-					menuback_Y + menuback_height / 2 - element.get_height() / 2));
+			DrawableElement drawableElement = new DrawableElement(context, R.drawable.nmago, R.drawable.nmago, 10, "Tropa "+i,false);
+			drawableElement.set_homeposition(new Point(
+					menuback_X + menuback_width / 2 - drawableElement.get_width() / 2,
+					menuback_Y + menuback_height / 2 - drawableElement.get_height() / 2));
 		}
+	}
+	public void removeLastElement()
+	{
+		arrayDrawableElements.remove(arrayDrawableElements.size()-1);
+		arrayQuantity.remove(arrayQuantity.size()-1);
+	}
+	public void addElement(Bitmap resImage,Bitmap resImageHover)
+	{
+		DrawableElement drawableElement = new DrawableElement(context,resImage,resImageHover,10,String.valueOf(
+				arrayDrawableElements.size()),false);
+		drawableElement.set_homeposition(new Point(drawableElement.get_imgradius()*2, drawableElement.get_imgradius()*2));
+		drawableElement.set_position(drawableElement.get_homepoint());
+		arrayDrawableElements.add(drawableElement);
+		arrayQuantity.add(drawableElement);
 	}
 	public void addElement(int resImage,int resImageHover)
 	{
-		Element element = new Element(context,resImage,resImageHover,10,String.valueOf(arrayElements.size()),false);
-		element.set_homeposition(new Point(element.get_imgradius()*2, element.get_imgradius()*2));
-		element.set_position(element.get_homepoint());
-		arrayElements.add(element);
-		arrayQuantity.add(element);
+		DrawableElement drawableElement = new DrawableElement(context,resImage,resImageHover,10,String.valueOf(
+				arrayDrawableElements.size()),false);
+		drawableElement.set_homeposition(new Point(drawableElement.get_imgradius()*2, drawableElement.get_imgradius()*2));
+		drawableElement.set_position(drawableElement.get_homepoint());
+		arrayDrawableElements.add(drawableElement);
+		arrayQuantity.add(drawableElement);
 	}
-	public void drawElementOnCanvas(Element element)
+	public void drawElementOnCanvas(DrawableElement drawableElement)
 	{
-		this.canvas.drawBitmap(element.get_img(), element.get_x(), element.get_y(), null);
+		this.canvas.drawBitmap(drawableElement.get_img(), drawableElement.get_x(), drawableElement.get_y(), null);
 	}
     public DrawableScene(Context context)
     {
         super(context);
 		this.context = context;
-        setFocusable(true); //necessary for getting the touch events
+        //setFocusable(true); //necessary for getting the touch events
                 
         BitmapFactory.Options opts = new BitmapFactory.Options();
         opts.inJustDecodeBounds = true;
@@ -101,92 +116,27 @@ public class DrawableScene extends View
         menuback_Y = menuback_center_Y - menuback_height / 2;
         menuback_radius = menuback_height / 2;
         menuback_border = 35;
-        
-        //pointer (center)
-		/*
-        menupointer = new Element(context, R.drawable.nminidraco, R.drawable.ndragon, 10, "Carta1",false);
-        menupointer.set_homeposition(new Point(
-        		menuback_X + menuback_width / 2 - menupointer.get_width() / 2,
-        		menuback_Y + menuback_height / 2 - menupointer.get_height() / 2));
-        menupointer.set_position(
-        		menupointer.get_homepoint().x,
-        		menupointer.get_homepoint().y);
 
-		menupointer2 = new Element(context, R.drawable.nbarbaro, R.drawable.narquera, 10, "Carta2",false);
-		menupointer2.set_homeposition(new Point(
-				menuback_X + menuback_width / 2 - menupointer.get_width() / 2,
-				menuback_Y + menuback_height / 2 - menupointer.get_height() / 2));
-		menupointer2.set_position(
-				menupointer.get_homepoint().x+250,
-				menupointer.get_homepoint().y+250);
-		arrayElements.add(menupointer);
-		arrayElements.add(menupointer2);
-		menupointer3 = new Element(context, R.drawable.nbarbaro, R.drawable.narquera, 10, "Carta2",false);
-		menupointer3.set_homeposition(new Point(
-				menuback_X + menuback_width / 2 - menupointer.get_width() / 2,
-				menuback_Y + menuback_height / 2 - menupointer.get_height() / 2));
-		menupointer3.set_position(
-				menupointer.get_homepoint().x+250,
-				menupointer.get_homepoint().y+350);
-		arrayElements.add(menupointer3);
-		*/
 		//Anulamos rellenado de magos
 		int templimit = 0; //poner a 4 para recuperar los magos
 		for (int i=1;i<=templimit;i++)
 		{
-			//pointer (center)
-			/*
-			Element backgroundElement = new Element(context, R.drawable.shield1, R.drawable.shield1, 10, "Escudo"+i,true);
-			backgroundElement.set_homeposition(new Point(
-					menuback_X + menuback_width / 2 - backgroundElement.get_width() / 2,
-					menuback_Y + menuback_height / 2 - backgroundElement.get_height() / 2));
-			backgroundElement.set_position(
-					0 + arrayElements.size()* backgroundElement.get_imgradius()+15,
-					screenHeight-backgroundElement.get_height());
-			*/
-			Element pointer = new Element(context, R.drawable.nmago, R.drawable.nmago, 10, "Tropa "+i,false);
+			DrawableElement pointer = new DrawableElement(context, R.drawable.nmago, R.drawable.nmago, 10, "Tropa "+i,false);
 			pointer.set_homeposition(new Point(
 					menuback_X + menuback_width / 2 - pointer.get_width() / 2,
 					menuback_Y + menuback_height / 2 - pointer.get_height() / 2));
 			pointer.set_position(
-					arrayElements.size()* pointer.get_imgradius()+ pointer.get_imgradius()* arrayElements.size(),
+					arrayDrawableElements.size()* pointer.get_imgradius()+ pointer.get_imgradius()* arrayDrawableElements.size(),
 					screenHeight-pointer.get_height());
-			//arrayElements.add(backgroundElement);
-			arrayElements.add(pointer);
-			Element quantity = new Element(context, R.drawable.menu_pointer, R.drawable.menu_pointerover, 10, "Quantity "+i,false);
-			int quantityX = arrayQuantity.size()* pointer.get_imgradius()+ pointer.get_imgradius()*arrayQuantity.size()+pointer.get_imgradius();
-			int quantityY = screenHeight-pointer.get_height()+ pointer.get_imgradius();
+			//arrayDrawableElements.add(backgroundElement);
+			arrayDrawableElements.add(pointer);
+			DrawableElement quantity  = new DrawableElement(context, R.drawable.menu_pointer, R.drawable.menu_pointerover, 10, "Quantity "+i,false);
+			int             quantityX = arrayQuantity.size()* pointer.get_imgradius()+ pointer.get_imgradius()*arrayQuantity.size()+pointer.get_imgradius();
+			int             quantityY = screenHeight-pointer.get_height()+ pointer.get_imgradius();
 			quantity.set_homeposition(new Point(quantityX,quantityY));
 			quantity.set_position(quantityX,quantityY);
 			arrayQuantity.add(quantity);
 		}
-
-
-
-        //a item (0)
-        menuitems[0] = new MenuCItem(context, R.drawable.menu_item_a, R.drawable.menu_item_aover, 10, 0);
-        menuitems[0].set_position(
-        		menuback_X - menuitems[0].get_width() / 2 + menuback_width / 2,
-        		menuback_Y - menuitems[0].get_height() / 2 + menuback_border);
-        
-        //b item (3)
-        menuitems[1] = new MenuCItem(context, R.drawable.menu_item_b, R.drawable.menu_item_bover, 10, 1);
-        menuitems[1].set_position(
-        		menuback_X - menuitems[1].get_width() / 2 + menuback_width - menuback_border,
-        		menuback_Y - menuitems[1].get_height() / 2 + menuback_height / 2);
-        
-        //c item (6)
-        menuitems[2] = new MenuCItem(context, R.drawable.menu_item_c, R.drawable.menu_item_cover, 10, 2);
-        menuitems[2].set_position(
-        		menuback_X - menuitems[2].get_width() / 2 + menuback_width / 2,
-        		menuback_Y - menuitems[2].get_height() / 2 + menuback_height - menuback_border);
-        
-        //d item (9)
-        menuitems[3] = new MenuCItem(context, R.drawable.menu_item_d, R.drawable.menu_item_dover, 10, 3);
-        menuitems[3].set_position(
-        		menuback_X - menuitems[3].get_width() / 2 + menuback_border,
-        		menuback_Y - menuitems[3].get_height() / 2 + menuback_height / 2);
-
     }
     
     @Override
@@ -203,14 +153,17 @@ public class DrawableScene extends View
 		paint.setShadowLayer(5, 5, 5, Color.RED);
 		paint.setTextSize(30);
 
-		//Draw quantity
-		for (Element element: arrayElements)
+		//Draw quantity text
+		for (DrawableElement drawableElement : arrayDrawableElements)
 		{
-			drawElementOnCanvas(element);
+			drawElementOnCanvas(drawableElement);
 			paint.setStyle(Paint.Style.FILL_AND_STROKE);
 			paint.setStrokeWidth(1);
 			paint.setColor(Color.WHITE);
-			canvas.drawText(String.valueOf(arrayElements.indexOf(element)),element.get_x()+element.get_imgradius()*2,element.get_y()+(element.get_imgradius()*5/2), paint);
+			canvas.drawText(
+					String.valueOf(drawableElement.getName()),
+					drawableElement.get_x()+ drawableElement.get_imgradius()*5/2,
+					drawableElement.get_y()+(drawableElement.get_imgradius()*5/2), paint);
 		}
     }
     public boolean onTouchEvent(MotionEvent event)
@@ -229,35 +182,34 @@ public class DrawableScene extends View
 		{
 			case MotionEvent.ACTION_DOWN:
 				lastClickedDrawn = true;
-				System.out.println("Elements_:" + arrayElements.size());
-				for (Element element: arrayElements)
+				System.out.println("Elements_:" + arrayDrawableElements.size());
+				for (DrawableElement drawableElement : arrayDrawableElements)
 				{
-					if(!element.isDrawn())
+					if(!drawableElement.isDrawn())
 					{
-						element.set_homeposition(new Point(center_X,current_y));
-						element.set_x(current_x);
-						element.set_y(current_y);
-						element.isDrawn(true);
+						drawableElement.set_homeposition(new Point(center_X,current_y));
+						drawableElement.set_x(current_x);
+						drawableElement.set_y(current_y);
+						drawableElement.isDrawn(true);
 					}
 				}
 				int i=0;
-				for (Element pointer: arrayElements) //Item is selected (Check and mark)
+				for (DrawableElement drawableElement : arrayDrawableElements) //Item is selected (Check and mark)
 				{
-					if(!pointer.isStatic)
+					if(!drawableElement.isStatic)
 					{
-						i++; // check if the finger is on the pointer
-						int menupointer_x = pointer.get_x() + pointer.get_imgradius();
-						int menupointer_y = pointer.get_y() + pointer.get_imgradius();
-						//new Alex:
+						i++; // check if the finger is on the drawableElement
+						int menupointer_x = drawableElement.get_x() + drawableElement.get_imgradius();
+						int menupointer_y = drawableElement.get_y() + drawableElement.get_imgradius();
 
-						// distance from the touch pointe to the center of the pointer
+						// distance from the touch point to the center of the drawnElement
 						double pointer_radius = Math.sqrt((double) (Math.pow(menupointer_x - current_x, 2) + Math.pow(menupointer_y - current_y, 2)));
-						//check if the pointer is selected (add some distance)
-						if (pointer_radius < pointer.get_imgradius() - 3)
+						//check if the drawableElement is selected (add some distance)
+						if (pointer_radius < drawableElement.get_imgradius() - 3)
 						{
-							pointer.set_isselected(true);
+							drawableElement.set_isselected(true);
 							//Per each selected Item we carry the quantity as selected.
-							arrayQuantity.get(arrayElements.indexOf(pointer)).set_isselected(true);
+							arrayQuantity.get(arrayDrawableElements.indexOf(drawableElement)).set_isselected(true);
 							break;
 						}
 					}
@@ -266,30 +218,31 @@ public class DrawableScene extends View
 
 			case MotionEvent.ACTION_MOVE:
 				int x = 0;
-				for (Element pointer: arrayElements)
+				for (DrawableElement drawableElement : arrayDrawableElements)
 				{
-					x++;// move the pointer
-					if (pointer.get_isselected())
+					x++;// move the drawableElement
+					if (drawableElement.get_isselected())
 					{
-						borderPointerPositionFix(pointer);
+						borderElementPositionFix(drawableElement);
 
-						Element pointerQuantity = arrayQuantity.get(arrayElements.indexOf(pointer));
+						DrawableElement pointerQuantity = arrayQuantity.get(
+								arrayDrawableElements.indexOf(drawableElement));
 
-						borderPointerPositionFix(pointerQuantity);
+						borderElementPositionFix(pointerQuantity);
 					}
 				}
 			break;
 
 			case MotionEvent.ACTION_UP:
-				for (Element pointer: arrayElements)
-				{// reset the pointer to home if needed
-					pointer.set_isselected(false);
-					arrayQuantity.get(arrayElements.indexOf(pointer)).set_isselected(false);
+				for (DrawableElement drawableElement : arrayDrawableElements)
+				{// reset the drawableElement to home if needed
+					drawableElement.set_isselected(false);
+					arrayQuantity.get(arrayDrawableElements.indexOf(drawableElement)).set_isselected(false);
 				}
 			break;
 		}
 	}
-	private void borderPointerPositionFix(Element pointer)
+	private void borderElementPositionFix(DrawableElement pointer)
 	{
 		if(!pointer.isStatic)
 		{

@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="array_troops_names">
+        <item>Archer</item>
+        <item>Goblin</item>
+        <item>Wizzard</item>
+        <item>Barbarian</item>
+        <item>Giant</item>
+        <item>Baloon</item>
+        <item>Wall Breaker</item>
+        <item>Pekka</item>
+        <item>Healer</item>
+        <item>Dragon</item>
+        <item>Baby Dragon</item>
+        <item>Miner</item>
+        <item>Minion</item>
+        <item>Golem</item>
+        <item>Bowler</item>
+        <item>Valquirie</item>
+        <item>Witch</item>
+        <item>Hog Rider</item>
+        <item/>
+        <item>Lava Hound</item>
+        <item/>
+        <item>King</item>
+        <item>Queen</item>
+        <item>Grand Warren</item>
+    </string-array>
+    <string-array name="stringDrawableSmallTroops">
+        <item>arc</item>
+        <item>gob</item>
+        <item>bar</item>
+        <item>wiz</item>
+        <item>gia</item>
+        <item>bal</item>
+        <item>wal</item>
+        <item>pek</item>
+        <item>hea</item>
+        <item>dra</item>
+        <item>bab</item>
+        <item>mnr</item>
+        <item>min</item>
+        <item>gol</item>
+        <item>bow</item>
+        <item>val</item>
+        <item>wit</item>
+        <item>hog</item>
+        <item>empty</item>
+        <item>lav</item>
+        <item>empty</item>
+        <item>bak</item>
+        <item>arq</item>
+        <item>gra</item>
+    </string-array>
     <color name="Aqua">#00FFFF</color>
     <color name="Black">#000000</color>
     <color name="Blue">#0000FF</color>
@@ -73,6 +125,10 @@
     <item name="transitionName" type="id"/>
     <item name="transitionPosition" type="id"/>
     <item name="transitionTransform" type="id"/>
+    <string name="alert_dialog_no">NO!</string>
+    <string name="alert_dialog_question">You may lose your progress \n\n Are you sure ?</string>
+    <string name="alert_dialog_title">Closing drawer app</string>
+    <string name="alert_dialog_yes">YES</string>
     <string name="app_name">Draw COC Strategy</string>
     <string name="btn_definir_ejercito">DEFINIR ARMY</string>
     <string name="btn_disolver_ejercito">DISSOLVE ARMY</string>
