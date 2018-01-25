@@ -13,12 +13,12 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v4.graphics.ColorUtils;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -28,9 +28,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import coc.strategy.FloatingMenu.CocElementDM;
 import coc.strategy.FloatingMenu.CocElementsRow;
@@ -40,8 +42,10 @@ public class MainPage extends Activity implements View.OnTouchListener
 {
     LinearLayout child;
 
-    private int screenWidth = 0;
-    private int screenHeight = 0;
+    private int currentShadowPaintColor = Color.WHITE;
+    private int currentWaveNum          = 1;
+    private int screenWidth             = 0;
+    private int screenHeight            = 0;
 
     private int[] smallTroops = new int[24];
     private String smallTroopsNames[];
@@ -58,11 +62,13 @@ public class MainPage extends Activity implements View.OnTouchListener
     ImageView imageSwitcher = null;
 
     //mainButtons
-    Button boton1;
-    Button boton2;
-    Button boton3;
-    Button boton4;
-    Button botonAdd;
+    TextView tvWaveNum;
+    Button   btnAddWave;
+    Button   boton1;
+    Button   boton2;
+    Button   boton3;
+    Button   boton4;
+    Button   botonAdd;
 
     //NormalTroops
     ImageButton boton1nt;
@@ -186,6 +192,8 @@ public class MainPage extends Activity implements View.OnTouchListener
 
     public void obtainViewButtons()
     {
+        tvWaveNum   = (TextView) findViewById(R.id.tvWaveNum);
+        btnAddWave   = (Button) findViewById(R.id.btnAddWave);
         boton1   = (Button) findViewById(R.id.button1);
         boton2   = (Button) findViewById(R.id.button2);
         boton3   = (Button) findViewById(R.id.button3);
@@ -230,6 +238,7 @@ public class MainPage extends Activity implements View.OnTouchListener
         Typeface plain  = Typeface.createFromAsset(am, "fonts/Supercell.ttf");
         Typeface bold   = Typeface.create(plain, Typeface.BOLD);
 
+        btnAddWave.setTypeface(plain);
         boton1.setTypeface(plain);
         boton2.setTypeface(plain);
         boton3.setTypeface(plain);
@@ -259,16 +268,17 @@ public class MainPage extends Activity implements View.OnTouchListener
     {
         //We void multiClick multiDraw with lastClickedDrawn. MultiClick musn't draw many images.
         //Allowing switch selected element to draw the last clicked:
+        System.out.println("Current color: " + currentShadowPaintColor);
         if(drawableScene.lastClickedDrawn)
         {
-            drawableScene.addElement(drawableResourceID,drawableResourceID);
+            drawableScene.addElement(drawableResourceID,drawableResourceID, currentShadowPaintColor);
             drawableScene.lastClickedDrawn = false;
         }
         else
         {
             System.out.println("Switching last clicked element");
             drawableScene.removeLastElement();
-            drawableScene.addElement(drawableResourceID,drawableResourceID);
+            drawableScene.addElement(drawableResourceID,drawableResourceID, currentShadowPaintColor);
             drawableScene.lastClickedDrawn = false;
         }
     }
@@ -367,7 +377,91 @@ public class MainPage extends Activity implements View.OnTouchListener
 
                 switchAddButtonVisible();
                 break;
+            case 6: //nuevo método para añadir Oleadas addWaves method
+                if(currentWaveNum<=8)
+                {
+                    currentShadowPaintColor = getRandomizedColor();
+                    drawableScene.addDrawableWaveElements(currentWaveNum);
+                    currentWaveNum += 1;
+                    tvWaveNum.setText(String.valueOf(currentWaveNum));
+                }
+                else
+                {
+                    Toast.makeText(this,this.getResources().getString(R.string.str_toast_max_waves_reached),Toast.LENGTH_SHORT).show();
+                }
+            break;
         }
+    }
+    public int getRandomizedColor()
+    {
+        int BLACK       = 0xFF000000;
+        int DKGRAY      = 0xFF444444;
+        int GRAY        = 0xFF888888;
+        int LTGRAY      = 0xFFCCCCCC;
+        int WHITE       = 0xFFFFFFFF;
+        int RED         = 0xFFFF0000;
+        int GREEN       = 0xFF00FF00;
+        int BLUE        = 0xFF0000FF;
+        int YELLOW      = 0xFFFFFF00;
+        int CYAN        = 0xFF00FFFF;
+        int MAGENTA     = 0xFFFF00FF;
+        Random rand = new Random();
+        int  n = rand.nextInt(9) + 0;
+        switch (n)
+        {
+            case 1:
+                return MAGENTA;
+            case 2:
+                return CYAN;
+            case 3:
+                return BLUE;
+            case 4:
+                return GRAY;
+            case 5:
+                return YELLOW;
+            case 6:
+                return GREEN;
+            case 7:
+                return WHITE;
+            default:
+                return BLACK;
+        }
+    }
+    public int getRandomColor()
+    {
+        Random rand = new Random();
+        int  n = rand.nextInt(9) + 0;
+        switch (n)
+        {
+            case 0:
+                return R.color.Yellow2;
+            case 1:
+                return R.color.Green;
+            case 2:
+                return android.R.color.holo_blue_bright;
+            case 3:
+                return android.R.color.holo_blue_dark;
+            case 4:
+                return R.color.Orange1;
+            case 5:
+                return R.color.White;
+            case 6:
+                return R.color.Lime;
+            case 7:
+                return android.R.color.black;
+            case 8:
+                return R.color.Pink;
+            default:
+                return android.R.color.holo_red_dark;
+        }
+    }
+    public static int randomColor(){
+        float[] TEMP_HSL = new float[]{0, 0, 0};
+        float[] hsl = TEMP_HSL;
+        hsl[0] = (float) (Math.random() * 360);
+        hsl[1] = (float) (40 + (Math.random() * 60));
+        hsl[2] = (float) (40 + (Math.random() * 60));
+        return ColorUtils.HSLToColor(hsl);
     }
     public void dragMenu(View v)
     {
@@ -489,7 +583,8 @@ public class MainPage extends Activity implements View.OnTouchListener
     }
     public void addDrawableSceneElement(int[] drawableResourceID, int clicked)
     {
-        drawableScene.addElement(drawableResourceID[clicked],drawableResourceID[clicked]);
+        drawableScene.addElement(drawableResourceID[clicked],drawableResourceID[clicked],
+                currentShadowPaintColor);
     }
     public void hideNormalTroopButtons()
     {

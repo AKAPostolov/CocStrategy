@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Build;
+import android.os.CountDownTimer;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
@@ -63,7 +64,34 @@ public class Tools
             e.printStackTrace();
         }
     }
+    public static void startWatch(int minutes, int tick)
+    {
+        int milisecDuration = minutes * 60000;
+        new CountDownTimer(milisecDuration, tick) // 180000, 1000
+        {
+            public void onTick(long millisUntilFinished)
+            {
+                float secondsRemaining = (millisUntilFinished / 1000);
 
+                int minutesRemaining = (int)secondsRemaining / 60;
+
+                secondsRemaining=secondsRemaining%60;
+
+                String strSecondsRemaining = String.valueOf(secondsRemaining);
+                if(strSecondsRemaining.length()<2)
+                { strSecondsRemaining="0"+strSecondsRemaining;}
+                String watch = String.valueOf(minutesRemaining) + ":" + strSecondsRemaining;
+                watch = watch.replace(".0","");
+                System.out.println("Watch: " + watch);
+                //here you can have your logic to set text to edittext
+            }
+
+            public void onFinish() {
+                System.out.println("done!");
+            }
+
+        }.start();
+    }
     //REAL PATH TOOLS
     public static String getPathFromUri(Context context, Uri uri)
     {

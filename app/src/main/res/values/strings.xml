@@ -18,6 +18,10 @@
     <string name="alert_dialog_question">You may lose your progress \n\n Are you sure ?</string>
     <string name="alert_dialog_yes">YES</string>
     <string name="alert_dialog_no">NO!</string>
+    <string name="str_wave_oleada">Wave</string>
+
+    <string name ="str_toast_max_waves_reached"> The max number of waves is 9. \n You can edit the settings</string>
+
     <string-array name="array_troops_names">
         <item>Archer</item>
         <item>Goblin</item>

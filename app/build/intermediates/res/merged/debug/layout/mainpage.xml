@@ -42,7 +42,7 @@
         android:shadowRadius="1"
         android:tag="1"
         android:text="@string/btn_elixir_normal"
-        android:textColor="@color/Fuchsia"
+        android:textColor="@color/Pink"
         android:textSize="8sp"
         android:visibility="gone"/>
     <Button
@@ -680,5 +680,71 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_toRightOf="@id/btnSpells8"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="24sp"
+        android:id="@+id/tvWaveLabel"
+        android:layout_below="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:shadowColor="@color/Red"
+        android:textColor="@color/White"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/str_wave_oleada"/>
+
+    <TextView
+
+        android:layout_marginTop="10dp"
+        android:textSize="24sp"
+        android:id="@+id/tvWaveNum"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:shadowColor="@color/Red"
+        android:textColor="@color/White"
+        android:layout_below="@+id/button1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:id="@+id/btnAddWave"
+        android:layout_below="@+id/button1"
+        android:layout_toLeftOf="@+id/tvWaveLabel"
+        android:layout_toStartOf="@+id/tvWaveLabel"
+        android:onClick="manageMainButtons"
+        android:textColor="@color/Orange1"
+        android:tag="6"
+        android:shadowColor="@color/Black"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="1"
+        android:layout_width="45dp"
+        android:layout_height="55dp"
+        android:textSize="26sp"
+        android:height="5dp"
+        android:textStyle="bold"
+        android:background="@drawable/coc_button_green_square"
+        android:text="+"/>
+
+    <SeekBar
+        android:visibility="gone"
+        android:background="@color/Orange1"
+        android:scrollbarStyle="outsideInset"
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp"
+        android:max="180"
+        android:progress="50"
+        android:layout_below="@+id/button1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
 </RelativeLayout>

@@ -213,8 +213,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int Aqua=0x7f070000;
         public static final int Black=0x7f070001;
         public static final int Blue=0x7f070002;
-        public static final int Fuchsia=0x7f070003;
-        public static final int Gray=0x7f070004;
+        public static final int Gray1=0x7f070003;
+        public static final int Gray2=0x7f070004;
         public static final int Green=0x7f070005;
         public static final int Lime=0x7f070006;
         public static final int Maroon=0x7f070007;
@@ -223,9 +223,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int Orange1=0x7f07000a;
         public static final int Orange2=0x7f07000b;
         public static final int Orange3=0x7f07000c;
-        public static final int Purple=0x7f07000d;
-        public static final int Red=0x7f07000e;
-        public static final int Silver=0x7f07000f;
+        public static final int Pink=0x7f07000d;
+        public static final int Purple=0x7f07000e;
+        public static final int Red=0x7f07000f;
         public static final int Teal=0x7f070010;
         public static final int White=0x7f070011;
         public static final int Yellow1=0x7f070012;
@@ -306,6 +306,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ImageSwitcherBackground=0x7f090022;
         public static final int LinearLayout_main=0x7f090023;
         public static final int bottom=0x7f09000e;
+        public static final int btnAddWave=0x7f09004d;
         public static final int btnDarkTroops1=0x7f090036;
         public static final int btnDarkTroops2=0x7f090037;
         public static final int btnDarkTroops3=0x7f090038;
@@ -354,8 +355,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int imb1=0x7f090019;
         public static final int imb2=0x7f09001b;
         public static final int imb3=0x7f09001d;
-        public static final int imv1=0x7f09004c;
-        public static final int imv2=0x7f09004d;
+        public static final int imv1=0x7f090050;
+        public static final int imv2=0x7f090051;
         public static final int item1=0x7f090018;
         public static final int item2=0x7f09001a;
         public static final int item3=0x7f09001c;
@@ -369,9 +370,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int parentMatrix=0x7f090004;
         public static final int relativeLayout=0x7f090021;
         public static final int right=0x7f090010;
-        public static final int root_view=0x7f09004b;
+        public static final int root_view=0x7f09004f;
         public static final int runningTransitions=0x7f090005;
         public static final int scene_layoutid_cache=0x7f090006;
+        public static final int seekBar=0x7f09004e;
         public static final int sequential=0x7f090012;
         public static final int together=0x7f090013;
         public static final int top=0x7f090011;
@@ -381,6 +383,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int transitionTransform=0x7f09000a;
         public static final int tv1=0x7f09001f;
         public static final int tv2=0x7f090020;
+        public static final int tvWaveLabel=0x7f09004b;
+        public static final int tvWaveNum=0x7f09004c;
     }
     public static final class layout {
         public static final int floating_palette_layout=0x7f030000;
@@ -389,21 +393,23 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int mainpage=0x7f030003;
     }
     public static final class string {
-        public static final int alert_dialog_no=0x7f06000b;
-        public static final int alert_dialog_question=0x7f06000c;
-        public static final int alert_dialog_title=0x7f06000d;
-        public static final int alert_dialog_yes=0x7f06000e;
-        public static final int app_name=0x7f060000;
-        public static final int btn_definir_ejercito=0x7f060001;
-        public static final int btn_disolver_ejercito=0x7f060002;
-        public static final int btn_elegir_enemigo=0x7f060003;
-        public static final int btn_elixir_normal=0x7f060004;
-        public static final int btn_elixir_oscuro=0x7f060005;
-        public static final int btn_hechizos=0x7f060006;
-        public static final int btn_heroes=0x7f060007;
-        public static final int btn_salir=0x7f060008;
-        public static final int btn_tropas=0x7f060009;
-        public static final int label_tipo=0x7f06000a;
+        public static final int alert_dialog_no=0x7f060000;
+        public static final int alert_dialog_question=0x7f060001;
+        public static final int alert_dialog_title=0x7f060002;
+        public static final int alert_dialog_yes=0x7f060003;
+        public static final int app_name=0x7f060004;
+        public static final int btn_definir_ejercito=0x7f060005;
+        public static final int btn_disolver_ejercito=0x7f060006;
+        public static final int btn_elegir_enemigo=0x7f060007;
+        public static final int btn_elixir_normal=0x7f060008;
+        public static final int btn_elixir_oscuro=0x7f060009;
+        public static final int btn_hechizos=0x7f06000a;
+        public static final int btn_heroes=0x7f06000b;
+        public static final int btn_salir=0x7f06000c;
+        public static final int btn_tropas=0x7f06000d;
+        public static final int label_tipo=0x7f06000e;
+        public static final int str_toast_max_waves_reached=0x7f06000f;
+        public static final int str_wave_oleada=0x7f060010;
     }
     public static final class style {
         public static final int whiteTextBlackStrokeButtonCOC=0x7f0a0000;

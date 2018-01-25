@@ -3,6 +3,7 @@ package coc.strategy;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 
@@ -12,6 +13,9 @@ public class DrawableElement
 	private String name;
 	private Bitmap img;
 	private Bitmap imgover;
+	public int wave = 0;
+
+	public int currentPaintColor;
 	private int imgradius;
 	private int x = 0;
 	private int y = 0;

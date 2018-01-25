@@ -10,6 +10,7 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.Typeface;
+import android.os.CountDownTimer;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 //menu class
 public class DrawableScene extends View
 {
+	public ArrayList<DrawableWave> arrayDrawableWaves;
 	public boolean lastClickedDrawn = true;
 
 	Context context;
@@ -29,7 +31,8 @@ public class DrawableScene extends View
 
 	private int current_x=0;
 	private int current_y=0;
-
+	Paint paint = new Paint();
+	Paint paintForNumbers = new Paint();
 	private Bitmap menuback = null;
 	private int menuback_center_X = 0;
 	private int menuback_center_Y = 0;
@@ -70,6 +73,23 @@ public class DrawableScene extends View
 		arrayDrawableElements.remove(arrayDrawableElements.size()-1);
 		arrayQuantity.remove(arrayQuantity.size()-1);
 	}
+	public ArrayList<DrawableElement> getDrawableElements(int currentWave)
+	{
+		ArrayList<DrawableElement> arrayListResult = new ArrayList<>();
+		for (DrawableElement element: arrayDrawableElements)
+		{
+			if(element.wave==0)
+			{
+				element.wave = currentWave;
+				arrayListResult.add(element);
+			}
+		}
+		return arrayListResult;
+	}
+	public void addDrawableWaveElements(int currentWave)
+	{
+		arrayDrawableWaves.add(new DrawableWave(getDrawableElements(currentWave)));
+	}
 	public void addElement(Bitmap resImage,Bitmap resImageHover)
 	{
 		DrawableElement drawableElement = new DrawableElement(context,resImage,resImageHover,10,String.valueOf(
@@ -79,12 +99,13 @@ public class DrawableScene extends View
 		arrayDrawableElements.add(drawableElement);
 		arrayQuantity.add(drawableElement);
 	}
-	public void addElement(int resImage,int resImageHover)
+	public void addElement(int resImage,int resImageHover,int currentPaintColor)
 	{
 		DrawableElement drawableElement = new DrawableElement(context,resImage,resImageHover,10,String.valueOf(
 				arrayDrawableElements.size()),false);
 		drawableElement.set_homeposition(new Point(drawableElement.get_imgradius()*2, drawableElement.get_imgradius()*2));
 		drawableElement.set_position(drawableElement.get_homepoint());
+		drawableElement.currentPaintColor = currentPaintColor;
 		arrayDrawableElements.add(drawableElement);
 		arrayQuantity.add(drawableElement);
 	}
@@ -97,7 +118,7 @@ public class DrawableScene extends View
         super(context);
 		this.context = context;
         //setFocusable(true); //necessary for getting the touch events
-                
+		arrayDrawableWaves = new ArrayList<>();
         BitmapFactory.Options opts = new BitmapFactory.Options();
         opts.inJustDecodeBounds = true;
 
@@ -142,28 +163,36 @@ public class DrawableScene extends View
     @Override
     protected void onDraw(Canvas canvas) 
     {
+		paint.setColor(Color.WHITE); //default
 		this.canvas = canvas;
-
-		Paint paint = new Paint();
-		paint.setColor(Color.MAGENTA);
 		AssetManager am = this.getContext().getAssets();
+
+		Typeface plainNumbers = Typeface.createFromAsset(am, "fonts/Quango.otf");
+		paintForNumbers.setTypeface(plainNumbers);
+		paintForNumbers.setTextSize(50);
+		paintForNumbers.setColor(Color.WHITE);
+
 		Typeface plain = Typeface.createFromAsset(am, "fonts/Supercell.ttf");
 		Typeface bold  = Typeface.create(plain, Typeface.BOLD);
 		paint.setTypeface(plain);
-		paint.setShadowLayer(5, 5, 5, Color.RED);
 		paint.setTextSize(30);
 
 		//Draw quantity text
 		for (DrawableElement drawableElement : arrayDrawableElements)
 		{
+
 			drawElementOnCanvas(drawableElement);
-			paint.setStyle(Paint.Style.FILL_AND_STROKE);
-			paint.setStrokeWidth(1);
-			paint.setColor(Color.WHITE);
+			paintForNumbers.setStyle(Paint.Style.FILL_AND_STROKE);
+			paintForNumbers.setStrokeWidth(5);
+			paintForNumbers.setShadowLayer(7, 7, 7, drawableElement.currentPaintColor);
+			//paint.setShadowLayer(5, 5, 5,Color.RED);
+			canvas.drawText("⚑",
+					drawableElement.get_x()-drawableElement.get_imgradius(),
+					drawableElement.get_y(), paintForNumbers);
 			canvas.drawText(
 					String.valueOf(drawableElement.getName()),
 					drawableElement.get_x()+ drawableElement.get_imgradius()*5/2,
-					drawableElement.get_y()+(drawableElement.get_imgradius()*5/2), paint);
+					drawableElement.get_y()+(drawableElement.get_imgradius()*5/2), paintForNumbers);
 		}
     }
     public boolean onTouchEvent(MotionEvent event)

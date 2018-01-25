@@ -29,7 +29,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/Gray">
+            android:background="@color/Gray1">
 
         </LinearLayout>
         <LinearLayout
@@ -45,7 +45,7 @@
         android:orientation="vertical"
         android:layout_gravity="top|center"
         android:gravity="top|center"
-        android:background="@drawable/coc_button_green"
+        android:background="@color/Pink"
         android:layout_width="100dp"
         android:padding="5dp"
         android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/Gray">
+            android:background="@color/Gray1">
 
         </LinearLayout>
         <LinearLayout

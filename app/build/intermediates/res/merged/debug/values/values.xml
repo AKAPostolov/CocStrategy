@@ -55,8 +55,8 @@
     <color name="Aqua">#00FFFF</color>
     <color name="Black">#000000</color>
     <color name="Blue">#0000FF</color>
-    <color name="Fuchsia">#FF00FF</color>
-    <color name="Gray">#808080</color>
+    <color name="Gray1">#C0C0C0</color>
+    <color name="Gray2">#808080</color>
     <color name="Green">#008000</color>
     <color name="Lime">#00FF00</color>
     <color name="Maroon">#800000</color>
@@ -65,9 +65,9 @@
     <color name="Orange1">#FFA500</color>
     <color name="Orange2">#FF7500</color>
     <color name="Orange3">#FF5500</color>
+    <color name="Pink">#FF00FF</color>
     <color name="Purple">#800080</color>
     <color name="Red">#FF0000</color>
-    <color name="Silver">#C0C0C0</color>
     <color name="Teal">#008080</color>
     <color name="White">#FFFFFF</color>
     <color name="Yellow1">#FFFF00</color>
@@ -140,6 +140,8 @@
     <string name="btn_salir">EXIT</string>
     <string name="btn_tropas">TROOPS</string>
     <string name="label_tipo">TYPE</string>
+    <string name="str_toast_max_waves_reached"> The max number of waves is 9. \n You can edit the settings</string>
+    <string name="str_wave_oleada">Wave</string>
     <style name="whiteTextBlackStrokeButtonCOC">
         <item name="android:gestureStrokeWidth">2</item>
     </style>
