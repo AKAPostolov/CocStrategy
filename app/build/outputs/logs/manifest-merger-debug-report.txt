@@ -1,6 +1,14 @@
 -- Merging decision tree log ---
 manifest
 ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
+MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.4.aar\73c881da1737bf31526fe82e8913f49f\AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\support-v4-22.2.1.aar\595351f0709fe9e91a22dbf358786283\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
 	package
 		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:3:7-29
 		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
@@ -9,16 +17,22 @@ ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\And
 		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:5:7-34
 		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
 		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:4:7-30
 		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
-	xmlns:android
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:6:5-7:40
-MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.android\build-cache\535cb02ec080438491cf54d6161a2fbf39c761d9\output\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.android\build-cache\bc03fcae0687d9fc2da9a17fe16937638470be61\output\AndroidManifest.xml:20:5-43
+INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:6:5-7:40
+INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:6:5-7:40
+MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.4.aar\73c881da1737bf31526fe82e8913f49f\AndroidManifest.xml:8:5-10:41
+MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.4.aar\73c881da1737bf31526fe82e8913f49f\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\support-v4-22.2.1.aar\595351f0709fe9e91a22dbf358786283\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\support-v4-22.2.1.aar\595351f0709fe9e91a22dbf358786283\AndroidManifest.xml:20:5-43
+INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:6:5-7:40
+INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:6:5-7:40
 	android:targetSdkVersion
 		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:7:9-38
 		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
@@ -29,8 +43,10 @@ MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.android\build-
 		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
 application
 ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:8:5-17:19
-MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.android\build-cache\535cb02ec080438491cf54d6161a2fbf39c761d9\output\AndroidManifest.xml:12:5-20
-MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.android\build-cache\bc03fcae0687d9fc2da9a17fe16937638470be61\output\AndroidManifest.xml:22:5-20
+MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.4.aar\73c881da1737bf31526fe82e8913f49f\AndroidManifest.xml:12:5-20
+MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.4.aar\73c881da1737bf31526fe82e8913f49f\AndroidManifest.xml:12:5-20
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\support-v4-22.2.1.aar\595351f0709fe9e91a22dbf358786283\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\support-v4-22.2.1.aar\595351f0709fe9e91a22dbf358786283\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:8:51-83
 	android:icon
