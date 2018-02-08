@@ -21,7 +21,7 @@ public class DrawableScene extends View
 {
 	public ArrayList<DrawableWave> arrayDrawableWaves;
 	public boolean lastClickedDrawn = true;
-
+	public boolean waveColorUsed = false;
 	Context context;
 	Canvas canvas;
 
@@ -116,6 +116,7 @@ public class DrawableScene extends View
     public DrawableScene(Context context)
     {
         super(context);
+
 		this.context = context;
         //setFocusable(true); //necessary for getting the touch events
 		arrayDrawableWaves = new ArrayList<>();
@@ -181,14 +182,13 @@ public class DrawableScene extends View
 		for (DrawableElement drawableElement : arrayDrawableElements)
 		{
 
-			drawElementOnCanvas(drawableElement);
+
 			paintForNumbers.setStyle(Paint.Style.FILL_AND_STROKE);
 			paintForNumbers.setStrokeWidth(5);
 			paintForNumbers.setShadowLayer(7, 7, 7, drawableElement.currentPaintColor);
 			//paint.setShadowLayer(5, 5, 5,Color.RED);
-			canvas.drawText("⚑",
-					drawableElement.get_x()-drawableElement.get_imgradius(),
-					drawableElement.get_y(), paintForNumbers);
+			//canvas.drawText("☐",drawableElement.get_x()+drawableElement.get_imgradius()-2,drawableElement.get_y()+drawableElement.get_imgradius()+2, paintForNumbers);
+			drawElementOnCanvas(drawableElement);
 			canvas.drawText(
 					String.valueOf(drawableElement.getName()),
 					drawableElement.get_x()+ drawableElement.get_imgradius()*5/2,
@@ -206,6 +206,7 @@ public class DrawableScene extends View
 		eventaction = event.getAction(); //get current touch position
 		current_x = (int)event.getX();
 		current_y = (int)event.getY();
+
 		System.out.println("Drawable scene evenActionHandler");
 		switch (eventaction)
 		{

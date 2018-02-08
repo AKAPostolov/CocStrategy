@@ -50,7 +50,7 @@
         <item>King</item>
         <item>Queen</item>
         <item>Grand Warren</item>
-    </string-array></file><file path="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\res\values\style.xml" qualifiers=""><style name="whiteTextBlackStrokeButtonCOC">
+    </string-array><string name="add_añadir">+</string></file><file path="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\res\values\style.xml" qualifiers=""><style name="whiteTextBlackStrokeButtonCOC">
         <item name="android:gestureStrokeWidth">2</item>
     </style></file><file path="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\res\values\values.xml" qualifiers=""><string-array name="stringDrawableSmallTroops">
         <item>arc</item>
@@ -101,7 +101,7 @@
         <item>Rey</item>
         <item>Reina</item>
         <item>Gran Centinela</item>
-    </string-array></file></source><source path="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\generated\res\rs\debug"/><source path="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\debug\res"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="TransitionManager"><attr format="reference" name="transition"/><attr format="reference" name="fromScene"/><attr format="reference" name="toScene"/></declare-styleable><declare-styleable name="ChangeTransform"><attr format="boolean" name="reparentWithOverlay"/><attr format="boolean" name="reparent"/></declare-styleable><declare-styleable name="Slide"><attr name="slideEdge">
+    </string-array><string name="add_symbol">+</string></file></source><source path="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\generated\res\rs\debug"/><source path="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\debug\res"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="TransitionManager"><attr format="reference" name="transition"/><attr format="reference" name="fromScene"/><attr format="reference" name="toScene"/></declare-styleable><declare-styleable name="ChangeTransform"><attr format="boolean" name="reparentWithOverlay"/><attr format="boolean" name="reparent"/></declare-styleable><declare-styleable name="Slide"><attr name="slideEdge">
             
             <enum name="left" value="0x03"/>
             

@@ -364,23 +364,25 @@ public final class R {
     public static final int mainpage=0x7f080003;
   }
   public static final class string {
-    public static final int alert_dialog_no=0x7f090000;
-    public static final int alert_dialog_question=0x7f090001;
-    public static final int alert_dialog_title=0x7f090002;
-    public static final int alert_dialog_yes=0x7f090003;
-    public static final int app_name=0x7f090004;
-    public static final int btn_definir_ejercito=0x7f090005;
-    public static final int btn_disolver_ejercito=0x7f090006;
-    public static final int btn_elegir_enemigo=0x7f090007;
-    public static final int btn_elixir_normal=0x7f090008;
-    public static final int btn_elixir_oscuro=0x7f090009;
-    public static final int btn_hechizos=0x7f09000a;
-    public static final int btn_heroes=0x7f09000b;
-    public static final int btn_salir=0x7f09000c;
-    public static final int btn_tropas=0x7f09000d;
-    public static final int label_tipo=0x7f09000e;
-    public static final int str_toast_max_waves_reached=0x7f09000f;
-    public static final int str_wave_oleada=0x7f090010;
+    public static final int add_añadir=0x7f090000;
+    public static final int add_symbol=0x7f090001;
+    public static final int alert_dialog_no=0x7f090002;
+    public static final int alert_dialog_question=0x7f090003;
+    public static final int alert_dialog_title=0x7f090004;
+    public static final int alert_dialog_yes=0x7f090005;
+    public static final int app_name=0x7f090006;
+    public static final int btn_definir_ejercito=0x7f090007;
+    public static final int btn_disolver_ejercito=0x7f090008;
+    public static final int btn_elegir_enemigo=0x7f090009;
+    public static final int btn_elixir_normal=0x7f09000a;
+    public static final int btn_elixir_oscuro=0x7f09000b;
+    public static final int btn_hechizos=0x7f09000c;
+    public static final int btn_heroes=0x7f09000d;
+    public static final int btn_salir=0x7f09000e;
+    public static final int btn_tropas=0x7f09000f;
+    public static final int label_tipo=0x7f090010;
+    public static final int str_toast_max_waves_reached=0x7f090011;
+    public static final int str_wave_oleada=0x7f090012;
   }
   public static final class style {
     public static final int whiteTextBlackStrokeButtonCOC=0x7f0a0000;

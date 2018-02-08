@@ -13,12 +13,13 @@
     <string name="btn_elegir_enemigo">ELEGIR ALDEA ENEMIGA</string>
     <string name="btn_definir_ejercito">DEFINIR EJERCITO</string>
     <string name="btn_disolver_ejercito">DISOLVER EJERCITO</string>
-    <string name="str_wave_oleada">Oleada</string>
-
     <string name="alert_dialog_title">Cerrando app</string>
     <string name="alert_dialog_question">Puede perder su progreso \n\n Está seguro ?</string>
     <string name="alert_dialog_yes">Sí</string>
     <string name="alert_dialog_no">NO!</string>
+    <string name="str_wave_oleada">Oleada</string>
+    <string name="add_symbol">+</string>
+
     <string name ="str_toast_max_waves_reached"> El máximo numero de oleadas es 9, \n puede editar los ajustes.</string>
 
 

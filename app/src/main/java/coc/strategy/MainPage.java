@@ -13,7 +13,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.graphics.ColorUtils;
+//import android.support.v4.graphics.ColorUtils;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.MenuItem;
@@ -381,9 +381,13 @@ public class MainPage extends Activity implements View.OnTouchListener
                 if(currentWaveNum<=8)
                 {
                     currentShadowPaintColor = getRandomizedColor();
-                    drawableScene.addDrawableWaveElements(currentWaveNum);
-                    currentWaveNum += 1;
-                    tvWaveNum.setText(String.valueOf(currentWaveNum));
+                    if(!drawableScene.waveColorUsed)
+                    {
+                        drawableScene.addDrawableWaveElements(currentWaveNum);
+                        currentWaveNum += 1;
+                        tvWaveNum.setText(String.valueOf(currentWaveNum));
+                        drawableScene.waveColorUsed = true;
+                    }
                 }
                 else
                 {
@@ -455,6 +459,7 @@ public class MainPage extends Activity implements View.OnTouchListener
                 return android.R.color.holo_red_dark;
         }
     }
+    /*
     public static int randomColor(){
         float[] TEMP_HSL = new float[]{0, 0, 0};
         float[] hsl = TEMP_HSL;
@@ -462,7 +467,7 @@ public class MainPage extends Activity implements View.OnTouchListener
         hsl[1] = (float) (40 + (Math.random() * 60));
         hsl[2] = (float) (40 + (Math.random() * 60));
         return ColorUtils.HSLToColor(hsl);
-    }
+    }*/
     public void dragMenu(View v)
     {
         child.setOnTouchListener(this);
