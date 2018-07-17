@@ -2,12 +2,14 @@ package coc.strategy.FloatingMenu;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -22,6 +24,8 @@ import coc.strategy.R;
 
 public class CustomAdapter extends ArrayAdapter<CocElementsRow>
 {
+    private View currentClickedView = null;
+    private int currentClickedViewBackGround = Color.WHITE;
     private ArrayList<CocElementsRow> elementsRows;
     private Activity activity;
     Context context;
@@ -165,6 +169,17 @@ public class CustomAdapter extends ArrayAdapter<CocElementsRow>
             if(clickedViewDrawableID!=R.drawable.empty)
             {
                 ((MainPage)activity).drawElementByDrawableResourceID(clickedViewDrawableID);
+                if(currentClickedView!=null)
+                {
+                    currentClickedView.setBackgroundColor(Color.WHITE);
+                    v.setBackgroundColor(Color.YELLOW);
+                    currentClickedView = v;
+                }
+                else
+                {
+                    currentClickedView = v;
+                    currentClickedView.setBackgroundColor(Color.YELLOW);
+                }
             }
             System.out.println("Clicked : " + viewTag);
         }
