@@ -3,18 +3,16 @@ package coc.strategy;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.graphics.Point;
-import android.graphics.drawable.BitmapDrawable;
 
 //pointer class
 public class DrawableElement
 {
 	private String name;
+	private int drawableResourceID;
 	private Bitmap img;
 	private Bitmap imgover;
 	public int wave = 0;
-
 	public int currentPaintColor;
 	private int imgradius;
 	private int x = 0;
@@ -39,6 +37,7 @@ public class DrawableElement
         this.imgradius = this.img.getWidth()/2;
         this.height = this.img.getHeight();
         this.width = this.img.getWidth();
+        this.drawableResourceID = img;
 	}
 	public DrawableElement(Context context, Bitmap img, Bitmap imgover, int border, String name, boolean isStatic)
 	{
@@ -80,6 +79,7 @@ public class DrawableElement
 	public void set_homeposition(Point point) {
         this.homepoint = point;
 	}
+
 	public void set_position(Point point) {
 		x = point.x;
 		y = point.y;
@@ -121,12 +121,17 @@ public class DrawableElement
 	{
 		return isDrawn;
 	}
+
 	public void isDrawn(boolean value)
 	{
 		isDrawn = value;
 	}
+
 	public String getName()
 	{
 		return name;
 	}
+
+	public int getDrawableResourceID()
+	{return drawableResourceID;}
 }

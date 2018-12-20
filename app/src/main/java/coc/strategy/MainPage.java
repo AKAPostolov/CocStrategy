@@ -41,7 +41,7 @@ import coc.strategy.FloatingMenu.CustomAdapter;
 public class MainPage extends Activity implements View.OnTouchListener
 {
     LinearLayout child;
-
+    private int clickedViewDrawableID = 0;
     private int currentShadowPaintColor = Color.WHITE;
     private int currentWaveNum          = 1;
     private int screenWidth             = 0;
@@ -264,11 +264,28 @@ public class MainPage extends Activity implements View.OnTouchListener
             }
         });
     }
+    public void drawElementByDrawableResourceID()
+    {
+        drawElementByDrawableResourceID(clickedViewDrawableID);
+        /*
+        DrawableElement drawableElement = drawableScene.arrayDrawableElements.get(
+                drawableScene.arrayDrawableElements.size() - 1);
+        drawableScene.arrayDrawableElements.add(drawableElement);
+        drawableScene.invalidate();
+        */
+    }
     public void drawElementByDrawableResourceID(int drawableResourceID)
     {
+        clickedViewDrawableID = drawableResourceID;
         //We void multiClick multiDraw with lastClickedDrawn. MultiClick musn't draw many images.
         //Allowing switch selected element to draw the last clicked:
-        System.out.println("Current color: " + currentShadowPaintColor);
+        System.out.println("drawElementByDrawableResourceID  ");
+
+        ///TODO permito multiple dibujo de las tropas:
+        drawableScene.addElement(drawableResourceID,drawableResourceID, currentShadowPaintColor);
+        drawableScene.lastClickedDrawn = false;
+        //Para revertir Descomentar:
+        /*
         if(drawableScene.lastClickedDrawn)
         {
             drawableScene.addElement(drawableResourceID,drawableResourceID, currentShadowPaintColor);
@@ -281,6 +298,7 @@ public class MainPage extends Activity implements View.OnTouchListener
             drawableScene.addElement(drawableResourceID,drawableResourceID, currentShadowPaintColor);
             drawableScene.lastClickedDrawn = false;
         }
+        */
     }
     public ArrayList<CocElementsRow> getRowsFromElements(ArrayList<CocElementDM> elements)
     {
@@ -354,40 +372,38 @@ public class MainPage extends Activity implements View.OnTouchListener
                 hideMainButtons();
                 showNormalTroopsButtons();
                 //switchAddButtonVisible();
-                break;
+            break;
             case 2:
                 hideMainButtons();
                 showDarkTroopsButtons();
                 //switchAddButtonVisible();
-                break;
+            break;
             case 3:
                 hideMainButtons();
                 showHeroesButtons();
                 //switchAddButtonVisible();
-                break;
+            break;
             case 4:
-
                 bringDrawingToFront();
                 hideMainButtons();
                 showSpellsButtons();
                 //switchAddButtonVisible();
-                break;
+            break;
             case 5:
                 showMainButtons();
-
                 switchAddButtonVisible();
-                break;
+            break;
             case 6: //nuevo método para añadir Oleadas addWaves method
                 if(currentWaveNum<=8)
                 {
                     currentShadowPaintColor = getRandomizedColor();
-                    if(!drawableScene.waveColorUsed)
-                    {
-                        drawableScene.addDrawableWaveElements(currentWaveNum);
-                        currentWaveNum += 1;
-                        tvWaveNum.setText(String.valueOf(currentWaveNum));
-                        drawableScene.waveColorUsed = true;
-                    }
+                    //if(!drawableScene.waveColorUsed)
+                    //{
+                    //drawableScene.addDrawableWaveElements(currentWaveNum);
+                    currentWaveNum += 1;
+                    tvWaveNum.setText(String.valueOf(currentWaveNum));
+                    drawableScene.waveColorUsed = true;
+                    //}
                 }
                 else
                 {
@@ -411,6 +427,10 @@ public class MainPage extends Activity implements View.OnTouchListener
         int MAGENTA     = 0xFFFF00FF;
         Random rand = new Random();
         int  n = rand.nextInt(9) + 0;
+
+        //TODO ñapa devolver solo negro color negro
+        //return BLACK;
+        //TODO UNDO THIS COMMENT para fix ñapa color negro
         switch (n)
         {
             case 1:
@@ -583,13 +603,14 @@ public class MainPage extends Activity implements View.OnTouchListener
     }
     public void drawNormalTroopClicked(int clicked)
     {
+        System.out.println("drawNormalTroopClicked: " + clicked);
         addDrawableSceneElement(normalTroopsIDs,clicked);
         invalidateDrawableScene();
     }
     public void addDrawableSceneElement(int[] drawableResourceID, int clicked)
     {
-        drawableScene.addElement(drawableResourceID[clicked],drawableResourceID[clicked],
-                currentShadowPaintColor);
+        System.out.println("addDrawableSceneElement: " + clicked);
+        drawableScene.addElement(drawableResourceID[clicked],drawableResourceID[clicked], currentShadowPaintColor);
     }
     public void hideNormalTroopButtons()
     {
@@ -903,7 +924,6 @@ public class MainPage extends Activity implements View.OnTouchListener
 
     public void buildExitDialog()
     {
-
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
         // set title

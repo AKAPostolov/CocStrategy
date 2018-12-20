@@ -19,6 +19,7 @@ import java.util.ArrayList;
 //menu class
 public class DrawableScene extends View
 {
+	DrawableElement drawableElement = null;
 	public ArrayList<DrawableWave> arrayDrawableWaves;
 	public boolean lastClickedDrawn = true;
 	public boolean waveColorUsed = false;
@@ -99,15 +100,29 @@ public class DrawableScene extends View
 		arrayDrawableElements.add(drawableElement);
 		arrayQuantity.add(drawableElement);
 	}
+	public void addPreviousElement(DrawableElement drawableElement)
+	{
+		if(drawableElement!=null) ((MainPage)context).drawElementByDrawableResourceID();
+	}
 	public void addElement(int resImage,int resImageHover,int currentPaintColor)
 	{
-		DrawableElement drawableElement = new DrawableElement(context,resImage,resImageHover,10,String.valueOf(
-				arrayDrawableElements.size()),false);
+		System.out.println("\n Ini: addElement" + arrayDrawableElements.size());
+		drawableElement = new DrawableElement(context,resImage,resImageHover,10,String.valueOf(arrayDrawableElements.size()),false);
 		drawableElement.set_homeposition(new Point(drawableElement.get_imgradius()*2, drawableElement.get_imgradius()*2));
-		drawableElement.set_position(drawableElement.get_homepoint());
+		Point point = drawableElement.get_homepoint();
+		System.out.println("\n element point: " + point);
+		drawableElement.set_position(point);
 		drawableElement.currentPaintColor = currentPaintColor;
-		arrayDrawableElements.add(drawableElement);
-		arrayQuantity.add(drawableElement);
+		//if(point.x!=52 && point.y!=52)
+		//{
+			arrayDrawableElements.add(drawableElement);
+			arrayQuantity.add(drawableElement);
+			System.out.println(" Fini: addElement" + arrayDrawableElements.size());
+		//}
+        /*for (DrawableElement drawableElement : arrayDrawableElements){
+			System.out.println(" element pos_X: " + drawableElement.get_x() );
+			System.out.println(" element pos_Y: " + drawableElement.get_y() );
+		}*/
 	}
 	public void drawElementOnCanvas(DrawableElement drawableElement)
 	{
@@ -164,6 +179,7 @@ public class DrawableScene extends View
     @Override
     protected void onDraw(Canvas canvas) 
     {
+		System.out.println("onDraw DrawableScene event size: " + arrayDrawableElements.size());
 		paint.setColor(Color.WHITE); //default
 		this.canvas = canvas;
 		AssetManager am = this.getContext().getAssets();
@@ -181,18 +197,23 @@ public class DrawableScene extends View
 		//Draw quantity text
 		for (DrawableElement drawableElement : arrayDrawableElements)
 		{
-
-
 			paintForNumbers.setStyle(Paint.Style.FILL_AND_STROKE);
 			paintForNumbers.setStrokeWidth(5);
 			paintForNumbers.setShadowLayer(7, 7, 7, drawableElement.currentPaintColor);
 			//paint.setShadowLayer(5, 5, 5,Color.RED);
 			//canvas.drawText("☐",drawableElement.get_x()+drawableElement.get_imgradius()-2,drawableElement.get_y()+drawableElement.get_imgradius()+2, paintForNumbers);
-			drawElementOnCanvas(drawableElement);
-			canvas.drawText(
-					String.valueOf(drawableElement.getName()),
-					drawableElement.get_x()+ drawableElement.get_imgradius()*5/2,
-					drawableElement.get_y()+(drawableElement.get_imgradius()*5/2), paintForNumbers);
+
+			//arrayDrawableElements.remove(arrayDrawableElements.get(arrayDrawableElements.size()-1));
+
+			//Alex diciembre2018
+			if(arrayDrawableElements.size()>1 && arrayDrawableElements.indexOf(drawableElement)<arrayDrawableElements.size()-1)
+			{
+				drawElementOnCanvas(drawableElement);
+			}
+
+			//Aqui va el numero de la tropa:
+			///TODO: Continuar con la numeración de tropas o oleadas
+			///canvas.drawText("1",//String.valueOf(drawableElement.getName()),drawableElement.get_x()+ drawableElement.get_imgradius()*5/2,drawableElement.get_y()+(drawableElement.get_imgradius()*5/2), paintForNumbers);
 		}
     }
     public boolean onTouchEvent(MotionEvent event)
@@ -207,22 +228,11 @@ public class DrawableScene extends View
 		current_x = (int)event.getX();
 		current_y = (int)event.getY();
 
-		System.out.println("Drawable scene evenActionHandler");
 		switch (eventaction)
 		{
 			case MotionEvent.ACTION_DOWN:
-				lastClickedDrawn = true;
-				System.out.println("Elements_:" + arrayDrawableElements.size());
-				for (DrawableElement drawableElement : arrayDrawableElements)
-				{
-					if(!drawableElement.isDrawn())
-					{
-						drawableElement.set_homeposition(new Point(center_X,current_y));
-						drawableElement.set_x(current_x);
-						drawableElement.set_y(current_y);
-						drawableElement.isDrawn(true);
-					}
-				}
+				System.out.println("Drawable scene ACTION_DOWN");
+				boolean someItemIsSelected = false;
 				int i=0;
 				for (DrawableElement drawableElement : arrayDrawableElements) //Item is selected (Check and mark)
 				{
@@ -235,12 +245,41 @@ public class DrawableScene extends View
 						// distance from the touch point to the center of the drawnElement
 						double pointer_radius = Math.sqrt((double) (Math.pow(menupointer_x - current_x, 2) + Math.pow(menupointer_y - current_y, 2)));
 						//check if the drawableElement is selected (add some distance)
-						if (pointer_radius < drawableElement.get_imgradius() - 3)
+						if (pointer_radius < drawableElement.get_imgradius() - 1)
 						{
 							drawableElement.set_isselected(true);
 							//Per each selected Item we carry the quantity as selected.
 							arrayQuantity.get(arrayDrawableElements.indexOf(drawableElement)).set_isselected(true);
+							System.out.println("\nItem selected");
+							someItemIsSelected = true;
 							break;
+						}
+					}
+				}
+				///TODO permito multiples dibujos de una tropa:
+				//antes:
+				//lastClickedDrawn = true;
+				//despues:
+				//if(lastClickedDrawn)
+				//{
+				//lastClickedDrawn = false;
+				//addPreviousElement();
+				//invalidate();
+				//}
+				System.out.println("\nEvent DOWN Elements_:" + arrayDrawableElements.size());
+				if(!someItemIsSelected)
+				{
+					for (DrawableElement drawableElement : arrayDrawableElements)
+					{
+						///TODO permito multiples dibujos de una tropa:
+						if (!drawableElement.isDrawn())
+						{
+							drawableElement.set_homeposition(new Point(center_X, current_y));
+							drawableElement.set_x(current_x);
+							drawableElement.set_y(current_y);
+							drawableElement.isDrawn(true);
+							//despues:
+							lastClickedDrawn = true;
 						}
 					}
 				}
@@ -250,25 +289,70 @@ public class DrawableScene extends View
 				int x = 0;
 				for (DrawableElement drawableElement : arrayDrawableElements)
 				{
-					x++;// move the drawableElement
-					if (drawableElement.get_isselected())
+					//if (arrayDrawableElements.size() > 1 && drawableElement.get_x() == 52 && drawableElement.get_x() == 52)
+					if (true)
 					{
-						borderElementPositionFix(drawableElement);
+						x++;// move the drawableElement
+						if (drawableElement.get_isselected())
+						{
+							System.out.println("\nDrawableSelected is: " + drawableElement.getName() );
+							borderElementPositionFix(drawableElement);
 
-						DrawableElement pointerQuantity = arrayQuantity.get(
-								arrayDrawableElements.indexOf(drawableElement));
+							DrawableElement pointerQuantity = arrayQuantity.get(
+									arrayDrawableElements.indexOf(drawableElement));
 
-						borderElementPositionFix(pointerQuantity);
+							borderElementPositionFix(pointerQuantity);
+						}
 					}
 				}
 			break;
 
 			case MotionEvent.ACTION_UP:
+				boolean thereIsOneSelected = false;
 				for (DrawableElement drawableElement : arrayDrawableElements)
 				{// reset the drawableElement to home if needed
-					drawableElement.set_isselected(false);
-					arrayQuantity.get(arrayDrawableElements.indexOf(drawableElement)).set_isselected(false);
+					if (drawableElement.get_isselected()==true)
+					{
+						thereIsOneSelected=true;
+						drawableElement.set_isselected(false);
+						arrayQuantity.get(arrayDrawableElements.indexOf(drawableElement)).set_isselected(false);
+					}
 				}
+				//Si no hay ningun elemento seleccionado al levantar el dedo podemos dibujar uno nuevo
+				if(!thereIsOneSelected)
+				{
+					System.out.println("\nEvent DOWN Elements_:" + arrayDrawableElements.size());
+					if(arrayDrawableElements.size()>0)
+                    {
+						for (DrawableElement drawableElement : arrayDrawableElements)
+						{
+							System.out.println("DW element pos: " + drawableElement.get_x() );
+						}
+                        DrawableElement drawableElement = arrayDrawableElements.get(arrayDrawableElements.size() - 1);
+                        ///TODO permito multiples dibujos de una tropa:
+                        if (!drawableElement.isDrawn())
+                        {
+                            drawableElement.set_homeposition(new Point(center_X, current_y));
+                            drawableElement.set_x(current_x);
+                            drawableElement.set_y(current_y);
+                            drawableElement.isDrawn(true);
+                            //despues:
+                            lastClickedDrawn = true;
+                        }
+						addPreviousElement(drawableElement);
+
+                    	/*
+						DrawableElement drawableElement = arrayDrawableElements.get(
+								arrayDrawableElements.size() - 1);
+						arrayDrawableElements.add(drawableElement);
+                        invalidate();
+                        */
+                    	/*
+						addPreviousElement(drawableElement);
+						*/
+                    }
+				}
+
 			break;
 		}
 	}
