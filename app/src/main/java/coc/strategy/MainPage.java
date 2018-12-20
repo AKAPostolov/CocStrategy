@@ -1,19 +1,25 @@
 package coc.strategy;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 //import android.support.v4.graphics.ColorUtils;
+import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.MenuItem;
@@ -31,12 +37,21 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Random;
 
 import coc.strategy.FloatingMenu.CocElementDM;
 import coc.strategy.FloatingMenu.CocElementsRow;
 import coc.strategy.FloatingMenu.CustomAdapter;
+
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 public class MainPage extends Activity implements View.OnTouchListener
 {
@@ -63,6 +78,9 @@ public class MainPage extends Activity implements View.OnTouchListener
 
     //mainButtons
     TextView tvWaveNum;
+    TextView tvUndoLabel;
+    TextView tvClearLabel;
+    TextView tvSaveLabel;
     Button   btnAddWave;
     Button   boton1;
     Button   boton2;
@@ -190,9 +208,14 @@ public class MainPage extends Activity implements View.OnTouchListener
         System.out.println("Activity state: onRestart");
     }
 
+
     public void obtainViewButtons()
     {
         tvWaveNum   = (TextView) findViewById(R.id.tvWaveNum);
+        tvUndoLabel   = (TextView) findViewById(R.id.tvUndoLabel);
+        tvClearLabel   = (TextView) findViewById(R.id.tvClearLabel);
+        tvSaveLabel   = (TextView) findViewById(R.id.tvSaveLabel);
+
         btnAddWave   = (Button) findViewById(R.id.btnAddWave);
         boton1   = (Button) findViewById(R.id.button1);
         boton2   = (Button) findViewById(R.id.button2);
@@ -410,8 +433,57 @@ public class MainPage extends Activity implements View.OnTouchListener
                     Toast.makeText(this,this.getResources().getString(R.string.str_toast_max_waves_reached),Toast.LENGTH_SHORT).show();
                 }
             break;
+            case 7:
+                drawableScene.removeLastElement();
+            break;
+            case 8:
+                drawableScene.removeAllElements();
+            break;
+            case 9:
+                System.out.println("Saving screenshot !!!");
+                String fileName = "tester_1.png";
+                Tools.takeScreenShot(this);
+
+                File directory = this.getExternalCacheDir();
+                File file = new File( directory, fileName);
+
+                try
+                {
+                    file.getAbsoluteFile().mkdirs();
+                    Log.d("Create File", "File exists? " + file.exists());  // false
+
+                    File         f          = new File(directory.getAbsolutePath() + "/-bw.jpg");
+                    OutputStream fileStream = new BufferedOutputStream(new FileOutputStream(directory.getAbsolutePath() + "/-bw.jpg"));
+                    Tools.temporaryBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileStream);
+                    fileStream.close();
+
+                    //Tools.savePic(Tools.temporaryBitmap, file.getAbsoluteFile().toString());
+
+
+                    Intent share = new Intent(Intent.ACTION_SEND);
+                    share.setType("image/jpeg");
+                    ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+                    Tools.temporaryBitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+                    File file1 = new File(Environment.getExternalStorageDirectory() + File.separator + "temporary_file.jpg");
+                    try {
+                        f.createNewFile();
+                        FileOutputStream fo = new FileOutputStream(f);
+                        fo.write(bytes.toByteArray());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    share.putExtra(Intent.EXTRA_STREAM, Uri.parse(f.toURI().toString()));
+                    startActivity(Intent.createChooser(share, "Share Image"));
+                }
+                catch(Exception e)
+                {
+                    e.printStackTrace();
+                }
+
+            break;
         }
     }
+
     public int getRandomizedColor()
     {
         int BLACK       = 0xFF000000;

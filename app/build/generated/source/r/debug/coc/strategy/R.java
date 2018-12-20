@@ -357,8 +357,11 @@ public final class R {
     public static final int transitionTransform=0x7f070050;
     public static final int tv1=0x7f070051;
     public static final int tv2=0x7f070052;
-    public static final int tvWaveLabel=0x7f070053;
-    public static final int tvWaveNum=0x7f070054;
+    public static final int tvClearLabel=0x7f070053;
+    public static final int tvSaveLabel=0x7f070054;
+    public static final int tvUndoLabel=0x7f070055;
+    public static final int tvWaveLabel=0x7f070056;
+    public static final int tvWaveNum=0x7f070057;
   }
   public static final class layout {
     public static final int floating_palette_layout=0x7f080000;

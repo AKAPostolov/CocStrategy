@@ -69,10 +69,31 @@ public class DrawableScene extends View
 					menuback_Y + menuback_height / 2 - drawableElement.get_height() / 2));
 		}
 	}
+	public void removeAllElements()
+	{
+		arrayDrawableElements.clear();
+		arrayQuantity.clear();
+		invalidate();
+		System.out.println("Deleted & ALL CLEAR ?");
+	}
 	public void removeLastElement()
 	{
-		arrayDrawableElements.remove(arrayDrawableElements.size()-1);
-		arrayQuantity.remove(arrayQuantity.size()-1);
+		if(arrayDrawableElements.size()>0)
+		{
+			arrayDrawableElements.remove(arrayDrawableElements.size() - 1);
+			arrayQuantity.remove(arrayQuantity.size() - 1);
+			invalidate();
+			if(arrayDrawableElements.size()==1)
+			{
+				arrayDrawableElements.clear();
+				arrayQuantity.clear();
+			}
+			System.out.println("Deleted element ? YES");
+		}
+		else
+		{
+			System.out.println("Deleted element ? No because they are 0");
+		}
 	}
 	public ArrayList<DrawableElement> getDrawableElements(int currentWave)
 	{

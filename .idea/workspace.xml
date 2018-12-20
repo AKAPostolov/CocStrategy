@@ -9,41 +9,35 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/coc/strategy/Tools.java" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ac73da4e-4a78-4efa-a63b-5dea907d1c9a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/coc/strategy/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/coc/strategy/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/coc/strategy/MainPage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/coc/strategy/MainPage.class" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/coc/strategy/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/coc/strategy/R$id.class" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/coc/strategy/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/coc/strategy/R$layout.class" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/coc/strategy/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/coc/strategy/R$string.class" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/coc/strategy/MainPage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/coc/strategy/MainPage.class" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/coc/strategy/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/coc/strategy/R$id.class" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/coc/strategy/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/coc/strategy/R$layout.class" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/coc/strategy/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/coc/strategy/R$string.class" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_0.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_0.apk" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_1.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_1.apk" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_2.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_2.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_3.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_3.apk" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_4.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_4.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_5.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_5.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_6.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_6.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_7.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_7.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_8.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_8.apk" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_9.apk" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_9.apk" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/coc/strategy/DrawableElement.java" afterPath="$PROJECT_DIR$/app/src/main/java/coc/strategy/DrawableElement.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/coc/strategy/DrawableScene.java" afterPath="$PROJECT_DIR$/app/src/main/java/coc/strategy/DrawableScene.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/coc/strategy/MainPage.java" afterPath="$PROJECT_DIR$/app/src/main/java/coc/strategy/MainPage.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/floating_palette_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/floating_palette_layout.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/floating_row_item_x3.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/floating_row_item_x3.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/coc/strategy/Tools.java" afterPath="$PROJECT_DIR$/app/src/main/java/coc/strategy/Tools.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/mainpage.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/mainpage.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
     </list>
     <ignored path="COCStrategyDrawer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,19 +72,83 @@
       <file leaf-file-name="MainPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/coc/strategy/MainPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="284" column="24" lean-forward="false" selection-start-line="284" selection-start-column="24" selection-end-line="284" selection-end-column="24" />
+            <state relative-caret-position="253">
+              <caret line="467" column="11" lean-forward="false" selection-start-line="467" selection-start-column="11" selection-end-line="467" selection-end-column="11" />
               <folding>
-                <element signature="e#17369#17370#0" expanded="true" />
-                <element signature="e#17415#17416#0" expanded="true" />
-                <element signature="e#20053#20054#0" expanded="true" />
-                <element signature="e#20095#20096#0" expanded="true" />
-                <element signature="e#24829#24830#0" expanded="true" />
-                <element signature="e#24863#24864#0" expanded="true" />
-                <element signature="e#24903#24904#0" expanded="true" />
-                <element signature="e#24938#24939#0" expanded="true" />
+                <element signature="e#15747#15814#0" expanded="true" />
+                <element signature="e#20346#20347#0" expanded="true" />
+                <element signature="e#20392#20393#0" expanded="true" />
+                <element signature="e#23030#23031#0" expanded="true" />
+                <element signature="e#23072#23073#0" expanded="true" />
+                <element signature="e#27806#27807#0" expanded="true" />
+                <element signature="e#27840#27841#0" expanded="true" />
+                <element signature="e#27880#27881#0" expanded="true" />
+                <element signature="e#27915#27916#0" expanded="true" />
+                <element signature="e#31466#31692#0" expanded="true" />
+                <element signature="e#31691#31692#0" expanded="true" />
+                <element signature="e#33943#33991#0" expanded="true" />
+                <element signature="e#34145#34193#0" expanded="true" />
+                <element signature="e#34199#34248#0" expanded="true" />
+                <element signature="e#34379#34427#0" expanded="true" />
+                <element signature="e#34433#34482#0" expanded="true" />
+                <element signature="e#36591#36618#0" expanded="true" />
+                <element signature="e#36759#36789#0" expanded="true" />
+                <element signature="e#36864#36889#0" expanded="true" />
+                <element signature="e#36890#37194#0" expanded="true" />
+                <element signature="e#37193#37194#0" expanded="true" />
+                <element signature="e#37231#37255#0" expanded="true" />
+                <element signature="e#37256#37571#0" expanded="true" />
+                <element signature="e#37570#37571#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="542">
+              <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="76" lean-forward="false" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainpage.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mainpage.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="736" column="22" lean-forward="false" selection-start-line="736" selection-start-column="22" selection-end-line="736" selection-end-column="22" />
+              <folding>
+                <element signature="e#24639#24664#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -106,12 +164,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DrawableScene.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DrawableScene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/coc/strategy/DrawableScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="209" column="13" lean-forward="true" selection-start-line="209" selection-start-column="13" selection-end-line="209" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="240">
+              <caret line="81" column="9" lean-forward="false" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+              <folding>
+                <element signature="e#1583#1600#0" expanded="true" />
+                <element signature="e#1669#1686#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tools.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/coc/strategy/Tools.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,15 +204,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DrawableElement</find>
-      <find>drawableElement</find>
-      <find>Drawable scene evenActionHandle</find>
-      <find>nDraw DrawableScene event size:</find>
-      <find>addE</find>
-      <find>clickedViewDrawableID</find>
-      <find>MainP</find>
-      <find>activity</find>
-      <find>down</find>
       <find>drawableResourceID</find>
       <find>drawElementByDrawableResourceID</find>
       <find>Point</find>
@@ -161,6 +225,15 @@
       <find>up</find>
       <find>EVENT</find>
       <find>tvWaveNum</find>
+      <find>tvWave</find>
+      <find>onDraw</find>
+      <find>num</find>
+      <find>DOWN</find>
+      <find>case 7:</find>
+      <find>Activity</find>
+      <find>tag=&quot;7&quot;</find>
+      <find>arrayQuantity</find>
+      <find>9:</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2201,7 +2274,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/RealPathUtil.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/framelayout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/layers.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/RealPathTools.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/CocElementDataModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/CocElementDM.java" />
@@ -2217,26 +2289,28 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/values.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/FloatingMenu/CocElementsRow.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/DrawableWave.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/Tools.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/color.xml" />
         <option value="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/mainpage.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/floating_row_item_x3.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/floating_palette_layout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/mainpage.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/DrawableElement.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/FloatingMenu/CustomAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/MainPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/DrawableScene.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/mainpage.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/Manifest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/Tools.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/coc/strategy/MainPage.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="2" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="28" />
+    <option name="y" value="75" />
     <option name="width" value="1846" />
     <option name="height" value="1047" />
   </component>
@@ -2711,13 +2785,12 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
     <property name="device.picker.selection" value="xxxhdpi_560dpi_1440x2560_Api24_Andr_7.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="android.project.structure.last.selected" value="app" />
+    <property name="android.project.structure.proportion" value="0.15" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\res\drawable" />
-      <recent name="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\res\layout" />
-      <recent name="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\res\drawable-nodpi" />
-      <recent name="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\аssets" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="coc.strategy" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\assets\fonts" />
@@ -2725,6 +2798,12 @@
       <recent name="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\res\drawable-xhdpi" />
       <recent name="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\res\drawable-xxhdpi" />
       <recent name="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\res\values-es" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\res\drawable" />
+      <recent name="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\res\layout" />
+      <recent name="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\res\drawable-nodpi" />
+      <recent name="C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\аssets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2864,9 +2943,9 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
       <option name="USE_LAST_SELECTED_DEVICE" value="true" />
-      <option name="PREFERRED_AVD" value="" />
+      <option name="PREFERRED_AVD" value="Nexus_6_API_19" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Auto" />
@@ -2910,6 +2989,18 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="COCStrategyDrawer" />
       <envs />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -3321,11 +3412,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531867254582</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="20 Dicie. Arreglo todo para dibujar varios del mismo tipo.&#10;18 Julio. Arreglamos pintar varios, falta la seleccion misteriosa que sale debajo">
+      <created>1545300328669</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1545300328669</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="2" width="1846" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.4978678" order="11" side_tool="false" content_ui="tabs" />
@@ -3334,18 +3432,19 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38063064" sideWeight="0.5069444" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32882884" sideWeight="0.48076922" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.4871795" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277592" sideWeight="0.48076922" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277592" sideWeight="0.4871795" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3768116" sideWeight="0.49305555" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18029115" sideWeight="0.49335548" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24436937" sideWeight="0.49004975" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1716418" sideWeight="0.49335548" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2419175" sideWeight="0.49004975" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3975225" sideWeight="0.46153846" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39687848" sideWeight="0.46153846" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25266525" sideWeight="0.50664455" order="2" side_tool="true" content_ui="tabs" />
@@ -3359,7 +3458,6 @@
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32733408" sideWeight="0.6201923" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5042644" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.4871795" order="6" side_tool="false" content_ui="tabs" />
     </layout>
@@ -3399,42 +3497,42 @@
     <MESSAGE value="31 Enero Commit - Android 3.0_Updated" />
     <MESSAGE value="08 Febrero Commit - Android 3.0_Updated - Pequeños cambios, nose." />
     <MESSAGE value="18 Julio. Arreglamos pintar varios, falta la seleccion misteriosa que sale debajo" />
-    <option name="LAST_COMMIT_MESSAGE" value="18 Julio. Arreglamos pintar varios, falta la seleccion misteriosa que sale debajo" />
+    <MESSAGE value="20 Dicie. Arreglo todo para dibujar varios del mismo tipo.&#10;18 Julio. Arreglamos pintar varios, falta la seleccion misteriosa que sale debajo" />
+    <option name="LAST_COMMIT_MESSAGE" value="20 Dicie. Arreglo todo para dibujar varios del mismo tipo.&#10;18 Julio. Arreglamos pintar varios, falta la seleccion misteriosa que sale debajo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/coc/strategy/MainPage.java</url>
-          <line>763</line>
+          <line>835</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/coc/strategy/MainPage.java</url>
-          <line>983</line>
+          <line>1055</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/coc/strategy/MainPage.java</url>
-          <line>399</line>
+          <line>422</line>
           <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/coc/strategy/Tools.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="38" />
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Install_Dir/Android/sdk/platforms/android-8/android.jar!/android/graphics/Paint.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="204" column="37" lean-forward="false" selection-start-line="204" selection-start-column="23" selection-end-line="204" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/style.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -3507,17 +3605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3605,13 +3692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/coc/strategy/Tools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Install_Dir/Android/sdk/sources/android-24/android/graphics/Paint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -3641,20 +3721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="99" lean-forward="false" selection-start-line="0" selection-start-column="99" selection-end-line="0" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values-es/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -3677,17 +3743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mainpage.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="754" column="33" lean-forward="false" selection-start-line="754" selection-start-column="33" selection-end-line="754" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -3749,6 +3804,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mainpage.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="736" column="22" lean-forward="false" selection-start-line="736" selection-start-column="22" selection-end-line="736" selection-end-column="22" />
+          <folding>
+            <element signature="e#24639#24664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/coc/strategy/FloatingMenu/CustomAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -3759,27 +3827,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/coc/strategy/MainPage.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/coc/strategy/DrawableScene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="284" column="24" lean-forward="false" selection-start-line="284" selection-start-column="24" selection-end-line="284" selection-end-column="24" />
+        <state relative-caret-position="240">
+          <caret line="81" column="9" lean-forward="false" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
           <folding>
-            <element signature="e#17369#17370#0" expanded="true" />
-            <element signature="e#17415#17416#0" expanded="true" />
-            <element signature="e#20053#20054#0" expanded="true" />
-            <element signature="e#20095#20096#0" expanded="true" />
-            <element signature="e#24829#24830#0" expanded="true" />
-            <element signature="e#24863#24864#0" expanded="true" />
-            <element signature="e#24903#24904#0" expanded="true" />
-            <element signature="e#24938#24939#0" expanded="true" />
+            <element signature="e#1583#1600#0" expanded="true" />
+            <element signature="e#1669#1686#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/coc/strategy/DrawableScene.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/coc/strategy/Manifest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="209" column="13" lean-forward="true" selection-start-line="209" selection-start-column="13" selection-end-line="209" selection-end-column="13" />
+        <state relative-caret-position="42">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/coc/strategy/Tools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="76" lean-forward="false" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/coc/strategy/MainPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="467" column="11" lean-forward="false" selection-start-line="467" selection-start-column="11" selection-end-line="467" selection-end-column="11" />
+          <folding>
+            <element signature="e#15747#15814#0" expanded="true" />
+            <element signature="e#20346#20347#0" expanded="true" />
+            <element signature="e#20392#20393#0" expanded="true" />
+            <element signature="e#23030#23031#0" expanded="true" />
+            <element signature="e#23072#23073#0" expanded="true" />
+            <element signature="e#27806#27807#0" expanded="true" />
+            <element signature="e#27840#27841#0" expanded="true" />
+            <element signature="e#27880#27881#0" expanded="true" />
+            <element signature="e#27915#27916#0" expanded="true" />
+            <element signature="e#31466#31692#0" expanded="true" />
+            <element signature="e#31691#31692#0" expanded="true" />
+            <element signature="e#33943#33991#0" expanded="true" />
+            <element signature="e#34145#34193#0" expanded="true" />
+            <element signature="e#34199#34248#0" expanded="true" />
+            <element signature="e#34379#34427#0" expanded="true" />
+            <element signature="e#34433#34482#0" expanded="true" />
+            <element signature="e#36591#36618#0" expanded="true" />
+            <element signature="e#36759#36789#0" expanded="true" />
+            <element signature="e#36864#36889#0" expanded="true" />
+            <element signature="e#36890#37194#0" expanded="true" />
+            <element signature="e#37193#37194#0" expanded="true" />
+            <element signature="e#37231#37255#0" expanded="true" />
+            <element signature="e#37256#37571#0" expanded="true" />
+            <element signature="e#37570#37571#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
           <folding />
         </state>
       </provider>

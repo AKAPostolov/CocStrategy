@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ContentUris;
 import android.content.Context;
+import android.content.CursorLoader;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
@@ -13,7 +14,7 @@ import android.os.CountDownTimer;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
-import android.support.v4.content.CursorLoader;
+//import android.support.v4.content.CursorLoader;
 import android.view.View;
 
 import java.io.FileNotFoundException;
@@ -26,6 +27,7 @@ import java.io.IOException;
 
 public class Tools
 {
+    static Bitmap temporaryBitmap;
     public static Bitmap takeScreenShot(Activity activity)
     {
         View view = activity.getWindow().getDecorView();
@@ -38,16 +40,22 @@ public class Tools
         int width = activity.getWindowManager().getDefaultDisplay().getWidth();
         int height = activity.getWindowManager().getDefaultDisplay().getHeight();
 
-        Bitmap b = Bitmap.createBitmap(b1, 0, statusBarHeight, width, height  - statusBarHeight);
+        //Bitmap b = Bitmap.createBitmap(b1, 0, statusBarHeight, width, height  - statusBarHeight);
+        //view.destroyDrawingCache();
+        //return b;
+
+
+
+        temporaryBitmap = Bitmap.createBitmap(b1, 0, statusBarHeight, width, height  - statusBarHeight);
         view.destroyDrawingCache();
-        return b;
+        return temporaryBitmap;
     }
     public static void savePic(Bitmap b, String strFileName)
     {
         FileOutputStream fos = null;
         try
         {
-            fos = new FileOutputStream(strFileName);
+            fos = new FileOutputStream( strFileName);
             if (null != fos)
             {
                 b.compress(Bitmap.CompressFormat.PNG, 90, fos);
@@ -60,6 +68,10 @@ public class Tools
             e.printStackTrace();
         }
         catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        catch (Exception e)
         {
             e.printStackTrace();
         }

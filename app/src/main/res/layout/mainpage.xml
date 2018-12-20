@@ -695,7 +695,57 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:text="@string/str_wave_oleada"/>
-
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:id="@+id/tvUndoLabel"
+        android:tag="7"
+        android:layout_below="@+id/tvWaveLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:shadowColor="@color/Red"
+        android:textColor="@color/White"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="manageMainButtons"
+        android:text="UNDO"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:id="@+id/tvClearLabel"
+        android:tag="8"
+        android:layout_below="@+id/tvUndoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:shadowColor="@color/Red"
+        android:textColor="@color/White"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="manageMainButtons"
+        android:text="CLEAR"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:id="@+id/tvSaveLabel"
+        android:tag="9"
+        android:layout_below="@+id/tvClearLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:shadowColor="@color/Red"
+        android:textColor="@color/White"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="manageMainButtons"
+        android:text="SAVE"/>
     <TextView
 
         android:layout_marginTop="10dp"
