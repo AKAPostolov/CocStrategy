@@ -1,81 +1,81 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
-INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
-INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
-INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
-MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.4.aar\f5bde2ba346dcd7935b56543ae4e4769\AndroidManifest.xml:2:1-14:12
-MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\support-v4-22.2.1.aar\f15f9a2d8c252cf7844c086a2b90c6b2\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
-INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
-INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:1-20:12
+ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:2:1-20:12
+MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-2\files-2.1\95728d9872cb1e800deabb9ed5ea80b8\AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-2\files-2.1\e555a2c1d2a5db0000657b54200d79df\AndroidManifest.xml:17:1-24:12
+INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:2:1-20:12
 	package
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:3:7-29
-		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:3:7-29
+		INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml
+		INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:5:7-34
-		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:5:7-34
+		INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml
+		INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:4:7-30
-		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:4:7-30
+		INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml
+		INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml
 uses-sdk
-ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:6:5-7:40
-INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:6:5-7:40
-INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:6:5-7:40
-MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.4.aar\f5bde2ba346dcd7935b56543ae4e4769\AndroidManifest.xml:8:5-10:41
-MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.4.aar\f5bde2ba346dcd7935b56543ae4e4769\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\support-v4-22.2.1.aar\f15f9a2d8c252cf7844c086a2b90c6b2\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\support-v4-22.2.1.aar\f15f9a2d8c252cf7844c086a2b90c6b2\AndroidManifest.xml:20:5-43
-INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:6:5-7:40
-INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:6:5-7:40
+ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:6:5-7:40
+INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:6:5-7:40
+INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:6:5-7:40
+MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-2\files-2.1\95728d9872cb1e800deabb9ed5ea80b8\AndroidManifest.xml:8:5-10:41
+MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-2\files-2.1\95728d9872cb1e800deabb9ed5ea80b8\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-2\files-2.1\e555a2c1d2a5db0000657b54200d79df\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-2\files-2.1\e555a2c1d2a5db0000657b54200d79df\AndroidManifest.xml:20:5-43
+INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:6:5-7:40
+INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:6:5-7:40
 	android:targetSdkVersion
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:7:9-38
-		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:7:9-38
+		INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml
+		INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:6:15-41
-		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:6:15-41
+		INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml
+		INJECTED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:8:5-17:19
-MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.4.aar\f5bde2ba346dcd7935b56543ae4e4769\AndroidManifest.xml:12:5-20
-MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.4.aar\f5bde2ba346dcd7935b56543ae4e4769\AndroidManifest.xml:12:5-20
-MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\support-v4-22.2.1.aar\f15f9a2d8c252cf7844c086a2b90c6b2\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-1\files-1.1\support-v4-22.2.1.aar\f15f9a2d8c252cf7844c086a2b90c6b2\AndroidManifest.xml:22:5-20
+ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:8:5-17:19
+MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-2\files-2.1\95728d9872cb1e800deabb9ed5ea80b8\AndroidManifest.xml:12:5-20
+MERGED from [com.andkulikov:transitionseverywhere:1.7.4] C:\Users\XTO\.gradle\caches\transforms-2\files-2.1\95728d9872cb1e800deabb9ed5ea80b8\AndroidManifest.xml:12:5-20
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-2\files-2.1\e555a2c1d2a5db0000657b54200d79df\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\XTO\.gradle\caches\transforms-2\files-2.1\e555a2c1d2a5db0000657b54200d79df\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:8:51-83
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:8:51-83
 	android:icon
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:8:18-50
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:8:18-50
 activity#coc.strategy.MainPage
-ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:9:9-15:20
+ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:9:9-15:20
 	android:screenOrientation
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:9:44-81
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:9:44-81
 	android:label
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:10:19-51
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:10:19-51
 	android:configChanges
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:9:82-132
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:9:82-132
 	android:name
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:9:19-43
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:9:19-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:11:13-14:29
+ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:11:13-14:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:12:17-69
+ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:12:17-69
 	android:name
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:12:25-66
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:12:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:13:17-77
+ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:13:17-77
 	android:name
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:13:27-74
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:13:27-74
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:18:5-79
+ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:18:5-79
 	android:name
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:18:22-77
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:18:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:19:5-80
+ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:19:5-80
 	android:name
-		ADDED from C:\Users\XTO\AndroidStudioProjects\COCStrategyDrawer\app\src\main\AndroidManifest.xml:19:22-78
+		ADDED from D:\_WorkSpaces\_APPs\CocStrategy\app\src\main\AndroidManifest.xml:19:22-78

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/COCStrategyDrawer.iml" filepath="$PROJECT_DIR$/COCStrategyDrawer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CocStrategy.iml" filepath="$PROJECT_DIR$/CocStrategy.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

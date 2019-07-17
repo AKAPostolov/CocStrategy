@@ -108,7 +108,6 @@
         android:id="@+id/button5"
         android:visibility="gone"
         android:tag="5"
-
         android:onClick="manageMainButtons"
         android:textColor="@color/Orange1"
         android:shadowColor="@color/Black"
